@@ -1,0 +1,58 @@
+==Web ui/대시보드==
+
+UI화면
+1. 로그조회
+	-MCS Server가 기록한 로그 
+	-선택한 로그의 상세 정보 표시
+	-장비로 부터 받은 메세지는 SECSII 메세지로 표시
+2. AlarmReport 이력 조회
+	-설비가 보고한 Machine Alarm Event 이력 나열
+3. Machine 이력 조회
+	-설비 상태변경 이력 나열
+4. Port 이력 조회
+	-Port 상태변경 이력 나열
+5. Shelf 이력 조회
+	-Shelf 상태변경 이력 나열
+6. Crane 이력 조회
+	-Crane 상태변경 이력 나열
+7. Vehicle 이력 조회
+	-Vehicle 상태변경 이력 나열
+8. Storage Full 이력 조회
+	-Storage 설비의 Full 상태변경 이력 나열
+9. Carrier 위치 이력 조회
+	-Carrier 위치 이력 나열
+10.반송 이력 조회
+	-요약된 반송 이력 나열
+11.반송Job 이력 조회
+	-반송 Job 이력 나열
+12.반송Cmd 이력 조회
+	-반송 Cmd 이력 나열
+13.반송Job 실패 이력 조회
+	-실패한 반송 Job 이력 나열
+14.반송Cmd 실패 이력 조회
+	-실패한 반송 Cmd 이력 나열
+15.Carrier Elapsed Time 조회
+	-특정 Carrier 의 반송수행 명령에 대한 결과정보를 나타냄
+	-MES로부터 반송요청 명령 Event
+	-MCS(접수/반려) 명령 수신 Event
+	-MCS반송 수행 Event
+	-MCS반송 수행 간 Elapsed Time
+	-MCS반송 결과보고 Event
+	-명령수신 → 결과까지 Elapsed Time
+
+==대시보드==
+
+<소요시간 분석>
+최근 3시간 Area별 소요시간 평균
+최근 3시간 소요시간 상위 30개 CARRIER
+최근 3시간 Bay별 평균 소요시간 상위 20
+최근 3시간 REQUESTOR별 평균 소요시간 상위 20
+최근 1시간 반송 수행시간 트렌드 점검
+최근 1시간 반송 수행시간 이상치 점검
+최근 3시간 CARRIER별 반송 소요시간 분포
+
+<요구사항>
+주요 MES/MCS 이벤트 모니터링
+BAY별 Storage Full 모니터링
+물류설비(AMHS)별 Status
+
