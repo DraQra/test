@@ -1,0 +1,260 @@
+[2017-04-18 11:03:30,803] [ FINE] [    THREAD-ID=255] [kr.co.aim.nanotrans.extention.service.trans.InterfaceServiceEx.checkTransportJob] - [sourceUnit is set as currentUnit{10101}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,805] [ FINE] [    THREAD-ID=255] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [023-switch, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,806] [ FINE] [    THREAD-ID=255] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [024-otherwise, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,808] [ FINE] [    THREAD-ID=255] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [025-terminate, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,809] [ FINE] [    THREAD-ID=255] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onEnd] - [END-{STORAGE-CARRIERINSTALLCOMPLETED}{136ms, running(1)}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,848] [ WELL] [ Tibrv Dispatcher] [kr.co.aim.nanotrans.communication.msb.tibrv.marker.EsListener.onMsg] - [<MESSAGE>
+  <HEADER>
+    <MESSAGENAME>STORAGE-CARRIERINSTALLCOMPLETED</MESSAGENAME>
+    <TRANSACTIONID>149248101084737204</TRANSACTIONID>
+    <CONVERSATIONID>14aa0e08-d562-45ae-b902-acec5556e27e</CONVERSATIONID>
+    <TIME>2017-04-18 11:03:30,842</TIME>
+  </HEADER>
+  <ORIGINATED>
+    <ORIGINATEDTYPE>M</ORIGINATEDTYPE>
+    <ORIGINATEDNAME />
+    <MACHINENAME>4AFS3701</MACHINENAME>
+    <CONNECTIONID>4AFS3701</CONNECTIONID>
+    <USERNAME />
+  </ORIGINATED>
+  <DATA>
+    <LIST>
+      <DATAID>0</DATAID>
+      <CEID>151</CEID>
+      <RPTIDCOUNT>
+        <LIST>
+          <RPTID>4</RPTID>
+          <VCOUNT>
+            <CARRIERINFO>
+              <CARRIERID>TEST0011</CARRIERID>
+              <CARRIERLOC>10101</CARRIERLOC>
+            </CARRIERINFO>
+          </VCOUNT>
+        </LIST>
+      </RPTIDCOUNT>
+    </LIST>
+  </DATA>
+  <TAIL>
+    <SECSII><![CDATA[D1 S6F11W   SYSBYTE=31951 EventRPTID4
+                   <L 3
+                       <U4 1 DATAID '0'>
+                       <U2 1 CEID '151'>
+                       <L 1 RPTIDCOUNT
+                           <L 2
+                               <U2 1 RPTID '4'>
+                               <L 1 VCOUNT
+                                   <L 2 CARRIERINFO
+                                       <A 8 CARRIERID 'TEST0011'>
+                                       <A 5 CARRIERLOC '10101'>
+                                   >
+                               >
+                           >
+                       >
+                   >.]]></SECSII>
+  </TAIL>
+</MESSAGE>
+, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=STORAGE-CARRIERINSTALLCOMPLETED, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,855] [ INFO] [ Tibrv Dispatcher] [kr.co.aim.nanotrans.workflow.impl.WorkflowManagerImpl.execute] - [STORAGE-CARRIERINSTALLCOMPLETED will be executed, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=, machineName=, unitName=]
+[2017-04-18 11:03:30,857] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [START-{STORAGE-CARRIERINSTALLCOMPLETED}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,861] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [001-STORAGE-CARRIERINSTALLCOMPLETED, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,862] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [002-interfaceService createCarrierMessage, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,868] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [003-interfaceService checkCarrier, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,872] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCarrier] - [carrier{TEST0011} is valid, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,873] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCarrier] - [carrier{TEST0011} is populated in message, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,876] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCarrier] - [carrierProcessType will be applied, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,879] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.route.impl.AbstractRouteManager.getCarrierProcessTypeNames] - [[FOUP] in carrier{TEST0011}, messageName=, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=, unitName=]
+[2017-04-18 11:03:30,880] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCarrier] - [carrierProcessType[FOUP] is applied in carrier{TEST0011}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,882] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [004-switch{SEQ}3, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,884] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [005-getVariable(result)=true{SEQ}5, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,885] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [006-interfaceService checkCurrentPosition, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,890] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCurrentMachine] - [currentMachine{4AFS3701} is valid, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,891] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCurrentMachine] - [currentMachine{4AFS3701} is populated in message, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,896] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCurrentUnit] - [currentUnit{10101} is valid, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,897] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCurrentUnit] - [currentUnit{10101} is populated in message, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,899] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [007-switch{SEQ}3, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,900] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [008-getVariable(result)=true{SEQ}5, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,902] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [009-materialService isCarrierFABDuplicated, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,903] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.extention.service.trans.MaterialServiceEx.isCarrierFABDuplicated] - [carrier{TEST0011}.machineName is equal to message.currentMachineName. It is NOT fab duplicate case]
+[2017-04-18 11:03:30,904] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [010-switch, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,906] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [011-case, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,907] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [012-materialService changeCarrierLocation, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,909] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.resource.impl.ResourceManagerImpl.changeCarrierLocation] - [carrier{TEST0011}.previousLocation will be checked, messageName=, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,910] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateUnitName] - [unit{10101} is valid]
+[2017-04-18 11:03:30,912] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.resource.impl.ResourceManagerImpl.changeCarrierLocation] - [previousUnit(10101} is equal to currentUnit, messageName=, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,915] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.resource.impl.ResourceManagerImpl.changeCarrierLocation] - [currentUnit(10101}.occupied is already T, messageName=, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,917] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.resource.impl.ResourceManagerImpl.changeCarrierLocation] - [carrier(TEST0011}.machineName .unitName .state can not be changed, messageName=, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,921] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.history.impl.HistoryManagerImpl.createCarrierLocationHistory] - [carrierLocationHistory{id=89401188359563503129452705196734, partitionId=4, transportCommandId=, carrierName=TEST0011, lotId=null, currentMachineName=4AFS3701, currentUnitName=10101, time=Tue Apr 18 11:03:30 KST 2017}, messageName=, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,926] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.resource.impl.ResourceManagerImpl.calculateStorageCurrentCapacity] - [machine:capacity{stored:reserved:banned/outofservice}=4AFS3701:134{1:0:133}, messageName=, communicationMessageName=, transportCommandId=, carrierName=, machineName=4AFS3701, unitName=]
+[2017-04-18 11:03:30,928] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.resource.impl.ResourceManagerImpl.updateStorageCurrentCapacity] - [{machine:max:current:hwm:lwm:rate=4AFS3701:134:134:100:100:100}, messageName=, communicationMessageName=, transportCommandId=, carrierName=, machineName=4AFS3701, unitName=]
+[2017-04-18 11:03:30,931] [ WELL] [    THREAD-ID=256] [kr.co.aim.nanotrans.communication.msb.tibrv.marker.UiSender.send] - [<?xml version="1.0" encoding="UTF-8"?>
+<MESSAGE>
+  <HEADER>
+    <MESSAGENAME>UI-MACHINE-STORAGE-CAPACITY</MESSAGENAME>
+    <TRANSACTIONID />
+    <CONVERSATIONID />
+    <TIME />
+  </HEADER>
+  <ORIGINATED>
+    <ORIGINATEDTYPE>N</ORIGINATEDTYPE>
+    <ORIGINATEDNAME />
+    <MACHINENAME>4AFS3701</MACHINENAME>
+    <CONNECTIONID />
+    <USERNAME />
+  </ORIGINATED>
+  <DATA>
+    <STATE>OUTOFSERVICE</STATE>
+    <CONNECTIONSTATE>CONNECTED</CONNECTIONSTATE>
+    <CONTROLSTATE>ONLINEREMOTE</CONTROLSTATE>
+    <TSCSTATE>AUTO</TSCSTATE>
+    <PROCESSINGSTATE>PROCESSING</PROCESSINGSTATE>
+    <RECONCILING>F</RECONCILING>
+    <FULLUP>T</FULLUP>
+    <MAXCAPACITY>134</MAXCAPACITY>
+    <CURRENTCAPACITY>134</CURRENTCAPACITY>
+    <HIGHWATERMARK>100</HIGHWATERMARK>
+    <LOWWATERMARK>100</LOWWATERMARK>
+    <HEAVYALARMCOUNT>0</HEAVYALARMCOUNT>
+    <LIGHTALARMCOUNT>0</LIGHTALARMCOUNT>
+    <COMMENTS />
+  </DATA>
+  <TAIL />
+</MESSAGE>
+
+ was sent to M14.TEST.NANOTRANS.MCSUIF.SENDER.ALL]
+[2017-04-18 11:03:30,938] [ WELL] [    THREAD-ID=256] [kr.co.aim.nanotrans.communication.msb.tibrv.marker.UiSender.send] - [<?xml version="1.0" encoding="UTF-8"?>
+<MESSAGE>
+  <HEADER>
+    <MESSAGENAME>UI-CARRIER</MESSAGENAME>
+    <TRANSACTIONID />
+    <CONVERSATIONID />
+    <TIME />
+  </HEADER>
+  <ORIGINATED>
+    <ORIGINATEDTYPE>N</ORIGINATEDTYPE>
+    <ORIGINATEDNAME />
+    <MACHINENAME>4AFS3701</MACHINENAME>
+    <CONNECTIONID />
+    <USERNAME />
+  </ORIGINATED>
+  <DATA>
+    <CARRIERNAME>TEST0011</CARRIERNAME>
+    <MACHINENAME>4AFS3701</MACHINENAME>
+    <UNITNAME>10101</UNITNAME>
+    <CARRIERKIND>CARRIER</CARRIERKIND>
+    <STATE>COMPLETED</STATE>
+    <TYPE>ALL</TYPE>
+    <RESERVED>F</RESERVED>
+    <HOLDED>F</HOLDED>
+    <PRODUCTEMPTY />
+    <LOTID />
+    <CONTAINERNAME />
+    <SLOTNUMBER />
+    <MAXCAPA>-1</MAXCAPA>
+  </DATA>
+  <TAIL />
+</MESSAGE>
+
+ was sent to M14.TEST.NANOTRANS.MCSUIF.SENDER.ALL]
+[2017-04-18 11:03:30,947] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [013-resourceService isCheckPortByMachine, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,952] [ WARN] [    THREAD-ID=256] [kr.co.aim.nanotrans.database.hibernate3.HibernateDaoImpl.findByNameWithoutException] - [10101 does not exist in repository, type{kr.co.aim.nanotrans.framework.resource.model.factory.unit.Port}]
+[2017-04-18 11:03:30,953] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.extention.service.trans.ResourceServiceEx.isCheckPortByMachine] - [port{10101}.Port State dose not changed., messageName=, communicationMessageName=, transportCommandId=, carrierName=, machineName=, unitName=]
+[2017-04-18 11:03:30,954] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [014-switch, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,956] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [015-otherwise, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,957] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [016-interfaceService checkGarbageCarrier, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,959] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [017-switch, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,960] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [018-otherwise, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,963] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [019-interfaceService checkTransportCommand, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,965] [ WARN] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateTransportCommand] - [transportCommand id is empty, please check it out]
+[2017-04-18 11:03:30,971] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateTransportCommand] - [transportCommand does not exist]
+[2017-04-18 11:03:30,972] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.service.trans.InterfaceService.checkTransportCommand] - [transportCommand does not exist in the message, trying to find transportCommand using carrier{TEST0011}]
+[2017-04-18 11:03:30,975] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.transfer.impl.TransferManagerImpl.getTransportCommandByCarrier] - [count{0}, []]
+[2017-04-18 11:03:30,976] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.transfer.impl.TransferManagerImpl.getTransportCommandByCarrier] - [transportCommand does not exist in Repository, DetachableCriteria(CriteriaImpl(kr.co.aim.nanotrans.framework.transfer.model.TransportCommand:this[][carrierName=TEST0011, transportMachineName=4AFS3701]))]
+[2017-04-18 11:03:30,978] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.transfer.impl.TransferManagerImpl.getTransportCommandByCarrier] - [transportCommand related to carrier{TEST0011} does not exist in Repository]
+[2017-04-18 11:03:30,979] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.model.Message.changeCause] - [cause{TRANSPORTCOMMANDIDISEMPTY} will be changed to {TRANSPORTCOMMANDNOTFOUND}]
+[2017-04-18 11:03:30,980] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [020-switch, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,982] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [021-otherwise, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,984] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [022-interfaceService checkTransportJob, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,986] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.transfer.impl.TransferManagerImpl.getTransportJobByCarrier] - [transportJob related to carrier{TEST0011} does not exist]
+[2017-04-18 11:03:30,988] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.extention.service.trans.InterfaceServiceEx.checkTransportJob] - [transportJob related to carrier{TEST0011} does not exist, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,989] [ INFO] [    THREAD-ID=256] [kr.co.aim.nanotrans.framework.message.model.Message.changeCause] - [cause{TRANSPORTCOMMANDNOTFOUND} will be changed to {TRANSPORTJOBNOTFOUND}]
+[2017-04-18 11:03:30,990] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.extention.service.trans.InterfaceServiceEx.checkTransportJob] - [sourceMachine is set as currentMachine{4AFS3701}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,991] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.extention.service.trans.InterfaceServiceEx.checkTransportJob] - [sourceUnit is set as currentUnit{10101}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:30,993] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [023-switch, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,995] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [024-otherwise, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,996] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [025-terminate, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:30,998] [ FINE] [    THREAD-ID=256] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onEnd] - [END-{STORAGE-CARRIERINSTALLCOMPLETED}{141ms, running(1)}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,028] [ WELL] [ Tibrv Dispatcher] [kr.co.aim.nanotrans.communication.msb.tibrv.marker.EsListener.onMsg] - [<MESSAGE>
+  <HEADER>
+    <MESSAGENAME>STORAGE-CARRIERINSTALLCOMPLETED</MESSAGENAME>
+    <TRANSACTIONID>149248101102703661</TRANSACTIONID>
+    <CONVERSATIONID>fc1ac83b-f938-4bab-8f5b-31fb6473c771</CONVERSATIONID>
+    <TIME>2017-04-18 11:03:31,022</TIME>
+  </HEADER>
+  <ORIGINATED>
+    <ORIGINATEDTYPE>M</ORIGINATEDTYPE>
+    <ORIGINATEDNAME />
+    <MACHINENAME>4AFS3701</MACHINENAME>
+    <CONNECTIONID>4AFS3701</CONNECTIONID>
+    <USERNAME />
+  </ORIGINATED>
+  <DATA>
+    <LIST>
+      <DATAID>0</DATAID>
+      <CEID>151</CEID>
+      <RPTIDCOUNT>
+        <LIST>
+          <RPTID>4</RPTID>
+          <VCOUNT>
+            <CARRIERINFO>
+              <CARRIERID>TEST0011</CARRIERID>
+              <CARRIERLOC>10101</CARRIERLOC>
+            </CARRIERINFO>
+          </VCOUNT>
+        </LIST>
+      </RPTIDCOUNT>
+    </LIST>
+  </DATA>
+  <TAIL>
+    <SECSII><![CDATA[D1 S6F11W   SYSBYTE=31952 EventRPTID4
+                   <L 3
+                       <U4 1 DATAID '0'>
+                       <U2 1 CEID '151'>
+                       <L 1 RPTIDCOUNT
+                           <L 2
+                               <U2 1 RPTID '4'>
+                               <L 1 VCOUNT
+                                   <L 2 CARRIERINFO
+                                       <A 8 CARRIERID 'TEST0011'>
+                                       <A 5 CARRIERLOC '10101'>
+                                   >
+                               >
+                           >
+                       >
+                   >.]]></SECSII>
+  </TAIL>
+</MESSAGE>
+, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=STORAGE-CARRIERINSTALLCOMPLETED, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,035] [ INFO] [ Tibrv Dispatcher] [kr.co.aim.nanotrans.workflow.impl.WorkflowManagerImpl.execute] - [STORAGE-CARRIERINSTALLCOMPLETED will be executed, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=, machineName=, unitName=]
+[2017-04-18 11:03:31,036] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [START-{STORAGE-CARRIERINSTALLCOMPLETED}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,040] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [001-STORAGE-CARRIERINSTALLCOMPLETED, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,042] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [002-interfaceService createCarrierMessage, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,047] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [003-interfaceService checkCarrier, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,051] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCarrier] - [carrier{TEST0011} is valid, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,053] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCarrier] - [carrier{TEST0011} is populated in message, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,055] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCarrier] - [carrierProcessType will be applied, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,058] [ INFO] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.route.impl.AbstractRouteManager.getCarrierProcessTypeNames] - [[FOUP] in carrier{TEST0011}, messageName=, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=, unitName=]
+[2017-04-18 11:03:31,060] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCarrier] - [carrierProcessType[FOUP] is applied in carrier{TEST0011}, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,061] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [004-switch{SEQ}3, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,063] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [005-getVariable(result)=true{SEQ}5, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,064] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [006-interfaceService checkCurrentPosition, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,068] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCurrentMachine] - [currentMachine{4AFS3701} is valid, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,070] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCurrentMachine] - [currentMachine{4AFS3701} is populated in message, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,075] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCurrentUnit] - [currentUnit{10101} is valid, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,076] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.framework.message.impl.MessageManagerImpl.validateAndPopulateCurrentUnit] - [currentUnit{10101} is populated in message, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=, transportCommandId=, carrierName=TEST0011, machineName=4AFS3701, unitName=10101]
+[2017-04-18 11:03:31,078] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [007-switch{SEQ}3, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,079] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [008-getVariable(result)=true{SEQ}5, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,081] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [009-materialService isCarrierFABDuplicated, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,081] [ INFO] [    THREAD-ID=257] [kr.co.aim.nanotrans.extention.service.trans.MaterialServiceEx.isCarrierFABDuplicated] - [carrier{TEST0011}.machineName is equal to message.currentMachineName. It is NOT fab duplicate case]
+[2017-04-18 11:03:31,083] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [010-switch, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,084] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [011-case, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
+[2017-04-18 11:03:31,086] [ FINE] [    THREAD-ID=257] [kr.co.aim.nanotrans.workflow.impl.BpelActivityListenerImpl.onStart] - [012-materialService changeCarrierLocation, messageName=STORAGE-CARRIERINSTALLCOMPLETED, communicationMessageName=]
