@@ -1,0 +1,309 @@
+{2017-07-19 11:14:05.918	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.920	JobManager	getJob	TRACKING Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.921	DAS2	select	R2R  SELECT T.MODEL_GRP_NAME, T.SETUP_KEY_VALUE, T.REPLY_YN, T.RAWID, T.CATEGORY_VALUE  FROM (         SELECT A.MODEL_GRP_NAME, A.SETUP_KEY_VALUE, A.REPLY_YN, A.RAWID, A.CATEGORY_VALUE, A.ORDER_FLAG         FROM (                SELECT '1' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE = ?                AND MG.CATEGORY_VALUE = ?                UNION ALL                SELECT '2' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE <> ?                AND   ? LIKE REPLACE(SKV.SETUP_KEY_VALUE, '*', '%')                AND MG.CATEGORY_VALUE = ?              ) A         ORDER BY A.ORDER_FLAG ASC, REPLACE(A.SETUP_KEY_VALUE, '*', ?) ASC       ) T  WHERE ROWNUM = 1
+		SKV.SETUP_KEY_VALUE.1 = AREA=PHOTO;EQP_MODEL=6300ES6A;,
+		MG.CATEGORY_VALUE.1 = PHOTO,
+		SKV.SETUP_KEY_VALUE.2 = AREA=PHOTO;EQP_MODEL=6300ES6A;,
+		SKV.SETUP_KEY_VALUE.3 = AREA=PHOTO;EQP_MODEL=6300ES6A;,
+		MG.CATEGORY_VALUE.2 = PHOTO,
+		A.DELEMETER_CHAR127 = 
+}
+{2017-07-19 11:14:05.921	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.921	DAS2	insert	TRACKING INSERT INTO SK_LOG_MES_HST_R2R (METHOD_ID,MSG_ID,STATE,SYNC_ID,SERVER_IP,CREATE_BY,CREATE_DTTS) values (?,?,?,?,?,?,SYSTIMESTAMP)
+		METHOD_ID = EISR2R_SAVESETPOINTS,
+		MSG_ID = 2017071911140500920,
+		STATE = FID=FW_R2R_M14_APC201;MID=R2R_,
+		SYNC_ID = TCNKM60,
+		SERVER_IP = 10.25.205.62,
+		CREATE_BY = 0,
+		CREATE_DTTS+SYSTIMESTAMP = 
+}
+{2017-07-19 11:14:05.922	DAS2	select	R2R  SELECT MAPPING_KEY1 FROM SK_WORKFLOW_MAPPING_R2R W  INNER JOIN AREA_MST_PP A                 ON A.AREA = :AREA                        AND A.RAWID= W.AREA_RAWID                AND MODEL_TYPE=:MODEL_TYPE               AND MAPPING_KEY2 = :MODEL               
+		AREA = PHOTO,
+		MODEL_TYPE = EQP_ID,
+		MODEL = 4PSK4510
+}
+{2017-07-19 11:14:05.922	DAS2	select	R2R  SELECT MAPPING_KEY1 FROM SK_WORKFLOW_MAPPING_R2R W  INNER JOIN AREA_MST_PP A                 ON A.AREA = :AREA                        AND A.RAWID= W.AREA_RAWID                AND MODEL_TYPE=:MODEL_TYPE               AND MAPPING_KEY2 = :MODEL               
+		AREA = PHOTO,
+		MODEL_TYPE = EQP_MODEL,
+		MODEL = 6300ES6A
+}
+{2017-07-19 11:14:05.923	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:05.923	DAS2	select	R2R  SELECT T.MODEL_GRP_NAME, T.SETUP_KEY_VALUE, T.REPLY_YN, T.RAWID, T.CATEGORY_VALUE  FROM (         SELECT A.MODEL_GRP_NAME, A.SETUP_KEY_VALUE, A.REPLY_YN, A.RAWID, A.CATEGORY_VALUE, A.ORDER_FLAG         FROM (                SELECT '1' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE = ?                AND MG.CATEGORY_VALUE = ?                UNION ALL                SELECT '2' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE <> ?                AND   ? LIKE REPLACE(SKV.SETUP_KEY_VALUE, '*', '%')                AND MG.CATEGORY_VALUE = ?              ) A         ORDER BY A.ORDER_FLAG ASC, REPLACE(A.SETUP_KEY_VALUE, '*', ?) ASC       ) T  WHERE ROWNUM = 1
+		SKV.SETUP_KEY_VALUE.1 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.1 = PHOTO,
+		SKV.SETUP_KEY_VALUE.2 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		SKV.SETUP_KEY_VALUE.3 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.2 = PHOTO,
+		A.DELEMETER_CHAR127 = 
+}
+{2017-07-19 11:14:05.923	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 3}
+{2017-07-19 11:14:05.924	DAS2	select	R2R  SELECT D.ITEM_NAME FROM SETUP_KEY_EXT_MST_R2R D INNER JOIN SETUP_KEY_MST_R2R K ON K.RAWID = D.SETUP_KEY_RAWID AND K.SETUP_KEY_NAME IN (  SELECT SK.SETUP_KEY_NAME FROM SETUP_KEY_MST_R2R SK INNER JOIN MODEL_GRP_MST_R2R MGM ON SK.RAWID = MGM.MODEL_GRP_SETUP_KEY_RAWID AND MGM.MODEL_GRP_NAME = ? ) ORDER BY D.SEQ, D.ITEM_NAME 
+		MGM.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.924	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 4}
+{2017-07-19 11:14:05.924	DAS2	select	R2R  SELECT M.MODEL_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE       , DECODE(MMT.ACTION_MODE_CD, '', MGLM.DEFAULT_ACTION_MODE_CD, MMT.ACTION_MODE_CD) AS ACTION_MODE_CD       , DECODE(MMT.EDITABLE_YN, '', MGLM.DEFAULT_EDITABLE_YN, MMT.EDITABLE_YN) AS EDITABLE_YN  FROM MODEL_GRP_MST_R2R MG  INNER JOIN MODEL_GRP_LNK_MST_R2R MGLM          ON MGLM.MODEL_GRP_RAWID = MG.RAWID  INNER JOIN MODEL_MST_R2R M          ON MGLM.MODEL_RAWID = M.RAWID  LEFT OUTER JOIN MODEL_MAP_TRX_R2R MMT          ON MMT.MODEL_GRP_LNK_RAWID = MGLM.RAWID AND MMT.MODEL_GRP_MAP_RAWID = ?  LEFT OUTER JOIN SETUP_KEY_VALUE_MST_R2R SKV          ON SKV.RAWID = MMT.SETUP_KEY_VALUE_RAWID  WHERE MG.MODEL_GRP_NAME = ? 
+		MMT.MODEL_GRP_MAP_RAWID = 20001,
+		MG.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.925	DAS2	select	R2R  SELECT T.MODEL_GRP_NAME, T.SETUP_KEY_VALUE, T.REPLY_YN, T.RAWID, T.CATEGORY_VALUE  FROM (         SELECT A.MODEL_GRP_NAME, A.SETUP_KEY_VALUE, A.REPLY_YN, A.RAWID, A.CATEGORY_VALUE, A.ORDER_FLAG         FROM (                SELECT '1' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE = ?                AND MG.CATEGORY_VALUE = ?                UNION ALL                SELECT '2' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE <> ?                AND   ? LIKE REPLACE(SKV.SETUP_KEY_VALUE, '*', '%')                AND MG.CATEGORY_VALUE = ?              ) A         ORDER BY A.ORDER_FLAG ASC, REPLACE(A.SETUP_KEY_VALUE, '*', ?) ASC       ) T  WHERE ROWNUM = 1
+		SKV.SETUP_KEY_VALUE.1 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.1 = PHOTO,
+		SKV.SETUP_KEY_VALUE.2 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		SKV.SETUP_KEY_VALUE.3 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.2 = PHOTO,
+		A.DELEMETER_CHAR127 = 
+}
+{2017-07-19 11:14:05.925	DAS2	select	R2R  SELECT D.ITEM_NAME FROM SETUP_KEY_EXT_MST_R2R D INNER JOIN SETUP_KEY_MST_R2R K ON K.RAWID = D.SETUP_KEY_RAWID AND K.SETUP_KEY_NAME IN (  SELECT SK.SETUP_KEY_NAME FROM SETUP_KEY_MST_R2R SK INNER JOIN MODEL_GRP_MST_R2R MGM ON SK.RAWID = MGM.MODEL_GRP_SETUP_KEY_RAWID AND MGM.MODEL_GRP_NAME = ? ) ORDER BY D.SEQ, D.ITEM_NAME 
+		MGM.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.926	DAS2	select	R2R  SELECT M.MODEL_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE       , DECODE(MMT.ACTION_MODE_CD, '', MGLM.DEFAULT_ACTION_MODE_CD, MMT.ACTION_MODE_CD) AS ACTION_MODE_CD       , DECODE(MMT.EDITABLE_YN, '', MGLM.DEFAULT_EDITABLE_YN, MMT.EDITABLE_YN) AS EDITABLE_YN  FROM MODEL_GRP_MST_R2R MG  INNER JOIN MODEL_GRP_LNK_MST_R2R MGLM          ON MGLM.MODEL_GRP_RAWID = MG.RAWID  INNER JOIN MODEL_MST_R2R M          ON MGLM.MODEL_RAWID = M.RAWID  LEFT OUTER JOIN MODEL_MAP_TRX_R2R MMT          ON MMT.MODEL_GRP_LNK_RAWID = MGLM.RAWID AND MMT.MODEL_GRP_MAP_RAWID = ?  LEFT OUTER JOIN SETUP_KEY_VALUE_MST_R2R SKV          ON SKV.RAWID = MMT.SETUP_KEY_VALUE_RAWID  WHERE MG.MODEL_GRP_NAME = ? 
+		MMT.MODEL_GRP_MAP_RAWID = 20001,
+		MG.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.926	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 5}
+{2017-07-19 11:14:05.926	DAS2	select	R2R  SELECT RAWID, EXECUTION_KEY  FROM MODEL_GRP_EXE_TRX_R2R 	WHERE CATEGORY_VALUE = ?  	AND   MODEL_GRP_NAME  = ?  	AND   END_DTTS IS NULL 
+		CATEGORY_VALUE = PHOTO,
+		MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.926	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 6}
+{2017-07-19 11:14:05.926	DAS2	select	R2R  SELECT RAWID FROM MODEL_GRP_EXE_VAL_TRX_R2R 	WHERE MODEL_GRP_EXE_TRX_RAWID = ?  	AND   EXECUTION_VALUE  = ? 
+		MODEL_GRP_EXE_TRX_RAWID = 1,
+		EXECUTION_VALUE = PHOTO;AREA=PHOTO;EQP_MODEL=DEFAULT;
+}
+{2017-07-19 11:14:05.929	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.930	DAS2	select	R2R  SELECT T.MODEL_GRP_NAME, T.SETUP_KEY_VALUE, T.REPLY_YN, T.RAWID, T.CATEGORY_VALUE  FROM (         SELECT A.MODEL_GRP_NAME, A.SETUP_KEY_VALUE, A.REPLY_YN, A.RAWID, A.CATEGORY_VALUE, A.ORDER_FLAG         FROM (                SELECT '1' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE = ?                AND MG.CATEGORY_VALUE = ?                UNION ALL                SELECT '2' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE <> ?                AND   ? LIKE REPLACE(SKV.SETUP_KEY_VALUE, '*', '%')                AND MG.CATEGORY_VALUE = ?              ) A         ORDER BY A.ORDER_FLAG ASC, REPLACE(A.SETUP_KEY_VALUE, '*', ?) ASC       ) T  WHERE ROWNUM = 1
+		SKV.SETUP_KEY_VALUE.1 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.1 = PHOTO,
+		SKV.SETUP_KEY_VALUE.2 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		SKV.SETUP_KEY_VALUE.3 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.2 = PHOTO,
+		A.DELEMETER_CHAR127 = 
+}
+{2017-07-19 11:14:05.930	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:05.931	DAS2	select	R2R  SELECT D.ITEM_NAME FROM SETUP_KEY_EXT_MST_R2R D INNER JOIN SETUP_KEY_MST_R2R K ON K.RAWID = D.SETUP_KEY_RAWID AND K.SETUP_KEY_NAME IN (  SELECT SK.SETUP_KEY_NAME FROM SETUP_KEY_MST_R2R SK INNER JOIN MODEL_GRP_MST_R2R MGM ON SK.RAWID = MGM.MODEL_GRP_SETUP_KEY_RAWID AND MGM.MODEL_GRP_NAME = ? ) ORDER BY D.SEQ, D.ITEM_NAME 
+		MGM.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.931	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 3}
+{2017-07-19 11:14:05.931	DAS2	select	R2R  SELECT M.MODEL_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE       , DECODE(MMT.ACTION_MODE_CD, '', MGLM.DEFAULT_ACTION_MODE_CD, MMT.ACTION_MODE_CD) AS ACTION_MODE_CD       , DECODE(MMT.EDITABLE_YN, '', MGLM.DEFAULT_EDITABLE_YN, MMT.EDITABLE_YN) AS EDITABLE_YN  FROM MODEL_GRP_MST_R2R MG  INNER JOIN MODEL_GRP_LNK_MST_R2R MGLM          ON MGLM.MODEL_GRP_RAWID = MG.RAWID  INNER JOIN MODEL_MST_R2R M          ON MGLM.MODEL_RAWID = M.RAWID  LEFT OUTER JOIN MODEL_MAP_TRX_R2R MMT          ON MMT.MODEL_GRP_LNK_RAWID = MGLM.RAWID AND MMT.MODEL_GRP_MAP_RAWID = ?  LEFT OUTER JOIN SETUP_KEY_VALUE_MST_R2R SKV          ON SKV.RAWID = MMT.SETUP_KEY_VALUE_RAWID  WHERE MG.MODEL_GRP_NAME = ? 
+		MMT.MODEL_GRP_MAP_RAWID = 20001,
+		MG.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.932	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.933	DAS2	select	R2R  SELECT T.MODEL_GRP_NAME, T.SETUP_KEY_VALUE, T.REPLY_YN, T.RAWID, T.CATEGORY_VALUE  FROM (         SELECT A.MODEL_GRP_NAME, A.SETUP_KEY_VALUE, A.REPLY_YN, A.RAWID, A.CATEGORY_VALUE, A.ORDER_FLAG         FROM (                SELECT '1' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE = ?                AND MG.CATEGORY_VALUE = ?                UNION ALL                SELECT '2' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE <> ?                AND   ? LIKE REPLACE(SKV.SETUP_KEY_VALUE, '*', '%')                AND MG.CATEGORY_VALUE = ?              ) A         ORDER BY A.ORDER_FLAG ASC, REPLACE(A.SETUP_KEY_VALUE, '*', ?) ASC       ) T  WHERE ROWNUM = 1
+		SKV.SETUP_KEY_VALUE.1 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.1 = PHOTO,
+		SKV.SETUP_KEY_VALUE.2 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		SKV.SETUP_KEY_VALUE.3 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.2 = PHOTO,
+		A.DELEMETER_CHAR127 = 
+}
+{2017-07-19 11:14:05.933	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:05.933	DAS2	select	R2R  SELECT D.ITEM_NAME FROM SETUP_KEY_EXT_MST_R2R D INNER JOIN SETUP_KEY_MST_R2R K ON K.RAWID = D.SETUP_KEY_RAWID AND K.SETUP_KEY_NAME IN (  SELECT SK.SETUP_KEY_NAME FROM SETUP_KEY_MST_R2R SK INNER JOIN MODEL_GRP_MST_R2R MGM ON SK.RAWID = MGM.MODEL_GRP_SETUP_KEY_RAWID AND MGM.MODEL_GRP_NAME = ? ) ORDER BY D.SEQ, D.ITEM_NAME 
+		MGM.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.934	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 3}
+{2017-07-19 11:14:05.934	DAS2	select	R2R  SELECT M.MODEL_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE       , DECODE(MMT.ACTION_MODE_CD, '', MGLM.DEFAULT_ACTION_MODE_CD, MMT.ACTION_MODE_CD) AS ACTION_MODE_CD       , DECODE(MMT.EDITABLE_YN, '', MGLM.DEFAULT_EDITABLE_YN, MMT.EDITABLE_YN) AS EDITABLE_YN  FROM MODEL_GRP_MST_R2R MG  INNER JOIN MODEL_GRP_LNK_MST_R2R MGLM          ON MGLM.MODEL_GRP_RAWID = MG.RAWID  INNER JOIN MODEL_MST_R2R M          ON MGLM.MODEL_RAWID = M.RAWID  LEFT OUTER JOIN MODEL_MAP_TRX_R2R MMT          ON MMT.MODEL_GRP_LNK_RAWID = MGLM.RAWID AND MMT.MODEL_GRP_MAP_RAWID = ?  LEFT OUTER JOIN SETUP_KEY_VALUE_MST_R2R SKV          ON SKV.RAWID = MMT.SETUP_KEY_VALUE_RAWID  WHERE MG.MODEL_GRP_NAME = ? 
+		MMT.MODEL_GRP_MAP_RAWID = 20001,
+		MG.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.934	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.935	DAS2	select	R2R  SELECT RAWID, EXECUTION_KEY  FROM MODEL_EXE_TRX_R2R WHERE MODEL_GRP_NAME = ?  	AND   MODEL_NAME  = ?  	AND   END_DTTS IS NULL 
+		MODEL_GRP_NAME = PHOTO_COMMON_GROUP,
+		MODEL_NAME = PHOTO_COMMON
+}
+{2017-07-19 11:14:05.935	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:05.936	DAS2	select	R2R  SELECT RAWID FROM MODEL_EXE_VAL_TRX_R2R 	WHERE MODEL_EXE_TRX_RAWID = ?  	AND   EXECUTION_VALUE  IS NULL 
+		MODEL_EXE_TRX_RAWID = 10002
+}
+{2017-07-19 11:14:05.936	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 3}
+{2017-07-19 11:14:05.936	DAS2	select	R2R  SELECT  MAX(h.rawid) rawid     FROM LOT_HST_R2R h WHERE (h.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  AND  AREA = ?  AND  EQP_ID = ?  AND  LINE = ?  AND  LOT_ID = ?  AND  OPERATION_ID = ?  AND  PROCESS_ID = ?  AND  PRODUCT_ID = ?  AND  RECIPE_ID = ?  AND  USE_IN_PROCESS = ? 
+		AREA = PHOTO,
+		EQP_ID = 4PSK4510,
+		LINE = M14,
+		LOT_ID = TCNKM60,
+		OPERATION_ID = K9011000D,
+		PROCESS_ID = DE-4CN-H53R8D23B_Z590MAVERICK,
+		PRODUCT_ID = H53R8D23B_Z590MAVERICK,
+		RECIPE_ID = CNNMT_0A2,
+		USE_IN_PROCESS = N
+}
+{2017-07-19 11:14:05.936	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 4}
+{2017-07-19 11:14:05.937	DAS2	select	R2R  SELECT /*+ USE_NL(H EX) */       h.rawid, h.line, h.model_grp_name, h.model_grp_status, h.track_in_dtts, h.track_out_dtts, request_dtts, reply_dtts,        h.job_pre_dtts,        h.time_interval, h.use_in_process, h.area, h.product_id, h.process_id, h.operation_id, h.recipe_id, h.reticle_id, h.batch_id,        h.lot_id, h.eqp_id, h.eqp_rawid, h.sub_eqp_id, h.sub_eqp_rawid, h.unit_id, h.unit_rawid, h.lot_status,        h.lot_type_cd, h.track_in_cancel_yn, h.qty, h.rework_count, h.user_message, h.system_message,        h.exception_message, h.last_update_by, h.last_update_dtts, h.create_by, h.create_dtts,        h.unit, h.batch_zone, h.carrier_id,        ex.rawid exrawid, ex.item_name, ex.item_value  FROM  LOT_HST_R2R h LEFT OUTER JOIN  LOT_EXT_HST_R2R ex ON h.rawid = ex.lot_hst_rawid  WHERE h.rawid = ? AND (h.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001) 
+		RAWID = 51137096
+}
+{2017-07-19 11:14:05.939	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 5}
+{2017-07-19 11:14:05.940	DAS2	select	R2R SELECT /*+ USE_NL(INPUT EX) */  input.rawid, input.lot_hst_rawid, input.model_name, input.model_status, input.substrate_id, input.unit_id, input.unit,        input.input_name, input.input_value, input.input_dtts, input.default_value, input.lower_spec_limit,        input.upper_spec_limit, input.r2r_value, input.r2r_dtts, input.site_value, input.input_type_cd,        input.user_message, input.system_message, input.exception_message, input.last_update_by,        input.last_update_dtts, input.create_by, input.create_dtts, ex.rawid exrawid, ex.item_name,        ex.item_value   FROM INPUT_HST_R2R input   LEFT OUTER JOIN INPUT_EXT_HST_R2R ex    ON input.rawid = ex.input_hst_rawid AND    INPUT.CREATE_DTTS <= EX.CREATE_DTTS AND    ex.CREATE_DTTS <= SYSDATE + 0.001  WHERE input.lot_hst_rawid = ? AND (input.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY input.model_name, input.model_name, input.input_name, input.substrate_id, input.unit_id, input.rawid DESC 
+		input.lot_hst_rawid = 51137096
+}
+{2017-07-19 11:14:05.940	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 6}
+{2017-07-19 11:14:05.941	DAS2	select	R2R SELECT        output.rawid, output.lot_hst_rawid, output.model_name, output.model_status, output.measure_operation_id, output.unit,        output.measure_eqp_id, output.unit_id, output.substrate_id, output.output_name,        output.output_value, output.output_dtts,        output.target, output.lower_spec_limit, output.upper_spec_limit, output.output_type_cd,        output.user_message, output.system_message, output.exception_message, output.last_update_by, output.site_value,        output.last_update_dtts, output.create_by, output.create_dtts, ex.item_name, ex.item_value, ex.rawid exrawid   FROM OUTPUT_HST_R2R output LEFT OUTER JOIN OUTPUT_EXT_HST_R2R ex     ON output.rawid = ex.output_hst_rawid AND (ex.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  WHERE output.lot_hst_rawid = ? AND (output.output_type_cd = ? OR output.output_type_cd = ?) AND (output.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY output_name, model_name, substrate_id, output.create_dtts desc
+		output.lot_hst_rawid = 51137096,
+		output.output_type_cd1 = OPFF,
+		output.output_type_cd2 = OVFF
+}
+{2017-07-19 11:14:05.941	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 7}
+{2017-07-19 11:14:05.942	DAS2	select	R2R SELECT /*+ USE_NL(OUTPUT EX) */       output.rawid, output.lot_hst_rawid, output.model_name, output.model_status, output.measure_operation_id, output.unit,        output.measure_eqp_id, output.unit_id, output.substrate_id, output.output_name,        output.output_value, output.output_dtts,         output.target, output.lower_spec_limit, output.upper_spec_limit, output.output_type_cd,        output.user_message, output.system_message, output.exception_message, output.last_update_by, output.site_value,        output.last_update_dtts, output.create_by, output.create_dtts, ex.item_name, ex.item_value, ex.rawid exrawid   FROM OUTPUT_HST_R2R output LEFT OUTER JOIN OUTPUT_EXT_HST_R2R ex     ON output.rawid = ex.output_hst_rawid AND (ex.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  WHERE output.lot_hst_rawid = ? AND (output.output_type_cd = ? OR output.output_type_cd = ?) AND (output.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY output_name, model_name, substrate_id, output.create_dtts DESC 
+		output.lot_hst_rawid = 51137096,
+		output.output_type_cd1 = OPFB,
+		output.output_type_cd2 = OVFB
+}
+{2017-07-19 11:14:05.942	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 8}
+{2017-07-19 11:14:05.944	DAS2	select	R2R SELECT /*+ USE_NL(INQUIRY EX) */       inquiry.rawid, inquiry.lot_hst_rawid, inquiry.model_name, inquiry.model_status, inquiry.request_dtts, inquiry.unit,        inquiry.reply_dtts, inquiry.time_interval, inquiry.substrate_id, inquiry.unit_id, inquiry.input_name,        inquiry.r2r_value, inquiry.r2r_dtts, inquiry.r2r_default_value, inquiry.r2r_upper_limit,        inquiry.r2r_lower_limit, inquiry.r2r_status, inquiry.process_use_yn, inquiry.reply_yn, inquiry.job_pre_value,        inquiry.job_pre_dtts, inquiry.user_message, inquiry.system_message, inquiry.exception_message,        inquiry.input_value,        inquiry.last_update_by, inquiry.last_update_dtts, inquiry.create_by, inquiry.create_dtts,        ex.rawid exrawid, ex.item_name, ex.item_value  FROM INQUIRY_HST_R2R inquiry   LEFT OUTER JOIN INQUIRY_EXT_HST_R2R ex     ON inquiry.rawid = ex.inquiry_hst_rawid AND (ex.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  WHERE inquiry.lot_hst_rawid = ? AND (inquiry.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY input_name, model_name, substrate_id, inquiry.create_dtts DESC 
+		inquiry.lot_hst_rawid = 51137096
+}
+{2017-07-19 11:14:05.956	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 9}
+{2017-07-19 11:14:05.956	DAS2	select	R2R SELECT        predict.rawid, predict.lot_hst_rawid, predict.model_name, predict.model_status, predict.output_name, predict.predictor_name, predict.output_type_cd,        predict.predict_value, predict.predict_dtts, predict.substrate_id, predict.unit_id, predict.user_message,        predict.system_message, predict.exception_message, predict.last_update_by,        predict.last_update_dtts, predict.create_by, predict.create_dtts,        ex.item_name, ex.item_value, ex.rawid exrawid   FROM PREDICT_HST_R2R predict LEFT OUTER JOIN PREDICT_EXT_HST_R2R ex     ON predict.rawid = ex.predict_hst_rawid AND (ex.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  WHERE predict.lot_hst_rawid = ? AND (predict.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY output_name, model_name, predictor_name, substrate_id, predict.create_dtts DESC 
+		predict.lot_hst_rawid = 51137096
+}
+{2017-07-19 11:14:05.959	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 10}
+{2017-07-19 11:14:05.961	DAS2	update	R2R UPDATE LOT_HST_R2R SET LINE = ?,MODEL_GRP_NAME = ?,MODEL_GRP_STATUS = ?,REQUEST_DTTS = ?,REPLY_DTTS = ?,JOB_PRE_DTTS = ?,TIME_INTERVAL = ?,USE_IN_PROCESS = ?,AREA = ?,PRODUCT_ID = ?,PROCESS_ID = ?,OPERATION_ID = ?,RECIPE_ID = ?,RETICLE_ID = ?,LOT_ID = ?,EQP_ID = ?,EQP_RAWID = ?,LOT_TYPE_CD = ?,LAST_UPDATE_BY = ?,LAST_UPDATE_DTTS=SYSTIMESTAMP WHERE rawid = ?  AND (CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)
+		LINE = M14,
+		MODEL_GRP_NAME = PHOTO_COMMON_GROUP,
+		MODEL_GRP_STATUS = A,
+		REQUEST_DTTS = Wed Jul 19 11:14:02 KST 2017,
+		REPLY_DTTS = Wed Jul 19 11:14:04 KST 2017,
+		JOB_PRE_DTTS = Wed Jul 19 11:14:05 KST 2017,
+		TIME_INTERVAL = 1,
+		USE_IN_PROCESS = N,
+		AREA = PHOTO,
+		PRODUCT_ID = H53R8D23B_Z590MAVERICK,
+		PROCESS_ID = DE-4CN-H53R8D23B_Z590MAVERICK,
+		OPERATION_ID = K9011000D,
+		RECIPE_ID = CNNMT_0A2,
+		RETICLE_ID = DD05AANMT0A2,
+		LOT_ID = TCNKM60,
+		EQP_ID = 4PSK4510,
+		EQP_RAWID = 400102,
+		LOT_TYPE_CD = P,
+		LAST_UPDATE_BY = EIS,
+		LAST_UPDATE_DTTS+SYSTIMESTAMP = NULL
+		RAWID = 51137096}
+{2017-07-19 11:14:05.964	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 11}
+{2017-07-19 11:14:05.965	DAS2	queryBatch	R2R result=[-2, -2, -2, -2, -2, -2, -2, -2]}
+{2017-07-19 11:14:05.965	DAS2	queryBatch	R2R 
+ INSERT INTO LOT_EXT_HST_R2R
+ (      RAWID
+      , LOT_HST_RAWID
+      , ITEM_NAME
+      , ITEM_VALUE
+      , DATA_TYPE_CD
+      , SOURCE_CLASS_NAME
+      , SOURCE_INSTANCE_NAME
+      , USER_MESSAGE
+      , SYSTEM_MESSAGE
+      , EXCEPTION_MESSAGE
+      , LAST_UPDATE_BY
+      , LAST_UPDATE_DTTS
+      , CREATE_BY
+      , CREATE_DTTS
+ ) VALUES (                     
+        :rawid                  
+      , :lot_hst_rawid          
+      , :item_name              
+      , :item_value             
+      , :data_type_cd           
+      , :source_class_name      
+      , :source_instance_name   
+      , :user_message           
+      , :system_message         
+      , :exception_message      
+      , :last_update_by         
+      , SYSTIMESTAMP            
+      , :create_by              
+      , SYSTIMESTAMP            
+ ) 
+		RAWID = [Ljava.lang.String;@3852bf8e,
+		LOT_HST_RAWID = [Ljava.lang.String;@409e2085,
+		ITEM_NAME = [Ljava.lang.String;@4d691ce7,
+		ITEM_VALUE = [Ljava.lang.String;@2fe8a965,
+		DATA_TYPE_CD = [Ljava.lang.String;@53c93e75,
+		SOURCE_CLASS_NAME = [Ljava.lang.String;@41239e4c,
+		SOURCE_INSTANCE_NAME = [Ljava.lang.String;@96db0fd,
+		USER_MESSAGE = [Ljava.lang.String;@7eb6e1,
+		SYSTEM_MESSAGE = [Ljava.lang.String;@7f186e07,
+		EXCEPTION_MESSAGE = [Ljava.lang.String;@1cdfcec1,
+		LAST_UPDATE_BY = [Ljava.lang.String;@297eefb6,
+		CREATE_BY = [Ljava.lang.String;@4cabab02
+}
+{2017-07-19 11:14:05.968	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.969	DAS2	select	R2R  SELECT T.MODEL_GRP_NAME, T.SETUP_KEY_VALUE, T.REPLY_YN, T.RAWID, T.CATEGORY_VALUE  FROM (         SELECT A.MODEL_GRP_NAME, A.SETUP_KEY_VALUE, A.REPLY_YN, A.RAWID, A.CATEGORY_VALUE, A.ORDER_FLAG         FROM (                SELECT '1' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE = ?                AND MG.CATEGORY_VALUE = ?                UNION ALL                SELECT '2' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE <> ?                AND   ? LIKE REPLACE(SKV.SETUP_KEY_VALUE, '*', '%')                AND MG.CATEGORY_VALUE = ?              ) A         ORDER BY A.ORDER_FLAG ASC, REPLACE(A.SETUP_KEY_VALUE, '*', ?) ASC       ) T  WHERE ROWNUM = 1
+		SKV.SETUP_KEY_VALUE.1 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.1 = PHOTO,
+		SKV.SETUP_KEY_VALUE.2 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		SKV.SETUP_KEY_VALUE.3 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.2 = PHOTO,
+		A.DELEMETER_CHAR127 = 
+}
+{2017-07-19 11:14:05.970	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:05.970	DAS2	select	R2R  SELECT D.ITEM_NAME FROM SETUP_KEY_EXT_MST_R2R D INNER JOIN SETUP_KEY_MST_R2R K ON K.RAWID = D.SETUP_KEY_RAWID AND K.SETUP_KEY_NAME IN (  SELECT SK.SETUP_KEY_NAME FROM SETUP_KEY_MST_R2R SK INNER JOIN MODEL_GRP_MST_R2R MGM ON SK.RAWID = MGM.MODEL_GRP_SETUP_KEY_RAWID AND MGM.MODEL_GRP_NAME = ? ) ORDER BY D.SEQ, D.ITEM_NAME 
+		MGM.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.970	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 3}
+{2017-07-19 11:14:05.971	DAS2	select	R2R  SELECT M.MODEL_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE       , DECODE(MMT.ACTION_MODE_CD, '', MGLM.DEFAULT_ACTION_MODE_CD, MMT.ACTION_MODE_CD) AS ACTION_MODE_CD       , DECODE(MMT.EDITABLE_YN, '', MGLM.DEFAULT_EDITABLE_YN, MMT.EDITABLE_YN) AS EDITABLE_YN  FROM MODEL_GRP_MST_R2R MG  INNER JOIN MODEL_GRP_LNK_MST_R2R MGLM          ON MGLM.MODEL_GRP_RAWID = MG.RAWID  INNER JOIN MODEL_MST_R2R M          ON MGLM.MODEL_RAWID = M.RAWID  LEFT OUTER JOIN MODEL_MAP_TRX_R2R MMT          ON MMT.MODEL_GRP_LNK_RAWID = MGLM.RAWID AND MMT.MODEL_GRP_MAP_RAWID = ?  LEFT OUTER JOIN SETUP_KEY_VALUE_MST_R2R SKV          ON SKV.RAWID = MMT.SETUP_KEY_VALUE_RAWID  WHERE MG.MODEL_GRP_NAME = ? 
+		MMT.MODEL_GRP_MAP_RAWID = 20001,
+		MG.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.972	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.974	DAS2	queryBatch	R2R result=[-2]}
+{2017-07-19 11:14:05.974	DAS2	queryBatch	R2R 
+ UPDATE INQUIRY_HST_R2R
+ SET    LOT_HST_RAWID = NVL(:lot_hst_rawid, LOT_HST_RAWID) 
+      , MODEL_NAME = NVL(:model_name, MODEL_NAME) 
+      , MODEL_STATUS = NVL(:model_status, MODEL_STATUS) 
+      , REQUEST_DTTS = CASE WHEN NVL(:request_dtts1, '') = '' THEN REQUEST_DTTS ELSE TO_TIMESTAMP(:request_dtts2, 'YYYYMMDD HH24MISS.FF3') END 
+      , REPLY_DTTS = CASE WHEN NVL(:reply_dtts1, '') = '' THEN REPLY_DTTS ELSE TO_TIMESTAMP(:reply_dtts2, 'YYYYMMDD HH24MISS.FF3') END 
+      , TIME_INTERVAL = NVL(:time_interval, TIME_INTERVAL) 
+      , SUBSTRATE_ID = NVL(:substrate_id, SUBSTRATE_ID) 
+      , UNIT_ID = NVL(:unit_id, UNIT_ID) 
+      , UNIT = NVL(:unit, UNIT) 
+      , INPUT_VALUE = NVL(:input_value, INPUT_VALUE) 
+      , INPUT_NAME = NVL(:input_name, INPUT_NAME) 
+      , R2R_VALUE = NVL(:r2r_value, R2R_VALUE) 
+      , R2R_DTTS = CASE WHEN NVL(:r2r_dtts1, '') = '' THEN R2R_DTTS ELSE TO_TIMESTAMP(:r2r_dtts2, 'YYYYMMDD HH24MISS.FF3') END 
+      , R2R_DEFAULT_VALUE = NVL(:r2r_default_value, R2R_DEFAULT_VALUE) 
+      , R2R_UPPER_LIMIT = NVL(:r2r_upper_limit, R2R_UPPER_LIMIT) 
+      , R2R_LOWER_LIMIT = NVL(:r2r_lower_limit, R2R_LOWER_LIMIT) 
+      , R2R_STATUS = NVL(:r2r_status, R2R_STATUS) 
+      , PROCESS_USE_YN = NVL(:process_use_yn, PROCESS_USE_YN) 
+      , REPLY_YN = NVL(:reply_yn, REPLY_YN) 
+      , JOB_PRE_VALUE = NVL(:job_pre_value, JOB_PRE_VALUE) 
+      , JOB_PRE_DTTS = CASE WHEN NVL(:job_pre_dtts1, '') = '' THEN JOB_PRE_DTTS ELSE TO_TIMESTAMP(:job_pre_dtts2, 'YYYYMMDD HH24MISS.FF3') END 
+      , USER_MESSAGE = NVL(:user_message, USER_MESSAGE) 
+      , SYSTEM_MESSAGE = NVL(:system_message, SYSTEM_MESSAGE) 
+      , EXCEPTION_MESSAGE = NVL(:exception_message, EXCEPTION_MESSAGE) 
+      , LAST_UPDATE_BY = NVL(:last_update_by, LAST_UPDATE_BY) 
+      , LAST_UPDATE_DTTS = SYSTIMESTAMP 
+ WHERE  RAWID = :rawid 
+ AND (CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)
+		LOT_HST_RAWID = [Ljava.lang.String;@742d45fd,
+		MODEL_NAME = [Ljava.lang.String;@484e20a1,
+		MODEL_STATUS = [Ljava.lang.String;@1404f1d,
+		REQUEST_DTTS1 = [Ljava.lang.String;@2509f98f,
+		REQUEST_DTTS2 = [Ljava.lang.String;@31df2e48,
+		REPLY_DTTS1 = [Ljava.lang.String;@3357928c,
+		REPLY_DTTS2 = [Ljava.lang.String;@3a563fa9,
+		TIME_INTERVAL = [Ljava.lang.String;@746d8e2a,
+		SUBSTRATE_ID = [Ljava.lang.String;@4490a31d,
+		UNIT_ID = [Ljava.lang.String;@73c4e815,
+		UNIT = [Ljava.lang.String;@460f614,
+		INPUT_VALUE = [Ljava.lang.String;@79bb9d4a,
+		INPUT_NAME = [Ljava.lang.String;@c53a3b6,
+		R2R_VALUE = [Ljava.lang.String;@4721080c,
+		R2R_DTTS1 = [Ljava.lang.String;@4997704f,
+		R2R_DTTS2 = [Ljava.lang.String;@754e7847,
+		R2R_DEFAULT_VALUE = [Ljava.lang.String;@72bab97b,
+		R2R_UPPER_LIMIT = [Ljava.lang.String;@40e77515,
+		R2R_LOWER_LIMIT = [Ljava.lang.String;@1bb7d6fd,
+		R2R_STATUS = [Ljava.lang.String;@42838a42,
+		PROCESS_USE_YN = [Ljava.lang.String;@49ea152b,
+		REPLY_YN = [Ljava.lang.String;@2713dff6,
+		JOB_PRE_VALUE = [Ljava.lang.String;@9d4a385,
+		JOB_PRE_DTTS1 = [Ljava.lang.String;@673b75cd,
+		JOB_PRE_DTTS2 = [Ljava.lang.String;@70b31aad,
+		USER_MESSAGE = [Ljava.lang.String;@7e9c8da8,
+		SYSTEM_MESSAGE = [Ljava.lang.String;@58185188,
+		EXCEPTION_MESSAGE = [Ljava.lang.String;@2490e4e7,
+		LAST_UPDATE_BY = [Ljava.lang.String;@24a40c72,
+		RAWID = [Ljava.lang.String;@e2d2329
+}
