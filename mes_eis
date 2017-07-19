@@ -1,0 +1,366 @@
+[07-18 19:03:58 063] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:RECV]M10.TEST.EAP.FATEST4.EIS.EAPEIS_RV_SUBJECT_REQ:{ IsOpaque=0 OpaqueType=0 xmlData="<?xml version="1.0" encoding="utf-8"?><Envelop>
+  <Header>
+    <Facility>M10</Facility>
+    <Environment>TEST</Environment>
+    <Sender_Node>EAP</Sender_Node>
+    <Send_Process>FATEST4</Send_Process>
+    <Listen_Process>EIS</Listen_Process>
+    <Command>EAPEIS_RV_SUBJECT_REQ</Command>
+  </Header>
+  <Body>
+    <DATA DESTINATION="EIS" ORIGINATION="FATEST4" TID="20170718190359190" FACILITY="M10" EQUIPMENT_ID="FATEST4" SEQUENCE_NAME="EAPEIS_RV_SUBJECT_REQ">
+      <EAPEIS_RV_SUBJECT_REQ SUBJECT="EIS"/>
+    </DATA>
+  </Body>
+</Envelop>
+" }
+[07-18 19:03:58 066] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:EXEC] Run com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ
+[07-18 19:03:58 066] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Facility) (M10)
+[07-18 19:03:58 067] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Environment) (TEST)
+[07-18 19:03:58 067] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Sender_Node) (EAP)
+[07-18 19:03:58 067] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Send_Process) (FATEST4)
+[07-18 19:03:58 068] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Listen_Process) (EIS)
+[07-18 19:03:58 068] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Command) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 068] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ReplySubjectName) ()
+[07-18 19:03:58 069] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Factory) (M10)
+[07-18 19:03:58 069] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (DESTINATION) (EIS)
+[07-18 19:03:58 069] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ORIGINATION) (FATEST4)
+[07-18 19:03:58 070] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (TID) (20170718190359190)
+[07-18 19:03:58 070] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (FACILITY) (M10)
+[07-18 19:03:58 070] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EQUIPMENT_ID) (FATEST4)
+[07-18 19:03:58 071] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 071] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (DESTINATION) (EIS)
+[07-18 19:03:58 071] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ORIGINATION) (FATEST4)
+[07-18 19:03:58 072] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (TID) (20170718190359190)
+[07-18 19:03:58 072] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (FACILITY) (M10)
+[07-18 19:03:58 072] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EQUIPMENT_ID) (FATEST4)
+[07-18 19:03:58 073] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 073] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EAPEIS_RV_SUBJECT_REQ) (EAPEIS_RV_SUBJECT_REQM1020170718190358EAPEIS_RV_SUBJECT_REQ0EISEIS)
+[07-18 19:03:58 073] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SUBJECT) (EIS)
+[07-18 19:03:58 074] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 074] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Factory) (M10)
+[07-18 19:03:58 074] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (CurrentTime) (20170718190358)
+[07-18 19:03:58 074] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (sRecvTXNName) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 075] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (nRtnCode) (0)
+[07-18 19:03:58 075] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Operator) (EIS)
+[07-18 19:03:58 075] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Step) (EIS)
+[07-18 19:03:58 076] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Result) (0)
+[07-18 19:03:58 076] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ReturnCode) (0)
+[07-18 19:03:58 076] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ErrorMessage) ()
+[07-18 19:03:58 077] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (TxData) ()
+[07-18 19:03:58 077] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (TxData) ()
+[07-18 19:03:58 077] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (R2R) ()
+[07-18 19:03:58 078] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (R2R) ()
+[07-18 19:03:58 078] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (RP) ()
+[07-18 19:03:58 078] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (RP) ()
+[07-18 19:03:58 079] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EAPDATA) (
+      EAPEIS_RV_SUBJECT_REQ
+    )
+[07-18 19:03:58 079] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EAPEIS_RV_SUBJECT_REQ) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 079] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SUBJECT) (EIS)
+[07-18 19:03:58 080] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EAPEIS_RV_SUBJECT_REQ) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 080] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SUBJECT) (EIS)
+[07-18 19:03:58 080] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 081] [T:RvThread#18] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:03:58 082] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.infoTrace] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQL]SELECT Object(MES_EQPMAS_EXT-com.hynix.smartmes.core.eqp.dao.EquipmentMasterExtensionInfo) WHERE EQP_ID=?
+	from com.hynix.smartmes.common.database.Transaction.selectObjectEx(Transaction.java:1329)
+	from com.hynix.smartmes.core.eqp.impl.EquipmentMasterExtensionImpl.read(EquipmentMasterExtensionImpl.java:205)
+	from sun.reflect.GeneratedMethodAccessor430.invoke(null:-1)
+	from sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	from java.lang.reflect.Method.invoke(Method.java:597)
+	from com.hynix.smartmes.common.service.FunctionProxy.invoke(FunctionProxy.java:75)
+	from com.sun.proxy.$Proxy5.read(null:-1)
+	from com.hynix.smartmes.biz.common.m10.eqp.EquipmentManagement.selectByName(EquipmentManagement.java:140)
+	from com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:52)
+	from com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+[07-18 19:03:58 083] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLPARAM]FATEST4(String)
+[07-18 19:03:58 085] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLROW] 0 row selected in 2 millisecond
+[07-18 19:03:58 086] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]NotFoundSignal thrown while running core function [EquipmentMasterExtension.read]
+com.hynix.smartmes.common.exception.NotFoundSignal: [null].[EquipmentMasterExtensionInfo].[EquipmentMasterExtensionInfo - 0 row seleted with WHERE EQP_ID=? [FATEST4]]
+	at com.hynix.smartmes.common.database.Transaction.selectObjectEx(Transaction.java:1005)
+	at com.hynix.smartmes.common.database.Transaction.selectObjectEx(Transaction.java:1329)
+	at com.hynix.smartmes.core.eqp.impl.EquipmentMasterExtensionImpl.read(EquipmentMasterExtensionImpl.java:205)
+	at sun.reflect.GeneratedMethodAccessor430.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.hynix.smartmes.common.service.FunctionProxy.invoke(FunctionProxy.java:75)
+	at com.sun.proxy.$Proxy5.read(Unknown Source)
+	at com.hynix.smartmes.biz.common.m10.eqp.EquipmentManagement.selectByName(EquipmentManagement.java:140)
+	at com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:52)
+	at com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+	at com.hynix.smartmes.common.service.WorkerManager.onMessage(WorkerManager.java:339)
+	at Hynix.Middleware.CMessage.onEventOccurrence(CMessage.java:2985)
+	at Hynix.Middleware.CMessage.onMsgReal(CMessage.java:2893)
+	at Hynix.Middleware.CMessage.onMsg(CMessage.java:2692)
+	at com.tibco.tibrv.TibrvListener.invoke(TibrvListener.java:142)
+	at com.tibco.tibrv.TibrvImplQueueC.natDispatch(Native Method)
+	at com.tibco.tibrv.TibrvImplQueueC.dispatch(TibrvImplQueueC.java:44)
+	at com.tibco.tibrv.TibrvQueue.dispatch(TibrvQueue.java:301)
+	at com.tibco.tibrv.TibrvDispatcher.run(TibrvDispatcher.java:169)
+[07-18 19:03:58 087] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.infoTrace] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQL]SELECT ERR_MSG_CTN FROM MES_ERRMSG_COD WHERE ERR_CD=? AND MSG_ID=? AND LANG_CD=?
+	from com.hynix.smartmes.common.database.Transaction.selectString(Transaction.java:2107)
+	from com.hynix.smartmes.common.exception.ErrorMessageBuilder.makeErrorMessage(ErrorMessageBuilder.java:278)
+	from com.hynix.smartmes.common.exception.ErrorMessageBuilder.throwException(ErrorMessageBuilder.java:330)
+	from com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:54)
+	from com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+[07-18 19:03:58 087] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLPARAM]NT_MACHINE_NOTFOUND(String), 1(String), kor(String)
+[07-18 19:03:58 088] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLROW] 1 row selected in 1 millisecond
+[07-18 19:03:58 089] [T:RvThread#18] [L:DEBUG] [util.MessageUtil.debug] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][ReturnCode] = NT_MACHINE_NOTFOUND
+[07-18 19:03:58 089] [T:RvThread#18] [L:DEBUG] [util.MessageUtil.debug] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][ErrorMessage] = 장비를 찾을 수 없습니다. MachineId(FATEST4)
+[07-18 19:03:58 090] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]BizException created
+com.hynix.smartmes.common.exception.BizException: (NT_MACHINE_NOTFOUND)(null)(장비를 찾을 수 없습니다. MachineId(FATEST4))
+	at com.hynix.smartmes.common.exception.ErrorMessageBuilder.throwException(ErrorMessageBuilder.java:337)
+	at com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:54)
+	at com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+	at com.hynix.smartmes.common.service.WorkerManager.onMessage(WorkerManager.java:339)
+	at Hynix.Middleware.CMessage.onEventOccurrence(CMessage.java:2985)
+	at Hynix.Middleware.CMessage.onMsgReal(CMessage.java:2893)
+	at Hynix.Middleware.CMessage.onMsg(CMessage.java:2692)
+	at com.tibco.tibrv.TibrvListener.invoke(TibrvListener.java:142)
+	at com.tibco.tibrv.TibrvImplQueueC.natDispatch(Native Method)
+	at com.tibco.tibrv.TibrvImplQueueC.dispatch(TibrvImplQueueC.java:44)
+	at com.tibco.tibrv.TibrvQueue.dispatch(TibrvQueue.java:301)
+	at com.tibco.tibrv.TibrvDispatcher.run(TibrvDispatcher.java:169)
+[07-18 19:03:58 091] [T:RvThread#18] [L:INFO] [errorlog.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]BizException while handling [<?xml version="1.0" encoding="utf-8"?><Envelop>
+  <Header>
+    <Facility>M10</Facility>
+    <Environment>TEST</Environment>
+    <Sender_Node>EAP</Sender_Node>
+    <Send_Process>FATEST4</Send_Process>
+    <Listen_Process>EIS</Listen_Process>
+    <Command>EAPEIS_RV_SUBJECT_REQ</Command>
+  </Header>
+  <Body>
+    <DATA DESTINATION="EIS" ORIGINATION="FATEST4" TID="20170718190359190" FACILITY="M10" EQUIPMENT_ID="FATEST4" SEQUENCE_NAME="EAPEIS_RV_SUBJECT_REQ">
+      <EAPEIS_RV_SUBJECT_REQ SUBJECT="EIS"/>
+    </DATA>
+  </Body>
+</Envelop>
+]
+com.hynix.smartmes.common.exception.BizException: (NT_MACHINE_NOTFOUND)(null)(장비를 찾을 수 없습니다. MachineId(FATEST4))
+	at com.hynix.smartmes.common.exception.ErrorMessageBuilder.throwException(ErrorMessageBuilder.java:337)
+	at com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:54)
+	at com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+	at com.hynix.smartmes.common.service.WorkerManager.onMessage(WorkerManager.java:339)
+	at Hynix.Middleware.CMessage.onEventOccurrence(CMessage.java:2985)
+	at Hynix.Middleware.CMessage.onMsgReal(CMessage.java:2893)
+	at Hynix.Middleware.CMessage.onMsg(CMessage.java:2692)
+	at com.tibco.tibrv.TibrvListener.invoke(TibrvListener.java:142)
+	at com.tibco.tibrv.TibrvImplQueueC.natDispatch(Native Method)
+	at com.tibco.tibrv.TibrvImplQueueC.dispatch(TibrvImplQueueC.java:44)
+	at com.tibco.tibrv.TibrvQueue.dispatch(TibrvQueue.java:301)
+	at com.tibco.tibrv.TibrvDispatcher.run(TibrvDispatcher.java:169)
+[07-18 19:03:58 092] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:POSTACTION]EAPEIS_RV_SUBJECT_REQ:com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ:com.hynix.smartmes.biz.common.m10.util.EisPostActionHandler
+[07-18 19:03:58 093] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]PostAction for EAPEIS_RV_SUBJECT_REQ
+[07-18 19:03:58 093] [T:RvThread#18] [L:DEBUG] [command.EAPEIS_RV_SUBJECT_REQ.debug] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]## CheckInsertNCJOBERRORHISTORY  ## 
+[07-18 19:03:58 094] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.infoTrace] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQL]SELECT CONST_YN FROM MES_COMMONTYP_MAS WHERE COMMON_TYP = ?
+	from com.hynix.smartmes.common.database.Transaction.selectForStrArray(Transaction.java:1790)
+	from com.hynix.smartmes.biz.common.m10.transaction.LotTransaction.checkTypeDefinition(LotTransaction.java:344)
+	from com.hynix.smartmes.biz.common.m10.transaction.WIPTransaction_M10.CheckDataInListTypeDef(WIPTransaction_M10.java:403)
+	from com.hynix.smartmes.biz.common.m10.transaction.COMTransaction.CheckInsertNCJOBERRORHISTORY(COMTransaction.java:2535)
+	from com.hynix.smartmes.biz.common.m10.util.EisPostActionHandler.executePostAction(EisPostActionHandler.java:58)
+	from com.hynix.smartmes.common.service.Worker.execute(Worker.java:418)
+[07-18 19:03:58 094] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLPARAM]JobErrorMessage_Send_Type(String)
+[07-18 19:03:58 095] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLROW] 1 row selected in 0 millisecond
+[07-18 19:03:58 096] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.infoTrace] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQL]SELECT COUNT(*) FROM MES_COMMONTYP_DET WHERE COMMON_TYP = ? AND TYP_VAL = ?
+	from com.hynix.smartmes.common.database.Transaction.selectInt(Transaction.java:2035)
+	from com.hynix.smartmes.biz.common.m10.transaction.LotTransaction.checkTypeDefinition(LotTransaction.java:359)
+	from com.hynix.smartmes.biz.common.m10.transaction.WIPTransaction_M10.CheckDataInListTypeDef(WIPTransaction_M10.java:403)
+	from com.hynix.smartmes.biz.common.m10.transaction.COMTransaction.CheckInsertNCJOBERRORHISTORY(COMTransaction.java:2535)
+	from com.hynix.smartmes.biz.common.m10.util.EisPostActionHandler.executePostAction(EisPostActionHandler.java:58)
+	from com.hynix.smartmes.common.service.Worker.execute(Worker.java:418)
+[07-18 19:03:58 096] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLPARAM]JobErrorMessage_Send_Type(String), EAPEIS_RV_SUBJECT_REQ_(String)
+[07-18 19:03:58 097] [T:RvThread#18] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLROW] 1 row selected in 0 millisecond
+[07-18 19:03:58 098] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ]PostAction completed for EAPEIS_RV_SUBJECT_REQ
+[07-18 19:03:58 100] [T:RvThread#18] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003032][CN:EAPEIS_RV_SUBJECT_REQ][F:END]EAPEIS_RV_SUBJECT_REQ:EIS110000003032:com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ
+[07-18 19:05:44 912] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:RECV]M10.TEST.EAP.FATEST4.EIS.EAPEIS_RV_SUBJECT_REQ:{ IsOpaque=0 OpaqueType=0 xmlData="<?xml version="1.0" encoding="utf-8"?><Envelop>
+  <Header>
+    <Facility>M10</Facility>
+    <Environment>TEST</Environment>
+    <Sender_Node>EAP</Sender_Node>
+    <Send_Process>FATEST4</Send_Process>
+    <Listen_Process>EIS</Listen_Process>
+    <Command>EAPEIS_RV_SUBJECT_REQ</Command>
+  </Header>
+  <Body>
+    <DATA DESTINATION="EIS" ORIGINATION="FATEST4" TID="20170718190545925" FACILITY="M10" EQUIPMENT_ID="FATEST4" SEQUENCE_NAME="EAPEIS_RV_SUBJECT_REQ">
+      <EAPEIS_RV_SUBJECT_REQ SUBJECT="EIS"/>
+    </DATA>
+  </Body>
+</Envelop>
+" }
+[07-18 19:05:44 913] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:EXEC] Run com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ
+[07-18 19:05:44 914] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Facility) (M10)
+[07-18 19:05:44 914] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Environment) (TEST)
+[07-18 19:05:44 914] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Sender_Node) (EAP)
+[07-18 19:05:44 915] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Send_Process) (FATEST4)
+[07-18 19:05:44 915] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Listen_Process) (EIS)
+[07-18 19:05:44 915] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Command) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 916] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ReplySubjectName) ()
+[07-18 19:05:44 916] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Factory) (M10)
+[07-18 19:05:44 916] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (DESTINATION) (EIS)
+[07-18 19:05:44 917] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ORIGINATION) (FATEST4)
+[07-18 19:05:44 917] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (TID) (20170718190545925)
+[07-18 19:05:44 917] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (FACILITY) (M10)
+[07-18 19:05:44 917] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EQUIPMENT_ID) (FATEST4)
+[07-18 19:05:44 918] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 918] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (DESTINATION) (EIS)
+[07-18 19:05:44 918] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ORIGINATION) (FATEST4)
+[07-18 19:05:44 919] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (TID) (20170718190545925)
+[07-18 19:05:44 919] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (FACILITY) (M10)
+[07-18 19:05:44 919] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EQUIPMENT_ID) (FATEST4)
+[07-18 19:05:44 920] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 920] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EAPEIS_RV_SUBJECT_REQ) (EAPEIS_RV_SUBJECT_REQM1020170718190544EAPEIS_RV_SUBJECT_REQ0EISEIS)
+[07-18 19:05:44 920] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SUBJECT) (EIS)
+[07-18 19:05:44 921] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 921] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Factory) (M10)
+[07-18 19:05:44 921] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (CurrentTime) (20170718190544)
+[07-18 19:05:44 922] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (sRecvTXNName) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 922] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (nRtnCode) (0)
+[07-18 19:05:44 922] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Operator) (EIS)
+[07-18 19:05:44 923] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Step) (EIS)
+[07-18 19:05:44 923] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (Result) (0)
+[07-18 19:05:44 923] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ReturnCode) (0)
+[07-18 19:05:44 924] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (ErrorMessage) ()
+[07-18 19:05:44 924] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (TxData) ()
+[07-18 19:05:44 924] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (TxData) ()
+[07-18 19:05:44 925] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (R2R) ()
+[07-18 19:05:44 925] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (R2R) ()
+[07-18 19:05:44 925] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (RP) ()
+[07-18 19:05:44 926] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (RP) ()
+[07-18 19:05:44 926] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EAPDATA) (
+      EAPEIS_RV_SUBJECT_REQ
+    )
+[07-18 19:05:44 926] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EAPEIS_RV_SUBJECT_REQ) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 927] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SUBJECT) (EIS)
+[07-18 19:05:44 927] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (EAPEIS_RV_SUBJECT_REQ) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 927] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SUBJECT) (EIS)
+[07-18 19:05:44 927] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 928] [T:RvThread#1] [L:INFO] [util.MessageUtil.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]register and set value into Context (SEQUENCE_NAME) (EAPEIS_RV_SUBJECT_REQ)
+[07-18 19:05:44 929] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.infoTrace] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQL]SELECT Object(MES_EQPMAS_EXT-com.hynix.smartmes.core.eqp.dao.EquipmentMasterExtensionInfo) WHERE EQP_ID=?
+	from com.hynix.smartmes.common.database.Transaction.selectObjectEx(Transaction.java:1329)
+	from com.hynix.smartmes.core.eqp.impl.EquipmentMasterExtensionImpl.read(EquipmentMasterExtensionImpl.java:205)
+	from sun.reflect.GeneratedMethodAccessor430.invoke(null:-1)
+	from sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	from java.lang.reflect.Method.invoke(Method.java:597)
+	from com.hynix.smartmes.common.service.FunctionProxy.invoke(FunctionProxy.java:75)
+	from com.sun.proxy.$Proxy5.read(null:-1)
+	from com.hynix.smartmes.biz.common.m10.eqp.EquipmentManagement.selectByName(EquipmentManagement.java:140)
+	from com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:52)
+	from com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+[07-18 19:05:44 929] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLPARAM]FATEST4(String)
+[07-18 19:05:44 932] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLROW] 0 row selected in 2 millisecond
+[07-18 19:05:44 933] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]NotFoundSignal thrown while running core function [EquipmentMasterExtension.read]
+com.hynix.smartmes.common.exception.NotFoundSignal: [null].[EquipmentMasterExtensionInfo].[EquipmentMasterExtensionInfo - 0 row seleted with WHERE EQP_ID=? [FATEST4]]
+	at com.hynix.smartmes.common.database.Transaction.selectObjectEx(Transaction.java:1005)
+	at com.hynix.smartmes.common.database.Transaction.selectObjectEx(Transaction.java:1329)
+	at com.hynix.smartmes.core.eqp.impl.EquipmentMasterExtensionImpl.read(EquipmentMasterExtensionImpl.java:205)
+	at sun.reflect.GeneratedMethodAccessor430.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.hynix.smartmes.common.service.FunctionProxy.invoke(FunctionProxy.java:75)
+	at com.sun.proxy.$Proxy5.read(Unknown Source)
+	at com.hynix.smartmes.biz.common.m10.eqp.EquipmentManagement.selectByName(EquipmentManagement.java:140)
+	at com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:52)
+	at com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+	at com.hynix.smartmes.common.service.WorkerManager.onMessage(WorkerManager.java:339)
+	at Hynix.Middleware.CMessage.onEventOccurrence(CMessage.java:2985)
+	at Hynix.Middleware.CMessage.onMsgReal(CMessage.java:2893)
+	at Hynix.Middleware.CMessage.onMsg(CMessage.java:2692)
+	at com.tibco.tibrv.TibrvListener.invoke(TibrvListener.java:142)
+	at com.tibco.tibrv.TibrvImplQueueC.natDispatch(Native Method)
+	at com.tibco.tibrv.TibrvImplQueueC.dispatch(TibrvImplQueueC.java:44)
+	at com.tibco.tibrv.TibrvQueue.dispatch(TibrvQueue.java:301)
+	at com.tibco.tibrv.TibrvDispatcher.run(TibrvDispatcher.java:169)
+[07-18 19:05:44 933] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.infoTrace] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQL]SELECT ERR_MSG_CTN FROM MES_ERRMSG_COD WHERE ERR_CD=? AND MSG_ID=? AND LANG_CD=?
+	from com.hynix.smartmes.common.database.Transaction.selectString(Transaction.java:2107)
+	from com.hynix.smartmes.common.exception.ErrorMessageBuilder.makeErrorMessage(ErrorMessageBuilder.java:278)
+	from com.hynix.smartmes.common.exception.ErrorMessageBuilder.throwException(ErrorMessageBuilder.java:330)
+	from com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:54)
+	from com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+[07-18 19:05:44 934] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLPARAM]NT_MACHINE_NOTFOUND(String), 1(String), kor(String)
+[07-18 19:05:44 935] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLROW] 1 row selected in 1 millisecond
+[07-18 19:05:44 935] [T:RvThread#1] [L:DEBUG] [util.MessageUtil.debug] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][ReturnCode] = NT_MACHINE_NOTFOUND
+[07-18 19:05:44 936] [T:RvThread#1] [L:DEBUG] [util.MessageUtil.debug] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][ErrorMessage] = 장비를 찾을 수 없습니다. MachineId(FATEST4)
+[07-18 19:05:44 936] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]BizException created
+com.hynix.smartmes.common.exception.BizException: (NT_MACHINE_NOTFOUND)(null)(장비를 찾을 수 없습니다. MachineId(FATEST4))
+	at com.hynix.smartmes.common.exception.ErrorMessageBuilder.throwException(ErrorMessageBuilder.java:337)
+	at com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:54)
+	at com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+	at com.hynix.smartmes.common.service.WorkerManager.onMessage(WorkerManager.java:339)
+	at Hynix.Middleware.CMessage.onEventOccurrence(CMessage.java:2985)
+	at Hynix.Middleware.CMessage.onMsgReal(CMessage.java:2893)
+	at Hynix.Middleware.CMessage.onMsg(CMessage.java:2692)
+	at com.tibco.tibrv.TibrvListener.invoke(TibrvListener.java:142)
+	at com.tibco.tibrv.TibrvImplQueueC.natDispatch(Native Method)
+	at com.tibco.tibrv.TibrvImplQueueC.dispatch(TibrvImplQueueC.java:44)
+	at com.tibco.tibrv.TibrvQueue.dispatch(TibrvQueue.java:301)
+	at com.tibco.tibrv.TibrvDispatcher.run(TibrvDispatcher.java:169)
+[07-18 19:05:44 937] [T:RvThread#1] [L:INFO] [errorlog.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]BizException while handling [<?xml version="1.0" encoding="utf-8"?><Envelop>
+  <Header>
+    <Facility>M10</Facility>
+    <Environment>TEST</Environment>
+    <Sender_Node>EAP</Sender_Node>
+    <Send_Process>FATEST4</Send_Process>
+    <Listen_Process>EIS</Listen_Process>
+    <Command>EAPEIS_RV_SUBJECT_REQ</Command>
+  </Header>
+  <Body>
+    <DATA DESTINATION="EIS" ORIGINATION="FATEST4" TID="20170718190545925" FACILITY="M10" EQUIPMENT_ID="FATEST4" SEQUENCE_NAME="EAPEIS_RV_SUBJECT_REQ">
+      <EAPEIS_RV_SUBJECT_REQ SUBJECT="EIS"/>
+    </DATA>
+  </Body>
+</Envelop>
+]
+com.hynix.smartmes.common.exception.BizException: (NT_MACHINE_NOTFOUND)(null)(장비를 찾을 수 없습니다. MachineId(FATEST4))
+	at com.hynix.smartmes.common.exception.ErrorMessageBuilder.throwException(ErrorMessageBuilder.java:337)
+	at com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ.execute(EAPEIS_RV_SUBJECT_REQ.java:54)
+	at com.hynix.smartmes.common.service.Worker.execute(Worker.java:254)
+	at com.hynix.smartmes.common.service.WorkerManager.onMessage(WorkerManager.java:339)
+	at Hynix.Middleware.CMessage.onEventOccurrence(CMessage.java:2985)
+	at Hynix.Middleware.CMessage.onMsgReal(CMessage.java:2893)
+	at Hynix.Middleware.CMessage.onMsg(CMessage.java:2692)
+	at com.tibco.tibrv.TibrvListener.invoke(TibrvListener.java:142)
+	at com.tibco.tibrv.TibrvImplQueueC.natDispatch(Native Method)
+	at com.tibco.tibrv.TibrvImplQueueC.dispatch(TibrvImplQueueC.java:44)
+	at com.tibco.tibrv.TibrvQueue.dispatch(TibrvQueue.java:301)
+	at com.tibco.tibrv.TibrvDispatcher.run(TibrvDispatcher.java:169)
+[07-18 19:05:44 938] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:POSTACTION]EAPEIS_RV_SUBJECT_REQ:com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ:com.hynix.smartmes.biz.common.m10.util.EisPostActionHandler
+[07-18 19:05:44 938] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]PostAction for EAPEIS_RV_SUBJECT_REQ
+[07-18 19:05:44 939] [T:RvThread#1] [L:DEBUG] [command.EAPEIS_RV_SUBJECT_REQ.debug] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]## CheckInsertNCJOBERRORHISTORY  ## 
+[07-18 19:05:44 939] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.infoTrace] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQL]SELECT CONST_YN FROM MES_COMMONTYP_MAS WHERE COMMON_TYP = ?
+	from com.hynix.smartmes.common.database.Transaction.selectForStrArray(Transaction.java:1790)
+	from com.hynix.smartmes.biz.common.m10.transaction.LotTransaction.checkTypeDefinition(LotTransaction.java:344)
+	from com.hynix.smartmes.biz.common.m10.transaction.WIPTransaction_M10.CheckDataInListTypeDef(WIPTransaction_M10.java:403)
+	from com.hynix.smartmes.biz.common.m10.transaction.COMTransaction.CheckInsertNCJOBERRORHISTORY(COMTransaction.java:2535)
+	from com.hynix.smartmes.biz.common.m10.util.EisPostActionHandler.executePostAction(EisPostActionHandler.java:58)
+	from com.hynix.smartmes.common.service.Worker.execute(Worker.java:418)
+[07-18 19:05:44 940] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLPARAM]JobErrorMessage_Send_Type(String)
+[07-18 19:05:44 941] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLROW] 1 row selected in 1 millisecond
+[07-18 19:05:44 941] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.infoTrace] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQL]SELECT COUNT(*) FROM MES_COMMONTYP_DET WHERE COMMON_TYP = ? AND TYP_VAL = ?
+	from com.hynix.smartmes.common.database.Transaction.selectInt(Transaction.java:2035)
+	from com.hynix.smartmes.biz.common.m10.transaction.LotTransaction.checkTypeDefinition(LotTransaction.java:359)
+	from com.hynix.smartmes.biz.common.m10.transaction.WIPTransaction_M10.CheckDataInListTypeDef(WIPTransaction_M10.java:403)
+	from com.hynix.smartmes.biz.common.m10.transaction.COMTransaction.CheckInsertNCJOBERRORHISTORY(COMTransaction.java:2535)
+	from com.hynix.smartmes.biz.common.m10.util.EisPostActionHandler.executePostAction(EisPostActionHandler.java:58)
+	from com.hynix.smartmes.common.service.Worker.execute(Worker.java:418)
+[07-18 19:05:44 942] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLPARAM]JobErrorMessage_Send_Type(String), EAPEIS_RV_SUBJECT_REQ_(String)
+[07-18 19:05:44 943] [T:RvThread#1] [L:INFO] [impl.EquipmentMasterExtensionImpl.info] [PKG:CORE][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:SQLROW] 1 row selected in 1 millisecond
+[07-18 19:05:44 944] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ]PostAction completed for EAPEIS_RV_SUBJECT_REQ
+[07-18 19:05:44 945] [T:RvThread#1] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003033][CN:EAPEIS_RV_SUBJECT_REQ][F:END]EAPEIS_RV_SUBJECT_REQ:EIS110000003033:com.hynix.smartmes.biz.eis.m10.command.EAPEIS_RV_SUBJECT_REQ
+[07-18 19:12:51 356] [T:RvThread#20] [L:INFO] [command.EAPEIS_RV_SUBJECT_REQ.info] [PKG:BIZ][TXN:EIS110000003034][CN:EAPEIS_RV_SUBJECT_REQ][F:RECV]M10.TEST.EAP.FATEST4.EIS.EAPEIS_RV_SUBJECT_REQ:{ IsOpaque=0 OpaqueType=0 xmlData="<?xml version="1.0" encoding="utf-8"?><Envelop>
+  <Header>
+    <Facility>M10</Facility>
+    <Environment>TEST</Environment>
+    <Sender_Node>EAP</Sender_Node>
+    <Send_Process>FATEST4</Send_Process>
+    <Listen_Process>EIS</Listen_Process>
+    <Command>EAPEIS_RV_SUBJECT_REQ</Command>
+  </Header>
+  <Body>
+    <DATA DESTINATION="EIS" ORIGINATION="FATEST4" TID="20170718191252388" FACILITY="M10" EQUIPMENT_ID="FATEST4" SEQUENCE_NAME="EAPEIS_RV_SUBJECT_REQ">
+      <EAPEIS_RV_SUBJECT_REQ SUBJECT="EIS"/>
+    </DATA>
+  </Body>
+</Envelop>
+" }
