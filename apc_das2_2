@@ -1,0 +1,192 @@
+{2017-07-19 11:14:05.975	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.976	DAS2	select	R2R  SELECT T.MODEL_GRP_NAME, T.SETUP_KEY_VALUE, T.REPLY_YN, T.RAWID, T.CATEGORY_VALUE  FROM (         SELECT A.MODEL_GRP_NAME, A.SETUP_KEY_VALUE, A.REPLY_YN, A.RAWID, A.CATEGORY_VALUE, A.ORDER_FLAG         FROM (                SELECT '1' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE = ?                AND MG.CATEGORY_VALUE = ?                UNION ALL                SELECT '2' AS ORDER_FLAG, MG.MODEL_GRP_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE                     , DECODE(MGMT.REPLY_YN,'',MG.DEFAULT_REPLY_YN, MGMT.REPLY_YN) AS REPLY_YN                     , MGMT.RAWID AS RAWID                     , MG.CATEGORY_VALUE AS CATEGORY_VALUE                FROM MODEL_GRP_MST_R2R MG                INNER JOIN MODEL_GRP_MAP_TRX_R2R MGMT ON MG.RAWID = MGMT.MODEL_GRP_RAWID                INNER JOIN SETUP_KEY_VALUE_MST_R2R SKV  ON SKV.RAWID = MGMT.SETUP_KEY_VALUE_RAWID                WHERE SKV.SETUP_KEY_VALUE <> ?                AND   ? LIKE REPLACE(SKV.SETUP_KEY_VALUE, '*', '%')                AND MG.CATEGORY_VALUE = ?              ) A         ORDER BY A.ORDER_FLAG ASC, REPLACE(A.SETUP_KEY_VALUE, '*', ?) ASC       ) T  WHERE ROWNUM = 1
+		SKV.SETUP_KEY_VALUE.1 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.1 = PHOTO,
+		SKV.SETUP_KEY_VALUE.2 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		SKV.SETUP_KEY_VALUE.3 = AREA=PHOTO;EQP_MODEL=DEFAULT;,
+		MG.CATEGORY_VALUE.2 = PHOTO,
+		A.DELEMETER_CHAR127 = 
+}
+{2017-07-19 11:14:05.977	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:05.977	DAS2	select	R2R  SELECT D.ITEM_NAME FROM SETUP_KEY_EXT_MST_R2R D INNER JOIN SETUP_KEY_MST_R2R K ON K.RAWID = D.SETUP_KEY_RAWID AND K.SETUP_KEY_NAME IN (  SELECT SK.SETUP_KEY_NAME FROM SETUP_KEY_MST_R2R SK INNER JOIN MODEL_GRP_MST_R2R MGM ON SK.RAWID = MGM.MODEL_GRP_SETUP_KEY_RAWID AND MGM.MODEL_GRP_NAME = ? ) ORDER BY D.SEQ, D.ITEM_NAME 
+		MGM.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.977	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 3}
+{2017-07-19 11:14:05.977	DAS2	select	R2R  SELECT M.MODEL_NAME, SKV.SETUP_KEY_VALUE AS SETUP_KEY_VALUE       , DECODE(MMT.ACTION_MODE_CD, '', MGLM.DEFAULT_ACTION_MODE_CD, MMT.ACTION_MODE_CD) AS ACTION_MODE_CD       , DECODE(MMT.EDITABLE_YN, '', MGLM.DEFAULT_EDITABLE_YN, MMT.EDITABLE_YN) AS EDITABLE_YN  FROM MODEL_GRP_MST_R2R MG  INNER JOIN MODEL_GRP_LNK_MST_R2R MGLM          ON MGLM.MODEL_GRP_RAWID = MG.RAWID  INNER JOIN MODEL_MST_R2R M          ON MGLM.MODEL_RAWID = M.RAWID  LEFT OUTER JOIN MODEL_MAP_TRX_R2R MMT          ON MMT.MODEL_GRP_LNK_RAWID = MGLM.RAWID AND MMT.MODEL_GRP_MAP_RAWID = ?  LEFT OUTER JOIN SETUP_KEY_VALUE_MST_R2R SKV          ON SKV.RAWID = MMT.SETUP_KEY_VALUE_RAWID  WHERE MG.MODEL_GRP_NAME = ? 
+		MMT.MODEL_GRP_MAP_RAWID = 20001,
+		MG.MODEL_GRP_NAME = PHOTO_COMMON_GROUP
+}
+{2017-07-19 11:14:05.978	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:05.979	DAS2	select	R2R  SELECT  MAX(h.rawid) rawid     FROM LOT_HST_R2R h WHERE (h.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  AND  RAWID = ? 
+		RAWID = 51137096
+}
+{2017-07-19 11:14:05.979	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:05.981	DAS2	select	R2R  SELECT /*+ USE_NL(H EX) */       h.rawid, h.line, h.model_grp_name, h.model_grp_status, h.track_in_dtts, h.track_out_dtts, request_dtts, reply_dtts,        h.job_pre_dtts,        h.time_interval, h.use_in_process, h.area, h.product_id, h.process_id, h.operation_id, h.recipe_id, h.reticle_id, h.batch_id,        h.lot_id, h.eqp_id, h.eqp_rawid, h.sub_eqp_id, h.sub_eqp_rawid, h.unit_id, h.unit_rawid, h.lot_status,        h.lot_type_cd, h.track_in_cancel_yn, h.qty, h.rework_count, h.user_message, h.system_message,        h.exception_message, h.last_update_by, h.last_update_dtts, h.create_by, h.create_dtts,        h.unit, h.batch_zone, h.carrier_id,        ex.rawid exrawid, ex.item_name, ex.item_value  FROM  LOT_HST_R2R h LEFT OUTER JOIN  LOT_EXT_HST_R2R ex ON h.rawid = ex.lot_hst_rawid  WHERE h.rawid = ? AND (h.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001) 
+		RAWID = 51137096
+}
+{2017-07-19 11:14:05.984	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 3}
+{2017-07-19 11:14:05.984	DAS2	select	R2R SELECT /*+ USE_NL(INPUT EX) */  input.rawid, input.lot_hst_rawid, input.model_name, input.model_status, input.substrate_id, input.unit_id, input.unit,        input.input_name, input.input_value, input.input_dtts, input.default_value, input.lower_spec_limit,        input.upper_spec_limit, input.r2r_value, input.r2r_dtts, input.site_value, input.input_type_cd,        input.user_message, input.system_message, input.exception_message, input.last_update_by,        input.last_update_dtts, input.create_by, input.create_dtts, ex.rawid exrawid, ex.item_name,        ex.item_value   FROM INPUT_HST_R2R input   LEFT OUTER JOIN INPUT_EXT_HST_R2R ex    ON input.rawid = ex.input_hst_rawid AND    INPUT.CREATE_DTTS <= EX.CREATE_DTTS AND    ex.CREATE_DTTS <= SYSDATE + 0.001  WHERE input.lot_hst_rawid = ? AND (input.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY input.model_name, input.model_name, input.input_name, input.substrate_id, input.unit_id, input.rawid DESC 
+		input.lot_hst_rawid = 51137096
+}
+{2017-07-19 11:14:05.985	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 4}
+{2017-07-19 11:14:05.985	DAS2	select	R2R SELECT        output.rawid, output.lot_hst_rawid, output.model_name, output.model_status, output.measure_operation_id, output.unit,        output.measure_eqp_id, output.unit_id, output.substrate_id, output.output_name,        output.output_value, output.output_dtts,        output.target, output.lower_spec_limit, output.upper_spec_limit, output.output_type_cd,        output.user_message, output.system_message, output.exception_message, output.last_update_by, output.site_value,        output.last_update_dtts, output.create_by, output.create_dtts, ex.item_name, ex.item_value, ex.rawid exrawid   FROM OUTPUT_HST_R2R output LEFT OUTER JOIN OUTPUT_EXT_HST_R2R ex     ON output.rawid = ex.output_hst_rawid AND (ex.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  WHERE output.lot_hst_rawid = ? AND (output.output_type_cd = ? OR output.output_type_cd = ?) AND (output.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY output_name, model_name, substrate_id, output.create_dtts desc
+		output.lot_hst_rawid = 51137096,
+		output.output_type_cd1 = OPFF,
+		output.output_type_cd2 = OVFF
+}
+{2017-07-19 11:14:05.985	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 5}
+{2017-07-19 11:14:05.986	DAS2	select	R2R SELECT /*+ USE_NL(OUTPUT EX) */       output.rawid, output.lot_hst_rawid, output.model_name, output.model_status, output.measure_operation_id, output.unit,        output.measure_eqp_id, output.unit_id, output.substrate_id, output.output_name,        output.output_value, output.output_dtts,         output.target, output.lower_spec_limit, output.upper_spec_limit, output.output_type_cd,        output.user_message, output.system_message, output.exception_message, output.last_update_by, output.site_value,        output.last_update_dtts, output.create_by, output.create_dtts, ex.item_name, ex.item_value, ex.rawid exrawid   FROM OUTPUT_HST_R2R output LEFT OUTER JOIN OUTPUT_EXT_HST_R2R ex     ON output.rawid = ex.output_hst_rawid AND (ex.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  WHERE output.lot_hst_rawid = ? AND (output.output_type_cd = ? OR output.output_type_cd = ?) AND (output.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY output_name, model_name, substrate_id, output.create_dtts DESC 
+		output.lot_hst_rawid = 51137096,
+		output.output_type_cd1 = OPFB,
+		output.output_type_cd2 = OVFB
+}
+{2017-07-19 11:14:05.986	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 6}
+{2017-07-19 11:14:05.988	DAS2	select	R2R SELECT /*+ USE_NL(INQUIRY EX) */       inquiry.rawid, inquiry.lot_hst_rawid, inquiry.model_name, inquiry.model_status, inquiry.request_dtts, inquiry.unit,        inquiry.reply_dtts, inquiry.time_interval, inquiry.substrate_id, inquiry.unit_id, inquiry.input_name,        inquiry.r2r_value, inquiry.r2r_dtts, inquiry.r2r_default_value, inquiry.r2r_upper_limit,        inquiry.r2r_lower_limit, inquiry.r2r_status, inquiry.process_use_yn, inquiry.reply_yn, inquiry.job_pre_value,        inquiry.job_pre_dtts, inquiry.user_message, inquiry.system_message, inquiry.exception_message,        inquiry.input_value,        inquiry.last_update_by, inquiry.last_update_dtts, inquiry.create_by, inquiry.create_dtts,        ex.rawid exrawid, ex.item_name, ex.item_value  FROM INQUIRY_HST_R2R inquiry   LEFT OUTER JOIN INQUIRY_EXT_HST_R2R ex     ON inquiry.rawid = ex.inquiry_hst_rawid AND (ex.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  WHERE inquiry.lot_hst_rawid = ? AND (inquiry.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  AND inquiry.create_dtts >= (SELECT request_dtts FROM LOT_HST_R2R where rawid = inquiry.lot_hst_rawid)  ORDER BY input_name, model_name, substrate_id, inquiry.create_dtts DESC 
+		inquiry.lot_hst_rawid = 51137096
+}
+{2017-07-19 11:14:06.000	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 7}
+{2017-07-19 11:14:06.000	DAS2	select	R2R SELECT        predict.rawid, predict.lot_hst_rawid, predict.model_name, predict.model_status, predict.output_name, predict.predictor_name, predict.output_type_cd,        predict.predict_value, predict.predict_dtts, predict.substrate_id, predict.unit_id, predict.user_message,        predict.system_message, predict.exception_message, predict.last_update_by,        predict.last_update_dtts, predict.create_by, predict.create_dtts,        ex.item_name, ex.item_value, ex.rawid exrawid   FROM PREDICT_HST_R2R predict LEFT OUTER JOIN PREDICT_EXT_HST_R2R ex     ON predict.rawid = ex.predict_hst_rawid AND (ex.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  WHERE predict.lot_hst_rawid = ? AND (predict.CREATE_DTTS BETWEEN SYSDATE - 30 AND SYSDATE + 0.001)  ORDER BY output_name, model_name, predictor_name, substrate_id, predict.create_dtts DESC 
+		predict.lot_hst_rawid = 51137096
+}
+{2017-07-19 11:14:06.164	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:06.165	DAS2	select	R2R  SELECT NAME AS EQP_ID      FROM CODE_MST_PP   WHERE CATEGORY = 'R2R_EQ_CONVERT'              AND CODE = :EQP_ID  
+		EQP_ID = 
+}
+{2017-07-19 11:14:06.224	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:06.225	DAS2	select	R2R  SELECT NAME AS EQP_ID      FROM CODE_MST_PP   WHERE CATEGORY = 'R2R_EQ_CONVERT'              AND CODE = :EQP_ID  
+		EQP_ID = 4CSC0803
+}
+{2017-07-19 11:14:06.225	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:06.225	DAS2	select	R2R SELECT APC FROM TEMP_APC_RMS_EQP_SEND_INFO  WHERE EQP_ID= :v_eqpid 
+		v_eqpid = 4CSC0803
+}
+{2017-07-19 11:14:06.469	JobManager	getJob	FRAMEWORK Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:06.471	DAS2	select	FRAMEWORK SELECT sub_workflow_name, deployed_dtts from sub_workflow_mst_pp 
+
+}
+{2017-07-19 11:14:06.663	JobManager	getJob	FRAMEWORK Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:06.666	DAS2	select	FRAMEWORK SELECT CMP.ITEM_NAME APPLICATION_NAME, WMTMP.WORKFLOW_MODEL_TYPE WORKFLOW_TYPE,        WMMP.WORKFLOW_MODEL_NAME WORKFLOW_NAME, WMMP.DEPLOYED_DTTS DEPLOYED_DTTS   FROM CONFIG_MST_PP CMP, WF_MODEL_TYPE_MST_PP WMTMP,         WORKFLOW_MODEL_MST_PP WMMP, WORKFLOW_MODEL_VER_MST_PP WMVMP  WHERE CMP.RAWID = WMTMP.CONFIG_RAWID    AND WMTMP.RAWID = WMMP.WF_MODEL_TYPE_RAWID    AND WMMP.ACTIVE_WF_MODEL_VER_RAWID = WMVMP.RAWID   AND WMMP.DEPLOYED_DTTS > ?  ORDER BY WMMP.DEPLOYED_DTTS 
+		LAST_REFRESHED_DATE = 2017-07-19 10:55:17.896773
+}
+{2017-07-19 11:14:06.666	JobManager	getJob	FRAMEWORK Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:06.667	DAS2	select	FRAMEWORK SELECT wmvmp.property property   FROM config_mst_pp cmp, wf_model_type_mst_pp wmtmp,        workflow_model_mst_pp wmmp, workflow_model_ver_mst_pp wmvmp  WHERE cmp.rawid = wmtmp.config_rawid    AND wmtmp.rawid = wmmp.wf_model_type_rawid    AND wmmp.active_wf_model_ver_rawid = wmvmp.rawid     AND cmp.item_type = 'APPLICATION'    AND cmp.item_name = ?    AND wmtmp.workflow_model_type = ?    AND wmmp.workflow_model_name = ? 
+		APPLICATION_NAME = R2R,
+		WORKFLOW_MODEL_TYPE = MODEL,
+		WORKFLOW_MODEL_NAME = PHOTO_COMMON
+}
+{2017-07-19 11:14:07.278	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:07.279	DAS2	select	R2R  SELECT NAME AS EQP_ID      FROM CODE_MST_PP   WHERE CATEGORY = 'R2R_EQ_CONVERT'              AND CODE = :EQP_ID  
+		EQP_ID = 4PSK4510
+}
+{2017-07-19 11:14:07.279	JobManager	getJob	R2R Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:07.280	DAS2	select	R2R SELECT APC FROM TEMP_APC_RMS_EQP_SEND_INFO  WHERE EQP_ID= :v_eqpid 
+		v_eqpid = 4PSK4510
+}
+{2017-07-19 11:14:07.281	JobManager	getJob	FRAMEWORK Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:07.282	DAS2	select	FRAMEWORK  SELECT                                                                 TO_CHAR(A.RAWID)         			AS RAWID                     , A.EQP_MODEL						AS EQP_MODEL                 , B.DATA_COLLECTION_CD				AS DATA_COLLECTION_CD        , NVL(B.CONNECTIVITY_TIME_YN, 'N') 	AS CONNECTIVITY_TIME_YN      , TO_CHAR(C.RAWID)         			AS DCP_RAWID                 , C.DCP_ID							AS DCP_ID                    , E.DATA_COLLECTOR_ID				AS DATA_COLLECTOR_ID         , D.SERVER_IP                                                    , D.SERVER_PORT                                                  , E.MESSAGE_EQP_ID                                           FROM                                                                 EQP_MST_PP                         		A                        JOIN EQP_DC_OPTIONS_MST_PP         		B                           ON  A.EQP_ID = B.EQP_ID                                          AND A.MODULE_ID = B.EQP_MODULE_ID                             LEFT JOIN EQP_DCP_MST_PP     			C                           ON  A.EQP_ID = C.EQP_ID                                       LEFT JOIN DATA_COLLECTOR_LINK_MST_PP 	E                           ON  A.EQP_ID = E.EQP_ID                                       LEFT JOIN DATA_COLLECTOR_MST_PP 		D                        	ON  E.DATA_COLLECTOR_ID = D.DATA_COLLECTOR_ID            WHERE                                                                A.EQP_ID = ?                                                 AND A.PARENT IS NULL                                             AND C.DCP_STATE_CD = 'ACT'                                      
+		EQP_ID = 4PSK4510
+}
+{2017-07-19 11:14:07.282	JobManager	getJob	FRAMEWORK Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:07.283	DAS2	select	FRAMEWORK SELECT TO_CHAR(RAWID) RAWID, EQP_ID, ALIAS FROM MET_EQP_MST_PP WHERE EQP_ID = ? 
+		EQP_ID = 4PSK4510
+}
+{2017-07-19 11:14:07.283	JobManager	getJob	FRAMEWORK Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:07.284	DAS2	select	FRAMEWORK select TO_CHAR(RAWID) EQP_RAWID, EQP_ID, MODULE_NAME, MODULE_ID from EQP_MST_PP where eqp_id = ?
+		EQP_ID = 4PSK4510
+}
+{2017-07-19 11:14:07.284	JobManager	getJob	FRAMEWORK Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:07.285	DAS2	select	FRAMEWORK  SELECT                                                   	  B.EQP_MODULE_ID                                    	, A.DCP_ID                                           	, C.PARAM_ALIAS                                      	, B.EVENT_ID                                         	, C.VARIABLE_ID                                      	, C.PARAM_NAME                                       	, C.PARAM_CATEGORY_CD                                	, C.DATA_TYPE_CD                                     	, C.SUM_TYPE_CD                                      	, C.SCALE                                            	, C.OFFSET                                           	, C.CONDITIONING                                     	, C.UNIT                                             	, TO_CHAR(NVL(C.PARAM_ORDER, 10000)) AS PARAM_ORDER  	, C.POSITION                                         	, NVL(C.EXCLUDE_YN, 'N')   AS EXCLUDE_YN             	, NVL(C.LIST_TYPE_YN, 'N') AS LIST_TYPE_YN           	, C.PARENT                                           FROM                                                     	EQP_DCP_MST_PP 							A            	JOIN EQP_EVENT_MST_PP 					B            		ON  A.EQP_ID = B.EQP_ID                          		AND A.DCP_ID = B.EQP_DCP_ID                      	JOIN EQP_EVENT_PARAM_MST_PP 			C            		ON  B.EQP_MODULE_ID = C.EQP_MODULE_ID            		AND B.EQP_DCP_ID	= C.EQP_DCP_ID               		AND B.EVENT_ID		= C.EQP_EVENT_ID             WHERE                                                    	A.EQP_ID = ?                                         AND NVL(C.VIRTUAL_YN, 'N') = 'N'                         AND NVL(A.DCP_STATE_CD, 'INACT') = 'ACT'                 ORDER BY                                                 	PARAM_ORDER ASC                                     
+		EQP_ID = 4PSK4510
+}
+{2017-07-19 11:14:07.285	JobManager	getJob	FRAMEWORK Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:07.286	DAS2	select	FRAMEWORK  SELECT                                           	  C.EQP_MODULE_ID                            	, A.DCP_ID                                   	, B.RAWID 				AS EQP_TRID_RAWID    	, TO_CHAR(B.TRID) 		AS TRID              	, C.PARAM_ALIAS                              	, B.PROCESS_INTERVAL                         	, B.IDLE_INTERVAL                            	, B.TRACE_DATA_TIMEOUT                       	, B.MAIN_YN                                  	, C.VARIABLE_ID                              	, C.PARAM_NAME                               	, C.DATA_TYPE_CD                             	, C.MANDATORY_YN                             	, C.SCALE                                    	, C.OFFSET                                   	, C.CONDITIONING                             	, C.UNIT                                     	, C.MIN                                      	, C.MAX                                      	, C.DISPLAY_YN                               	, C.SAVE_YN                                  	, TO_CHAR(D.PARAM_ORDER) AS PARAM_ORDER      	, C.POSITION                                 	, NVL(C.EXCLUDE_YN, 'N')   AS EXCLUDE_YN     	, NVL(C.LIST_TYPE_YN, 'N') AS LIST_TYPE_YN   	, C.PARENT                                   FROM                                              	EQP_DCP_MST_PP 						A        	JOIN EQP_TRID_MST_PP 				B        		ON  A.EQP_ID = B.EQP_ID                  		AND A.DCP_ID = B.EQP_DCP_ID              	JOIN EQP_TRACE_PARAM_MST_PP 		C        		ON  A.EQP_ID = C.EQP_ID                  		AND A.DCP_ID = C.EQP_DCP_ID              	JOIN EQP_TRID_LINK_MST_PP			D        		ON  B.EQP_DCP_ID 	= D.EQP_DCP_ID       		AND B.TRID 			= D.EQP_TRID         		AND C.EQP_MODULE_ID = D.EQP_MODULE_ID    		AND C.EQP_DCP_ID 	= D.EQP_DCP_ID       		AND C.PARAM_ALIAS 	= D.EQP_PARAM_ALIAS  	JOIN EQP_MST_PP 					E        		ON  B.EQP_ID = E.EQP_ID                  		AND D.EQP_MODULE_ID = E.MODULE_ID        WHERE                                            	A.EQP_ID = ?                                 AND C.PARAM_TYPE_CD IS NULL                      AND NVL(C.VIRTUAL_YN, 'N') = 'N'                 AND NVL(A.DCP_STATE_CD, 'INACT') = 'ACT'         ORDER BY C.EQP_MODULE_ID, C.VARIABLE_ID ASC     
+		EQP_ID = 4PSK4510
+}
+{2017-07-19 11:14:07.288	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 1}
+{2017-07-19 11:14:07.288	DAS2	select	DP  SELECT EQP_ID   FROM   EQP_MST_PP  WHERE  MODULE_NAME = :moduleId 
+		moduleId = 4PSK4510
+}
+{2017-07-19 11:14:07.288	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 2}
+{2017-07-19 11:14:07.289	DAS2	select	DP SELECT CATEGORY_VALUE AREA_NAME  FROM SAVE_EVENT_INFO_MST_R2R  WHERE EVENT_NAME = :EQID AND EVENT_TYPE_CD = :EVENT_TYPE_CD 
+		EQID = 4PSK4510,
+		EVENT_TYPE_CD = E
+}
+{2017-07-19 11:14:07.289	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 3}
+{2017-07-19 11:14:07.293	DAS2	select	DP  SELECT * FROM    ( SELECT A.EQP_ID, A.PRODUCT_ID, A.PROCESS_ID, A.OPERATION_ID, A.RECIPE_ID,                                                                   ROW_NUMBER () OVER (                                                                                                            ORDER BY UTL_MATCH.EDIT_DISTANCE (A.EQP_ID||PRODUCT_ID||PROCESS_ID || OPERATION_ID || RECIPE_ID, UPPER (:P_SEARCHKEY))) SK             FROM SK_RECIPE_SPEC_EQP_R2R A,                                                                                                       EQP_MST_PP B                                                                                                              WHERE A.PRODUCT_ID IN ('*',:P_PRODUCT_ID)                                                                                         AND A.PROCESS_ID IN ('*',:P_PROCESS_ID)                                                                                         AND A.OPERATION_ID IN ('*',:P_OPERATION_ID)                                                                                     AND A.RECIPE_ID IN ('*',:P_RECIPE_ID)                                                                                           AND A.EQP_RAWID = B.RAWID                                                                                                       AND A.LINE = :P_FACILITY                                                                                                        AND B.EQP_ID = :P_EQP_ID                                                                                                        )                                                                                                                             WHERE SK=1                                                                                                             
+		P_SEARCHKEY = 4PSK4510H53R8D23B_Z590MAVERICK,
+		P_PRODUCT_ID = H53R8D23B_Z590MAVERICK,
+		P_PROCESS_ID = DE-4CN-H53R8D23B_Z590MAVERICK,
+		P_OPERATION_ID = K9011000D,
+		P_RECIPE_ID = CNNMT_0A2,
+		P_FACILITY = M14,
+		p_EQP_ID = 4PSK4510
+}
+{2017-07-19 11:14:07.293	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 4}
+{2017-07-19 11:14:07.298	DAS2	select	DP  SELECT LOTCD_ID FROM MES_PRODUCT_VW  where   PRODUCT_ID = :PRODUCT_ID     and PROCESS_ID= :PROCESS_ID               and LINE = :LINE  
+		PRODUCT_ID = H53R8D23B_Z590MAVERICK,
+		PROCESS_ID = DE-4CN-H53R8D23B_Z590MAVERICK,
+		LINE = M14
+}
+{2017-07-19 11:14:07.298	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 5}
+{2017-07-19 11:14:07.300	DAS2	select	DP  SELECT BASE_PRODUCT_ID,  BASE_PROCESS_ID,  BASE_OPERATION_ID, BASE_EQP_ID, BASE_RECIPE_ID FROM (                                                          SELECT  BASE_PRODUCT_ID,  BASE_PROCESS_ID,  BASE_OPERATION_ID, BASE_EQP_ID, BASE_RECIPE_ID,                                           ROW_NUMBER () OVER (                                                                                                                                          ORDER BY UTL_MATCH.EDIT_DISTANCE (A.SUB_LOT_CD||SUB_PRODUCT_ID||SUB_PROCESS_ID || SUB_OPERATION_ID || SUB_RECIPE_ID, UPPER (:P_SEARCHKEY))) SK      FROM SK_REF_MAP_MST_R2R A,  AREA_MST_PP B, EQP_MST_PP C       WHERE A.LINE = :LINE                                             AND A.AREA_RAWID = B.RAWID                                     AND A.SUB_EQP_RAWID = C.RAWID                                  AND A.SUB_LOT_CD IN ('*', :LOT_CODE)                           AND A.SUB_PRODUCT_ID IN ('*', :PRODUCT)                        AND A.SUB_PROCESS_ID IN ('*', :PROCESS)                        AND A.SUB_OPERATION_ID IN ('*', :OPERATION)                    AND A.SUB_RECIPE_ID IN ('*', :RECIPE)                          AND B.AREA = :AREA                                             AND C.EQP_ID = :EQP                                           )  WHERE sk=1                                              
+		P_SEARCHKEY = 4CNH53R8D23B_Z590MAVERICKDE-4C,
+		LINE = M14,
+		LOT_CODE = 4CN,
+		PRODUCT = H53R8D23B_Z590MAVERICK,
+		PROCESS = DE-4CN-H53R8D23B_Z590MAVERICK,
+		OPERATION = K9011000D,
+		RECIPE = CNNMT_0A2,
+		AREA = PHOTO,
+		EQP = 4PSK4510
+}
+{2017-07-19 11:14:07.300	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 6}
+{2017-07-19 11:14:07.301	DAS2	select	DP  SELECT EQP_MODEL   FROM   EQP_MST_PP  WHERE  EQP_ID = :eqpId  AND    MODULE_LEVEL = :moduleId 
+		eqpId = 4PSK4510,
+		moduleId = -1
+}
+{2017-07-19 11:14:07.301	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 7}
+{2017-07-19 11:14:07.305	DAS2	select	DP  SELECT DISTINCT F.RECIPE_ID                                                                , F.CONTROL_PARAM_NAME                                                        , F.REPLY_PARAM_NAME                                                          , F.RECIPE_MIN                                                                , F.RECIPE_MAX                                                                , F.DISPLAY_SEQ                                                               , DECODE (G.CONTROL_TYPE, 'W', 'wafer', 'lot') CONTROL_TYPE                   , F.RAWID                                                                     , F.STAGE_RANGE                                                               , G.INPUT_INTERLOCK                                                           , F.DCOL_RANGE,F.DCOL_RANGE_ACT                                               , G.ENABLE_FLAG                                                               , G.SAMPLE_ENABLE_FLAG                                                        , G.NPW_ENABLE_FLAG                                                           , G.IGNORE_NMR_TFIX_FLAG                                                      , G.ADD_OFFSET_FLAG AS ADD_OFFSET_FLAG                                        , G.IS_LOT_BASE_CALC AS IS_LOT_BASE_CALC                                      , F.USE_FLAG                                                 	              , F.OFFSET_VALUE                                              	              , F.CHAMBER_ID                                          		              , F.USE_FIRST_SETMONITOR                                   		              , F.USE_RFB2B                                                                 , NVL(TEMP_CHANGED_COUNT,0) AS TEMP_CHANGED_COUNT                             , NVL(CURRENT_TEMP,0) AS CURRENT_TEMP                                         , NVL(CURRENT_COUNT,0) AS CURRENT_COUNT                                       , F.ENGR_VALUE AS ENGR_VALUE                                                  , TO_CHAR(F.ENGR_TIME, 'YYYYMMDD HH24MISSXFF') AS ENGR_TIME                   , F.RECENT_VALUE AS RECENT_VALUE                                              , F.EWMA_BIAS AS EWMA_BIAS                     					              , F.EWMA_BIAS_TIME AS EWMA_BIAS_TIME                                          , F.EWMA_GAIN AS EWMA_GAIN                                       , 'EQP_ID=' || F.EQP_ID || ';PROCESS_ID=' || F.PROCESS_ID || ';OPERATION_ID=' || F.OPERATION_ID || ';RECIPE_ID=' || F.RECIPE_ID || ';RECIPE_PARA=' ||			  F.CONTROL_PARAM_NAME || ';' AS DEFAULT_KEY_VALUE 						                  , F.MEASURE_OPERATION_ID 			                                          , F.USER_MESSAGE 			                       			                  , F.USER_MESSAGE 			                       			       , F.USE_LOT_ACTION, F.USE_LOT, F.USE_DAYS, F.CHECK_TYPE                                  , F.DEFAULT_VAL AS DEFAULT_VAL                         			   FROM AREA_MST_PP A                                                               , EQP_MST_PP B                                                                , MODEL_MST_PP C                                                              , SK_PARAM_SPEC_MST_R2R D                                                     , SK_PARAM_SPEC_EQP_R2R E                                                     , SK_PARAM_SPEC_RECIPE_R2R F                                                  , (SELECT RAWID, CONTROL_TYPE , INPUT_INTERLOCK ,ENABLE_FLAG 			      ,SAMPLE_ENABLE_FLAG ,   NPW_ENABLE_FLAG,IGNORE_NMR_TFIX_FLAG 			      ,ADD_OFFSET_FLAG ,IS_LOT_BASE_CALC										           FROM (SELECT A.RAWID, A.ENABLE_FLAG                                                      , CONTROL_TYPE                                                                , RCP_OPTION3 INPUT_INTERLOCK                                                 , RCP_OPTION1 SAMPLE_ENABLE_FLAG                                              , RCP_OPTION2 NPW_ENABLE_FLAG                                                 , RCP_OPTION5 IGNORE_NMR_TFIX_FLAG                                            , RCP_OPTION6 ADD_OFFSET_FLAG 							                      , RCP_OPTION7 IS_LOT_BASE_CALC 							                      , ROW_NUMBER () OVER (ORDER BY UTL_MATCH.EDIT_DISTANCE (PRODUCT_ID || PROCESS_ID || OPERATION_ID || RECIPE_ID, UPPER (:P_SEARCHKEY))) SK                    FROM SK_RECIPE_SPEC_EQP_R2R A, EQP_MST_PP B                                  WHERE A.PRODUCT_ID IN ('*', :P_PRODUCT_ID)                                      AND A.PROCESS_ID IN ('*', :P_PROCESS_ID)                                      AND A.OPERATION_ID IN ('*', :P_OPERATION_ID)                                  AND A.RECIPE_ID IN ('*', :P_RECIPE_ID)                                        AND A.EQP_RAWID = B.RAWID                                                     AND A.LINE = :P_FACILITY                                                      AND B.EQP_ID = :P_EQP_ID)                                           WHERE SK = 1) G                                                       WHERE A.AREA = :P_AREA                                                          AND B.AREA_RAWID = A.RAWID                                                    AND B.EQP_ID = :P_EQP_ID1                                                     AND B.MODULE_NAME = :P_MODULE_NAME                                            AND C.AREA_RAWID = B.AREA_RAWID                                               AND C.MODEL_NAME = B.EQP_MODEL                                                AND D.AREA_RAWID = C.AREA_RAWID                                               AND D.LINE = :P_FACILITY1                                                     AND D.MODEL_RAWID = C.RAWID                                                   AND D.MODEL_NAME = C.MODEL_NAME                                               AND D.PARAM_TYPE = 'C'                                                        AND E.USE_FLAG = 'Y'                                                          AND E.PARM_SPEC_MST_RAWID = D.RAWID                                           AND E.EQP_RAWID = B.RAWID                                                     AND E.MODEL_RAWID = D.MODEL_RAWID                                             AND E.PARAM_TYPE = D.PARAM_TYPE                                               AND E.LINE = D.LINE                                                           AND F.PARM_SPEC_EQP_RAWID = E.RAWID                                           AND F.EQP_RAWID = E.EQP_RAWID                                                 AND F.LINE = E.LINE                                                           AND F.RECIPE_SPEC_EQP_RAWID = G.RAWID                                       ORDER BY F.DISPLAY_SEQ                                                      
+		P_SEARCHKEY = H53R8D23BDE-4CN-H53R8D23BK9011,
+		P_PRODUCT_ID = H53R8D23B,
+		P_PROCESS_ID = DE-4CN-H53R8D23B,
+		P_OPERATION_ID = K9011000D,
+		P_RECIPE_ID = CNNMT_0A2,
+		P_FACILITY = M14,
+		P_EQP_ID = 4PSK4510,
+		P_AREA = PHOTO,
+		P_EQP_ID1 = 4PSK4510,
+		P_MODULE_NAME = 4PSK4510,
+		P_FACILITY1 = M14
+}
+{2017-07-19 11:14:07.306	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 8}
+{2017-07-19 11:14:07.306	DAS2	select	DP  SELECT LOT_ID, FEEDBACK_YN ,FEEDFORWARD_YN ,REWORK_CALC_YN  FROM SK_EXCLUDE_WF_TRX_R2R  WHERE AREA_RAWID IN (SELECT RAWID FROM AREA_MST_PP WHERE AREA = :V_AREA)  AND LOT_ID = :V_LOTID  AND ACTIVE_YN = :V_ACTIVE  AND OPERATION_ID = :V_STEP_ID 
+		V_AREA = PHOTO,
+		V_LOTID = TCNKM60,
+		V_ACTIVE = Y,
+		V_STEP_ID = K9011000D
+}
+{2017-07-19 11:14:07.306	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 9}
+{2017-07-19 11:14:07.307	DAS2	select	DP  SELECT LOT_ID, FEEDBACK_YN ,FEEDFORWARD_YN ,REWORK_CALC_YN  FROM SK_EXCLUDE_WF_TRX_R2R  WHERE AREA_RAWID IN (SELECT RAWID FROM AREA_MST_PP WHERE AREA = :V_AREA)  AND LOT_ID = :V_LOTID  AND ACTIVE_YN = :V_ACTIVE  AND OPERATION_ID IS NULL 
+		V_AREA = PHOTO,
+		V_LOTID = TCNKM60,
+		V_ACTIVE = Y
+}
+{2017-07-19 11:14:07.307	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 10}
+{2017-07-19 11:14:07.310	DAS2	select	DP  SELECT PRODUCE_TYP,LOT_ID FROM MES_LOT_VW A  WHERE LOT_ID=:V_LOT_ID     AND PRODUCE_TYP = 'Sample' 
+		V_LOT_ID = TCNKM60
+}
+{2017-07-19 11:14:07.311	JobManager	getJob	DP Cached job info : JobCacheSize = 64, CurrentSize = 11}
+{2017-07-19 11:14:07.315	DAS2	select	DP  SELECT DISTINCT CONTROL_PARAM_NAME, REPLY_PARAM_NAME, DISPLAY_SEQ           FROM (SELECT ROW_NUMBER ()                                                              OVER (PARTITION BY CONTROL_PARAM_NAME                                         ORDER BY                                                                   DECODE (PRODUCT_ID, '*', PRODUCT_ID),                                   DECODE (PROCESS_ID, '*', PROCESS_ID),                                   DECODE (OPERATION_ID, '*', OPERATION_ID),                               DECODE (RECIPE_ID, '*', RECIPE_ID)) SK,                     F.CONTROL_PARAM_NAME, F.REPLY_PARAM_NAME,                               F.DISPLAY_SEQ                                                      FROM AREA_MST_PP A,                                                          EQP_MST_PP B,                                                           MODEL_MST_PP C,                                                         SK_PARAM_SPEC_MST_R2R D,                                                SK_PARAM_SPEC_EQP_R2R E,                                                SK_PARAM_SPEC_RECIPE_R2R F                                        WHERE     A.AREA = :P_AREA                                                    AND B.AREA_RAWID = A.RAWID                                              AND B.EQP_ID = :P_EQP_ID                                                AND B.MODULE_NAME = :P_MODULE_NAME                                      AND C.AREA_RAWID = B.AREA_RAWID                                         AND C.MODEL_NAME = B.EQP_MODEL                                          AND D.AREA_RAWID = C.AREA_RAWID                                         AND D.LINE = :P_FACILITY                                                AND D.MODEL_RAWID = C.RAWID                                             AND D.MODEL_NAME = C.MODEL_NAME                                         AND E.USE_FLAG = 'Y'                                                    AND E.PARM_SPEC_MST_RAWID = D.RAWID                                     AND E.EQP_RAWID = B.RAWID                                               AND E.MODEL_RAWID = D.MODEL_RAWID                                       AND E.PARAM_TYPE = 'C'                                                  AND E.LINE = D.LINE                                                     AND F.PARM_SPEC_EQP_RAWID = E.RAWID                                     AND F.EQP_RAWID = E.EQP_RAWID                                           AND F.LINE = E.LINE                                                     AND F.PRODUCT_ID IN ('*', :P_PRODUCT_ID)                                AND F.PROCESS_ID IN ('*', :P_PROCESS_ID)                                AND F.OPERATION_ID IN ('*', :P_OPERATION_ID)                            AND F.RECIPE_ID IN ('*', :P_RECIPE_ID))                   WHERE SK = 1                                                         ORDER BY DISPLAY_SEQ                                                   
+		P_AREA = PHOTO,
+		P_EQP_ID = 4PSK4510,
+		P_MODULE_NAME = 4PSK4510,
+		P_FACILITY = M14,
+		P_PRODUCT_ID = H53R8D23B_Z590MAVERICK,
+		P_PROCESS_ID = DE-4CN-H53R8D23B_Z590MAVERICK,
+		P_OPERATION_ID = K9011000D,
+		P_RECIPE_ID = CNNMT_0A2
+}
+{2017-07-19 11:14:07.316	DAS2	select	DP  SELECT EQP_MODEL   FROM   EQP_MST_PP  WHERE  EQP_ID = :eqpId  AND    MODULE_LEVEL = :moduleId 
+		eqpId = 4PSK4510,
+		moduleId = -1
+}
