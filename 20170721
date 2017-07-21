@@ -19,6 +19,12 @@ Tasks: 720 total,   1 running, 719 sleeping,   0 stopped,   0 zombie
  (PID) mcslog    20   0  109g  95g 9.8m S 94.3 75.7  75613:10  12g /---/jdk1.8.0_121/bin/java -Daraqne.data.dir=/log1/logpresso-data -DINSTANCE_ID=m14
 
 
+[mcslog@m14mcslog01p logpresso]$ free
+             total       used       free     shared    buffers     cached
+Mem:     132051820  131647864     403956        640     404260   24493800
+-/+ buffers/cache:  106749804   25302016
+Swap:     16777212   13784952    2992260
+
 ※ 참고사항 
 
 2017 7월 11일 Logpresso의 캐시를 비움,
