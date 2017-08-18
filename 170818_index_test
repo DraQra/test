@@ -1,0 +1,38 @@
+안녕하세요 비앤지시스템 전현구사원입니다.
+많은 도움주심에 감사드립니다.
+
+인덱스 설정 관련하여 문의드립니다
+
+■쿼리기반 필드추출 인덱스 설정
+①인덱스 토큰 추출 쿼리만 적용 (기존 인덱스)
+인덱스 토큰 추출 쿼리	fields LEVEL, method, CARRIER, MACHINENAME, AREANAME, BAYNAME, TYPE, COMMANDID, COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+데이터 : 985.18 MB
+인덱스 : 293.06 MB
+
+②구분자 적용 (신규 적용 인덱스)
+구분자	`
+인덱스 토큰 추출 쿼리	fields LEVEL, method, CARRIER, MACHINENAME, AREANAME, BAYNAME, TYPE, COMMANDID, COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+데이터 : 985.18 MB
+인덱스 : 3.32 GB
+
+③토크나이징 제외 대상필드 적용
+토크나이징 제외 대상 필드  COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+인덱스 토큰 추출 쿼리	fields LEVEL, method, CARRIER, MACHINENAME, AREANAME, BAYNAME, TYPE, COMMANDID, COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+데이터 : 985.18 MB
+인덱스 : 3.6 GB 
+
+■추가 모니터링 상황
+①신규적용 인덱스 중 데이터용량이 큰 테이블A 의 인덱스 삭제 후 메모리점유 상승률이
+ 시간당 약 0.8% 로 상승폭이 줄었지만 여전히 상승중임
+②GC 수행시간이 1K 이상 높게 나타나는 현상이 30~40 분 간격으로 줄었지만 여전히 발생
+③신규적용 인덱스 중 테이블B 의 인덱스 대상기간 설정 변경 (08/22화 ~)
+④GC 수행시간 정상범위 확인, 메모리 점유율 상승이 멈춤
+
+■문의사항
+신규 적용할 인덱스가 기존 인덱스의 용량 대비 약 11배의 데이터크기를 가지고있는데
+이부분이 실시간인덱싱에 어느정도 부하와 영향을 미치는지 문의드립니다
+※인덱스를 수정하려는 이유는 "_" or "-" 와같이 로그에 자주쓰이는 문자들이 구분자로 인식되어
+이부분을 개선하고자 함 입니다.
+
+
+감사합니다.
