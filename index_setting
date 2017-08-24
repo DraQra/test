@@ -1,0 +1,45 @@
+■쿼리기반 필드추출 인덱스 설정 TEST
+
+①인덱스 토큰 추출 쿼리만 적용 
+인덱스 토큰 추출 쿼리 fields LEVEL, method, CARRIER, MACHINENAME, AREANAME, BAYNAME, TYPE, COMMANDID, COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+
+데이터 : 985.18 MB
+인덱스 : 293.06 MB
+
+②-1구분자 적용
+인덱스 토큰 추출 쿼리 fields LEVEL, method, CARRIER, MACHINENAME, AREANAME, BAYNAME, TYPE, COMMANDID, COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+구분자 `
+→제외대상(연결되는 특수문자) !"#$%&'()*+,-./:;<=>?@[\]^_{\}~
+
+데이터 : 985.18 MB
+인덱스 : 3.32 GB
+
+②-2구분자 적용
+인덱스 토큰 추출 쿼리 fields LEVEL, method, CARRIER, MACHINENAME, AREANAME, BAYNAME, TYPE, COMMANDID, COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+구분자 !"#$%&'()*+/:;=?@\^`\~
+→제외대상(연결되는 특수문자) .  - _ , [ ] { } < > 
+
+데이터 : 985.18 MB
+인덱스 : 772.07 MB
+
+②-3구분자 적용
+인덱스 토큰 추출 쿼리 fields LEVEL, method, CARRIER, MACHINENAME, AREANAME, BAYNAME, TYPE, COMMANDID, COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+구분자 !"#$%&'()*+,/:;<>?@[\]^`{\}~		
+→제외대상(연결되는 특수문자) . - _  =
+
+데이터 : 985.18 MB
+인덱스 : 214.65 MB
+
+③토크나이징 제외 대상필드 적용
+인덱스 토큰 추출 쿼리 fields LEVEL, method, CARRIER, MACHINENAME, AREANAME, BAYNAME, TYPE, COMMANDID, COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+토크나이징 제외 대상 필드 COMMAND, OPERATION_NAME, MESSAGENAME, PROCESS, TRANSACTIONID, THREAD, TEXT, UNITNAME
+
+데이터 : 985.18 MB
+인덱스 : 3.6 GB
+
+-----------------------------------------------------
+##아스키 특수문자 !"#$%&'()*+,-./:;<=>?@[\]^_`{\}~
+
+##기존 데이터 인덱스 빌드시 araqnelog 확인 필!
+INFO (LogIndexerEngine) - logpresso index: batch indexing job [table=apc_data, index=f_idx] is completed
+araqnelog  INFO (LogIndexerEngine) - logpresso index: batch indexing job [table=apc_data, index=f_idx] is completed
