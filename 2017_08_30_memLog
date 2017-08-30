@@ -1,0 +1,74 @@
+안녕하세요 비앤지시스템 전현구 사원입니다.
+
+00시 부터 08시 까지 sys_mem_logs 출력 결과입니다
+하기와 같이 메모리는 일정하게 유지된 상태입니다
+아마도 이전에 full로 찬 상태였으므로 direx memory의 남은부분을 사용한 것으로 보여집니다
+
+■sys_mem_logs
+_time	tb_weight	iv_weight	bf0_weight	bf_weight	heap_used	total_mem
+2017-08-30 00:00:00+0900	14266700513.53 	27906709080.35 	6192567452.20 	4176998053.93 	7363336664.20 	59906311764.21 
+2017-08-30 01:00:00+0900	14266727194.00 	27906479709.60 	6222277000.42 	4191511082.33 	7467385318.01 	60054380304.36 
+2017-08-30 02:00:00+0900	14266727194.00 	27906927772.22 	6252452892.98 	4211341440.18 	7697730215.27 	60335179514.65 
+2017-08-30 03:00:00+0900	14266727194.00 	27906187236.27 	6283580217.76 	4233915024.46 	7687550779.77 	60377960452.26 
+2017-08-30 04:00:00+0900	14266727194.00 	27906148407.41 	6313973152.04 	4251361572.00 	7692549383.61 	60430759709.05 
+2017-08-30 05:00:00+0900	14266727194.00 	27907511826.36 	6344088982.94 	4276719782.03 	7397166627.83 	60192214413.16 
+2017-08-30 06:00:00+0900	14266727194.00 	27906559568.77 	6374853038.84 	4293786083.87 	7582336589.11 	60424262474.60 
+2017-08-30 07:00:00+0900	13781351426.54 	26959368290.30 	6186467236.58 	4163024647.04 	7596992728.88 	58687204329.34 
+
+■인덱스 정보
+인덱스 대상기간을 2017-08-30 ~ 무제한 으로 설정된 상태였으며
+online인덱싱 작업만 수행한 상태로 보여집니다
+
+■시스템메모리 점유율 증가
+2017-08-29 18:40	74.25%
+2017-08-30 08:05	80.45%
+
+■인덱스 생성시 araqnelog
+
+하기와 같은 log 가 시간당 20 ~ 30 건 정도 기록됩니다
+
+①IndexReplicationService	
+repliationTargets should not throw exception.
+java.net.SocketException: Broken pipe (Write failed)
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at org.araqne.websocket.WebSocket.send(WebSocket.java:325)
+	at org.araqne.logdb.client.http.impl.WebSocketSession.rpc(WebSocketSession.java:102)
+	at org.araqne.logdb.client.AbstractLogDbSession.rpc(AbstractLogDbSession.java:120)
+	at org.araqne.logdb.client.AbstractLogDbSession.rpc(AbstractLogDbSession.java:102)
+	at com.logpresso.replicator.impl.ReplicationConnectorImpl.rpc(ReplicationConnectorImpl.java:88)
+	at com.logpresso.replicator.impl.ReplicationConnectorImpl.appendBlock(ReplicationConnectorImpl.java:439)
+	at com.logpresso.index.repl.IndexReplicationService$LiveReplicator.onIndexBlockWriteCompleted(IndexReplicationService.java:1102)
+	at com.logpresso.index.repl.IndexReplicationService$LiveReplicator.onWriteCompleted(IndexReplicationService.java:1084)
+	at com.logpresso.index.file.InvertedIndexWriter$IndexSegment.flush(InvertedIndexWriter.java:841)
+	at com.logpresso.index.file.InvertedIndexWriter.processFlushQueue(InvertedIndexWriter.java:1030)
+	at com.logpresso.index.file.InvertedIndexWriter.access$3500(InvertedIndexWriter.java:57)
+	at com.logpresso.index.file.InvertedIndexWriter$1.runSafely(InvertedIndexWriter.java:1132)
+	at com.logpresso.logstorage.TaskBase.run(TaskBase.java:15)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+②IndexReplicationService	
+repliationTargets should not throw exception.
+org.araqne.logdb.client.MessageException: general-error: java.lang.NullPointerException, null
+	at org.araqne.logdb.client.http.impl.WebSocketSession.rpc(WebSocketSession.java:117)
+	at org.araqne.logdb.client.AbstractLogDbSession.rpc(AbstractLogDbSession.java:120)
+	at org.araqne.logdb.client.AbstractLogDbSession.rpc(AbstractLogDbSession.java:102)
+	at com.logpresso.replicator.impl.ReplicationConnectorImpl.rpc(ReplicationConnectorImpl.java:88)
+	at com.logpresso.replicator.impl.ReplicationConnectorImpl.appendBlock(ReplicationConnectorImpl.java:439)
+	at com.logpresso.index.repl.IndexReplicationService$LiveReplicator.onBloomfilterBlockWriteCompleted(IndexReplicationService.java:1137)
+	at com.logpresso.index.repl.IndexReplicationService$LiveReplicator.onWriteCompleted(IndexReplicationService.java:1086)
+	at com.logpresso.index.file.BloomFilterFileBuilder$FlushSegment.flush(BloomFilterFileBuilder.java:235)
+	at com.logpresso.index.file.BloomFilterFileBuilder$LevelContext.flush(BloomFilterFileBuilder.java:70)
+	at com.logpresso.index.file.BloomFilterFileBuilder.append(BloomFilterFileBuilder.java:170)
+	at com.logpresso.index.file.BloomFilterBuilder$Builder.appendFilter(BloomFilterBuilder.java:393)
+	at com.logpresso.index.file.BloomFilterBuilder$Builder.build(BloomFilterBuilder.java:358)
+	at com.logpresso.index.file.BloomFilterBuilder$Builder.runSafely(BloomFilterBuilder.java:199)
+	at com.logpresso.logstorage.TaskBase.run(TaskBase.java:15)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+	at java.lang.Thread.run(Thread.java:745)
+
+감사합니다.
