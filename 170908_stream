@@ -1,0 +1,37 @@
+안녕하세요 비앤지시스템 전현구 사원입니다
+많은 도움주심에 감사드립니다
+
+유선상 말씀드린 스트림쿼리 비동기모드 사용 옵션 관련하여 메일드립니다
+
+■설정 정보
+수집속도 약 7500 건/초 
+
+ts_raw → ts_data →ts_data_t2 순으로 스트림쿼리 적용
+ts_data와 ts_data_t2의 데이터입력 양은 동일하며
+ts_data는 테이블 데이터소스 방식의 동기모드
+ts_data_t2는 스트림 쿼리 데이터소스 방식의 비동기모드
+로 설정 되었습니다
+
+2017-09-07 13:05:42,570	INFO LogIndexerEngine logpresso index: created index => id=30, table=ts_data, index=f_idx
+2017-09-07 13:06:11,292	INFO LogIndexerEngine logpresso index: created index => id=31, table=ts_data_t2, index=f_idx
+2017-09-07 14:46:55,865	INFO LogIndexerEngine logpresso index: batch indexing job [table=ts_data, index=f_idx] is completed
+2017-09-07 15:14:31,679	INFO LogIndexerEngine logpresso index: follow up indexing job [table=ts_data_t2, index=f_idx] is completed
+
+■issue
+상기와 같은 인덱스 생성완료 로그 확인 후 fulltext 쿼리를 실행하였는데
+ex) fulltext duration=1m CARRIER=="TEST0011" from ts_data
+
+① 같은 쿼리를 ts_data 와 ts_data_t2 에서 실행하였을때
+ts_data 테이블은 쿼리결과에 70s 가량 소요되며 쿼리 중지를 하여도
+계속 실행됨
+ts_data_t2 테이블은 2s안에 결과가 나옴
+
+② fulltext 쿼리에서 인덱스토큰을 추출하지 않은 컬럼을 검색시에도
+쿼리가 실행되며 쿼리중지하여도 계속 실행됨
+
+③ fulltext duration=5h 로 긴시간을 쿼리할 결과
+가장 최근 로그시간이 2017-09-07 13:04분으로 스트림 쿼리를 잠시 중단한 시간대와 동일함
+
+※과거 데이터는 전부 인덱싱 되었는데 실시간 인덱싱 작업이 제대로 진행되지 않은걸로 생각됩니다
+
+감사합니다.
