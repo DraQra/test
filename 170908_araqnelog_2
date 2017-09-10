@@ -1,0 +1,252 @@
+[2017-09-08 08:51:22,808] ERROR (AraqneLogService) - [ERROR]  : [logger-factory-registry-0] The callback method start has thrown an exception : org.araqne.log.api.MultilineLogExtractor.<init>(Lorg/araqne/log/api/Logger;Lorg/araqne/log/api/LogPipe;)V
+java.lang.NoSuchMethodError: org.araqne.log.api.MultilineLogExtractor.<init>(Lorg/araqne/log/api/Logger;Lorg/araqne/log/api/LogPipe;)V
+	at com.logpresso.sdk.mcs.MCSFtpRotationFileLogger.init(MCSFtpRotationFileLogger.java:82)
+	at com.logpresso.sdk.mcs.MCSFtpRotationFileLogger.<init>(MCSFtpRotationFileLogger.java:78)
+	at com.logpresso.sdk.mcs.MCSFtpRotationFileLoggerFactory.__createLogger(MCSFtpRotationFileLoggerFactory.java:130)
+	at com.logpresso.sdk.mcs.MCSFtpRotationFileLoggerFactory.createLogger(MCSFtpRotationFileLoggerFactory.java)
+	at org.araqne.log.api.AbstractLoggerFactory.handleNewLogger(AbstractLoggerFactory.java:230)
+	at org.araqne.log.api.AbstractLoggerFactory.tryLoad(AbstractLoggerFactory.java:133)
+	at org.araqne.log.api.AbstractLoggerFactory.loadLoggers(AbstractLoggerFactory.java:93)
+	at org.araqne.log.api.AbstractLoggerFactory.onStart(AbstractLoggerFactory.java:71)
+	at org.araqne.log.api.impl.LoggerFactoryTracker.addingService(LoggerFactoryTracker.java:37)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:932)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:864)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:317)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.araqne.log.api.impl.LoggerFactoryRegistryImpl.__start(LoggerFactoryRegistryImpl.java:76)
+	at org.araqne.log.api.impl.LoggerFactoryRegistryImpl.start(LoggerFactoryRegistryImpl.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.felix.ipojo.util.Callback.call(Callback.java:233)
+	at org.apache.felix.ipojo.util.Callback.call(Callback.java:193)
+	at org.apache.felix.ipojo.handlers.lifecycle.callback.LifecycleCallback.call(LifecycleCallback.java:86)
+	at org.apache.felix.ipojo.handlers.lifecycle.callback.LifecycleCallbackHandler.__M_stateChanged(LifecycleCallbackHandler.java:162)
+	at org.apache.felix.ipojo.handlers.lifecycle.callback.LifecycleCallbackHandler.stateChanged(LifecycleCallbackHandler.java)
+	at org.apache.felix.ipojo.InstanceManager.setState(InstanceManager.java:536)
+	at org.apache.felix.ipojo.InstanceManager.stateChanged(InstanceManager.java:1402)
+	at org.apache.felix.ipojo.InstanceManager.setState(InstanceManager.java:561)
+	at org.apache.felix.ipojo.HandlerManager.stateChanged(HandlerManager.java:239)
+	at org.apache.felix.ipojo.Handler.setValidity(Handler.java:174)
+	at org.apache.felix.ipojo.handlers.dependency.DependencyHandler.__M_checkContext(DependencyHandler.java:163)
+	at org.apache.felix.ipojo.handlers.dependency.DependencyHandler.checkContext(DependencyHandler.java)
+	at org.apache.felix.ipojo.handlers.dependency.DependencyHandler.__M_validate(DependencyHandler.java:127)
+	at org.apache.felix.ipojo.handlers.dependency.DependencyHandler.validate(DependencyHandler.java)
+	at org.apache.felix.ipojo.util.DependencyModel.validate(DependencyModel.java:671)
+	at org.apache.felix.ipojo.util.DependencyModel.computeDependencyState(DependencyModel.java:332)
+	at org.apache.felix.ipojo.util.DependencyModel.manageArrival(DependencyModel.java:421)
+	at org.apache.felix.ipojo.util.DependencyModel.addedService(DependencyModel.java:357)
+	at org.apache.felix.ipojo.util.Tracker$Tracked.trackAdding(Tracker.java:711)
+	at org.apache.felix.ipojo.util.Tracker$Tracked.track(Tracker.java:672)
+	at org.apache.felix.ipojo.util.Tracker$Tracked.serviceChanged(Tracker.java:633)
+	at org.apache.felix.framework.util.EventDispatcher.invokeServiceListenerCallback(EventDispatcher.java:991)
+	at org.apache.felix.framework.util.EventDispatcher.fireEventImmediately(EventDispatcher.java:839)
+	at org.apache.felix.framework.util.EventDispatcher.fireServiceEvent(EventDispatcher.java:546)
+	at org.apache.felix.framework.Felix.fireServiceEvent(Felix.java:4557)
+	at org.apache.felix.framework.Felix.registerService(Felix.java:3549)
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:348)
+	at org.apache.felix.ipojo.IPojoContext.registerService(IPojoContext.java:385)
+	at org.apache.felix.ipojo.handlers.providedservice.ProvidedService.registerService(ProvidedService.java:359)
+	at org.apache.felix.ipojo.handlers.providedservice.ProvidedServiceHandler.__M_stateChanged(ProvidedServiceHandler.java:509)
+	at org.apache.felix.ipojo.handlers.providedservice.ProvidedServiceHandler.stateChanged(ProvidedServiceHandler.java)
+	at org.apache.felix.ipojo.InstanceManager.setState(InstanceManager.java:536)
+	at org.apache.felix.ipojo.InstanceManager.start(InstanceManager.java:418)
+	at org.apache.felix.ipojo.ComponentFactory.createInstance(ComponentFactory.java:178)
+	at org.apache.felix.ipojo.IPojoFactory.createComponentInstance(IPojoFactory.java:307)
+	at org.apache.felix.ipojo.IPojoFactory.createComponentInstance(IPojoFactory.java:234)
+	at org.apache.felix.ipojo.extender.internal.linker.ManagedType$InstanceSupport$1.call(ManagedType.java:285)
+	at org.apache.felix.ipojo.extender.internal.linker.ManagedType$InstanceSupport$1.call(ManagedType.java:279)
+	at org.apache.felix.ipojo.extender.internal.queue.JobInfoCallable.call(JobInfoCallable.java:100)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-09-08 08:51:22,809] ERROR (AraqneLogService) - [ERROR]  : java.lang.NoSuchMethodError: org.araqne.log.api.MultilineLogExtractor.<init>(Lorg/araqne/log/api/Logger;Lorg/araqne/log/api/LogPipe;)V
+java.lang.IllegalStateException: java.lang.NoSuchMethodError: org.araqne.log.api.MultilineLogExtractor.<init>(Lorg/araqne/log/api/Logger;Lorg/araqne/log/api/LogPipe;)V
+	at org.apache.felix.ipojo.handlers.lifecycle.callback.LifecycleCallbackHandler.__M_stateChanged(LifecycleCallbackHandler.java:171)
+	at org.apache.felix.ipojo.handlers.lifecycle.callback.LifecycleCallbackHandler.stateChanged(LifecycleCallbackHandler.java)
+	at org.apache.felix.ipojo.InstanceManager.setState(InstanceManager.java:536)
+	at org.apache.felix.ipojo.InstanceManager.stateChanged(InstanceManager.java:1402)
+	at org.apache.felix.ipojo.InstanceManager.setState(InstanceManager.java:561)
+	at org.apache.felix.ipojo.HandlerManager.stateChanged(HandlerManager.java:239)
+	at org.apache.felix.ipojo.Handler.setValidity(Handler.java:174)
+	at org.apache.felix.ipojo.handlers.dependency.DependencyHandler.__M_checkContext(DependencyHandler.java:163)
+	at org.apache.felix.ipojo.handlers.dependency.DependencyHandler.checkContext(DependencyHandler.java)
+	at org.apache.felix.ipojo.handlers.dependency.DependencyHandler.__M_validate(DependencyHandler.java:127)
+	at org.apache.felix.ipojo.handlers.dependency.DependencyHandler.validate(DependencyHandler.java)
+	at org.apache.felix.ipojo.util.DependencyModel.validate(DependencyModel.java:671)
+	at org.apache.felix.ipojo.util.DependencyModel.computeDependencyState(DependencyModel.java:332)
+	at org.apache.felix.ipojo.util.DependencyModel.manageArrival(DependencyModel.java:421)
+	at org.apache.felix.ipojo.util.DependencyModel.addedService(DependencyModel.java:357)
+	at org.apache.felix.ipojo.util.Tracker$Tracked.trackAdding(Tracker.java:711)
+	at org.apache.felix.ipojo.util.Tracker$Tracked.track(Tracker.java:672)
+	at org.apache.felix.ipojo.util.Tracker$Tracked.serviceChanged(Tracker.java:633)
+	at org.apache.felix.framework.util.EventDispatcher.invokeServiceListenerCallback(EventDispatcher.java:991)
+	at org.apache.felix.framework.util.EventDispatcher.fireEventImmediately(EventDispatcher.java:839)
+	at org.apache.felix.framework.util.EventDispatcher.fireServiceEvent(EventDispatcher.java:546)
+	at org.apache.felix.framework.Felix.fireServiceEvent(Felix.java:4557)
+	at org.apache.felix.framework.Felix.registerService(Felix.java:3549)
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:348)
+	at org.apache.felix.ipojo.IPojoContext.registerService(IPojoContext.java:385)
+	at org.apache.felix.ipojo.handlers.providedservice.ProvidedService.registerService(ProvidedService.java:359)
+	at org.apache.felix.ipojo.handlers.providedservice.ProvidedServiceHandler.__M_stateChanged(ProvidedServiceHandler.java:509)
+	at org.apache.felix.ipojo.handlers.providedservice.ProvidedServiceHandler.stateChanged(ProvidedServiceHandler.java)
+	at org.apache.felix.ipojo.InstanceManager.setState(InstanceManager.java:536)
+	at org.apache.felix.ipojo.InstanceManager.start(InstanceManager.java:418)
+	at org.apache.felix.ipojo.ComponentFactory.createInstance(ComponentFactory.java:178)
+	at org.apache.felix.ipojo.IPojoFactory.createComponentInstance(IPojoFactory.java:307)
+	at org.apache.felix.ipojo.IPojoFactory.createComponentInstance(IPojoFactory.java:234)
+	at org.apache.felix.ipojo.extender.internal.linker.ManagedType$InstanceSupport$1.call(ManagedType.java:285)
+	at org.apache.felix.ipojo.extender.internal.linker.ManagedType$InstanceSupport$1.call(ManagedType.java:279)
+	at org.apache.felix.ipojo.extender.internal.queue.JobInfoCallable.call(JobInfoCallable.java:100)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchMethodError: org.araqne.log.api.MultilineLogExtractor.<init>(Lorg/araqne/log/api/Logger;Lorg/araqne/log/api/LogPipe;)V
+	at com.logpresso.sdk.mcs.MCSFtpRotationFileLogger.init(MCSFtpRotationFileLogger.java:82)
+	at com.logpresso.sdk.mcs.MCSFtpRotationFileLogger.<init>(MCSFtpRotationFileLogger.java:78)
+	at com.logpresso.sdk.mcs.MCSFtpRotationFileLoggerFactory.__createLogger(MCSFtpRotationFileLoggerFactory.java:130)
+	at com.logpresso.sdk.mcs.MCSFtpRotationFileLoggerFactory.createLogger(MCSFtpRotationFileLoggerFactory.java)
+	at org.araqne.log.api.AbstractLoggerFactory.handleNewLogger(AbstractLoggerFactory.java:230)
+	at org.araqne.log.api.AbstractLoggerFactory.tryLoad(AbstractLoggerFactory.java:133)
+	at org.araqne.log.api.AbstractLoggerFactory.loadLoggers(AbstractLoggerFactory.java:93)
+	at org.araqne.log.api.AbstractLoggerFactory.onStart(AbstractLoggerFactory.java:71)
+	at org.araqne.log.api.impl.LoggerFactoryTracker.addingService(LoggerFactoryTracker.java:37)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:932)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:864)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:317)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.araqne.log.api.impl.LoggerFactoryRegistryImpl.__start(LoggerFactoryRegistryImpl.java:76)
+	at org.araqne.log.api.impl.LoggerFactoryRegistryImpl.start(LoggerFactoryRegistryImpl.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.felix.ipojo.util.Callback.call(Callback.java:233)
+	at org.apache.felix.ipojo.util.Callback.call(Callback.java:193)
+	at org.apache.felix.ipojo.handlers.lifecycle.callback.LifecycleCallback.call(LifecycleCallback.java:86)
+	at org.apache.felix.ipojo.handlers.lifecycle.callback.LifecycleCallbackHandler.__M_stateChanged(LifecycleCallbackHandler.java:162)
+	... 39 more
+
+[2017-09-08 08:51:22,879]  INFO (HA-Worker) - thread started.
+[2017-09-08 08:51:22,880]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\araqneLog] with interval [5000]
+[2017-09-08 08:51:22,937]  INFO (LoggerHaServiceImpl) - logpresso core: starting managed logger HA sync
+[2017-09-08 08:51:23,511]  INFO (NodeRegistryImpl) - logpresso federation: node [node3] alive
+[2017-09-08 08:51:23,512]  INFO (NodeRegistryImpl) - logpresso federation: node [node1] alive
+[2017-09-08 08:51:23,513]  INFO (NodeRegistryImpl) - logpresso federation: detected paired with node [node3]
+[2017-09-08 08:51:23,514]  INFO (HA-core) - onPaired: node [node3]
+[2017-09-08 08:51:23,514]  INFO (HA-core) - index/data syncer for node [node3] are started
+[2017-09-08 08:51:23,514]  INFO (LoggerHaServiceImpl) - logpresso core: starting backup logger transition for node [node3] op [PAIRING]
+[2017-09-08 08:51:23,514]  INFO (LoggerHaServiceImpl) - logpresso core: completed backup logger transition for node [node3] op [PAIRING]
+[2017-09-08 08:51:23,938]  INFO (LoggerHaServiceImpl) - logpresso core: logger recovery thread exit
+[2017-09-08 08:51:24,466]  INFO (NodeRegistryImpl) - logpresso federation: detected paired with node [node1]
+[2017-09-08 08:51:24,466]  INFO (HA-core) - onPaired: node [node1]
+[2017-09-08 08:51:24,467]  INFO (HA-core) - index/data syncer for node [node1] are started
+[2017-09-08 08:51:24,467]  INFO (LoggerHaServiceImpl) - logpresso core: starting backup logger transition for node [node1] op [PAIRING]
+[2017-09-08 08:51:24,467]  INFO (LoggerHaServiceImpl) - logpresso core: completed backup logger transition for node [node1] op [PAIRING]
+[2017-09-08 08:51:31,754]  INFO (ScriptRunner) - araqne core: user [root] execute command [bundle.list]
+[2017-09-08 08:51:47,892]  INFO (ScriptRunner) - araqne core: user [root] execute command [bundle.refresh]
+[2017-09-08 08:51:48,149]  INFO (BundleManagerService) - Stopping org.logpresso.ftp [65] bundle.
+[2017-09-08 08:51:48,166]  INFO (BundleManagerService) - Stopping com.logpresso.report [87] bundle.
+[2017-09-08 08:51:48,346]  INFO (BundleManagerService) - Stopping org.logpresso.pcap [98] bundle.
+[2017-09-08 08:51:48,395]  INFO (BundleManagerService) - Stopping org.logpresso.syslogmon [59] bundle.
+[2017-09-08 08:51:48,399]  INFO (LogTransformerFactoryRegistryImpl) - araqne log api: transformer factory [query] removed
+[2017-09-08 08:51:48,402]  INFO (StreamingResultEncoder) - araqne logdb: closed encoder thread pool [8]
+[2017-09-08 08:51:48,403]  INFO (QueryStatusNotifier) - araqne logdb: query status notifier stopped
+[2017-09-08 08:51:48,468]  INFO (LogServerEngine) - stopping component: stopping managed loggers..
+[2017-09-08 08:51:48,468]  INFO (ManagedLoggerServiceImpl) - logpresso core: stopping active managed logger [local\araqneLog]
+[2017-09-08 08:51:48,519]  INFO (LogServerEngine) - stopping component: managed loggers are stopped.
+[2017-09-08 08:51:48,519]  INFO (StreamQueryServiceImpl) - logpresso query: closing stream query service
+[2017-09-08 08:51:48,519]  INFO (LogServerEngine) - stopping component: removing queries..
+[2017-09-08 08:51:48,519]  INFO (LogServerEngine) - stopping component: queries are removed.
+[2017-09-08 08:51:48,519]  INFO (LogServerEngine) - flushing..
+[2017-09-08 08:51:48,520]  INFO (HA-core) - shutdown replicator...
+[2017-09-08 08:51:48,520]  INFO (HA-core) - unpairing node [node3]
+[2017-09-08 08:51:48,520]  INFO (HA-core) - unpairing node [node1]
+[2017-09-08 08:51:48,520]  INFO (HA-Worker) - shutdown Replication Worker
+[2017-09-08 08:51:48,520]  INFO (HA-Worker) - thread stopped
+[2017-09-08 08:51:48,521]  INFO (HA-core) - shutdown completed.
+[2017-09-08 08:51:48,521]  INFO (LogServerEngine) - log server stopped.
+[2017-09-08 08:51:48,568]  INFO (LoggerHaServiceImpl) - logpresso core: waiting logger HA executor pool shutdown...
+[2017-09-08 08:51:48,568]  INFO (LoggerHaServiceImpl) - logpresso core: stopped logger ha service.
+[2017-09-08 08:51:48,569]  INFO (LoggerHaServiceImpl) - logpresso core: managed logger HA sync thread exit
+[2017-09-08 08:51:48,599]  INFO (StreamQueryServiceImpl) - logpresso query: closing stream query service
+[2017-09-08 08:51:48,599]  INFO (StreamQueryServiceImpl) - logpresso query: thread pool shutdown completed
+[2017-09-08 08:51:48,637]  INFO (LogFileServiceV3) - logpresso logstorage: counter reset thread stopped
+[2017-09-08 08:51:48,638]  INFO (LogFileServiceRegistryImpl) - araqne logstorage: unloaded file engine [v3p]
+[2017-09-08 08:51:48,640]  INFO (QueryThreadPoolServiceImpl) - logpresso core: waiting query thread pool shutdown...
+[2017-09-08 08:51:48,640]  INFO (QueryThreadPoolServiceImpl) - logpresso core: stopped query thread pool service.
+[2017-09-08 08:51:48,849]  INFO (ReplicationPlugin) - replication msgbus plugin stopped
+[2017-09-08 08:51:48,890]  INFO (HA-core) - stopping replicator
+[2017-09-08 08:51:48,903]  INFO (ReplicationConnectorPool) - sweeper 87104fb3-05da-4321-b9a3-b2c1e7b541b4 thread is stopped.
+[2017-09-08 08:51:48,911]  INFO (NodeRegistryImpl) - logpresso federation: node check scheduler exit
+[2017-09-08 08:51:49,048]  INFO (LogIndexerEngine) - logpresso index: indexer sweeper stopped
+[2017-09-08 08:51:49,048]  INFO (LogIndexerEngine) - logpresso index: counter reset thread stopped
+[2017-09-08 08:51:49,606]  INFO (BundleManagerService) - Stopping org.araqne.logdb [6] bundle.
+[2017-09-08 08:51:49,620]  INFO (BundleManagerService) - Stopping org.logpresso.map.korea [107] bundle.
+[2017-09-08 08:51:50,844]  INFO (BundleManagerService) - Stopping com.logpresso.core [89] bundle.
+[2017-09-08 08:51:51,386]  INFO (BundleManagerService) - Stopping org.araqne.krsyslog.parser [92] bundle.
+[2017-09-08 08:51:51,495]  INFO (BundleManagerService) - Stopping com.logpresso.tap [109] bundle.
+[2017-09-08 08:51:51,772]  INFO (BundleManagerService) - Stopping org.araqne.syslog.parser [39] bundle.
+[2017-09-08 08:51:51,843]  INFO (BundleManagerService) - Stopping org.araqne.logdb.groovy [36] bundle.
+[2017-09-08 08:51:51,873]  INFO (BundleManagerService) - Stopping org.araqne.logfile.parser [48] bundle.
+[2017-09-08 08:51:51,883]  INFO (BundleManagerService) - Stopping org.araqne.log.api.xlsx [52] bundle.
+[2017-09-08 08:51:51,900]  INFO (BundleManagerService) - Stopping org.araqne.logdb.geoip [34] bundle.
+[2017-09-08 08:51:51,955]  INFO (BundleManagerService) - Stopping com.logpresso.hdfs [99] bundle.
+[2017-09-08 08:51:52,033]  INFO (BundleManagerService) - Stopping org.logpresso.redis [104] bundle.
+[2017-09-08 08:51:52,079]  INFO (BundleManagerService) - Stopping org.logpresso.snmpmon [68] bundle.
+[2017-09-08 08:51:52,095]  INFO (BundleManagerService) - Stopping com.logpresso.mcs [110] bundle.
+[2017-09-08 08:51:52,119]  INFO (BundleManagerService) - Stopping com.logpresso.lucene [96] bundle.
+[2017-09-08 08:51:52,223]  INFO (BundleManagerService) - Stopping org.araqne.logdb.cep [32] bundle.
+[2017-09-08 08:51:52,254]  INFO (BundleManagerService) - Stopping org.logpresso.flowmon [60] bundle.
+[2017-09-08 08:51:52,292]  INFO (BundleManagerService) - Stopping org.araqne.rss [53] bundle.
+[2017-09-08 08:51:52,330]  INFO (LogStorageEngine$WriterSweeper) - araqne logstorage: writer sweeper stopped
+[2017-09-08 08:51:52,552]  INFO (LogFileServiceRegistryImpl) - araqne logstorage: unloaded file engine [v2]
+[2017-09-08 08:51:52,562]  INFO (LogFileRepairerRegistryImpl) - araqne logstorage: unloaded file repairer [v1]
+[2017-09-08 08:51:52,568]  INFO (LogFileRepairerRegistryImpl) - araqne logstorage: unloaded file repairer [v2]
+[2017-09-08 08:51:52,574]  INFO (LogFileRepairerRegistryImpl) - araqne logstorage: unloaded file repairer [v3o]
+[2017-09-08 08:51:52,602]  INFO (logpresso-integrity-checker) - logpresso repair: pid file successfully deleted
+[2017-09-08 08:51:52,727]  INFO (BundleManagerService) - Stopping org.araqne.logstorage [3] bundle.
+[2017-09-08 08:51:52,734]  INFO (BundleManagerService) - Stopping com.logpresso.repairer [80] bundle.
+[2017-09-08 08:51:52,756]  INFO (BundleManagerService) - Stopping com.logpresso.license [16] bundle.
+[2017-09-08 08:51:52,783]  INFO (BundleManagerService) - Stopping org.logpresso.base [57] bundle.
+[2017-09-08 08:51:52,925]  INFO (BundleManagerService) - Stopping com.logpresso.ml [101] bundle.
+[2017-09-08 08:51:52,925]  INFO (BundleManagerService) - Stopping com.logpresso.query.api [82] bundle.
+[2017-09-08 08:51:52,925]  INFO (BundleManagerService) - Stopping org.apache.hive.jdbc [93] bundle.
+[2017-09-08 08:51:52,997]  INFO (BundleManagerService) - Stopping org.logpresso.ssh [64] bundle.
+[2017-09-08 08:51:53,032]  INFO (BundleManagerService) - Stopping com.logpresso.replicator [75] bundle.
+[2017-09-08 08:51:53,040]  INFO (BundleManagerService) - Stopping org.araqne.log.api.nio [31] bundle.
+[2017-09-08 08:51:53,046]  INFO (BundleManagerService) - Stopping org.araqne.logdb.crawler [46] bundle.
+[2017-09-08 08:51:53,046]  INFO (BundleManagerService) - Stopping com.logpresso.federation.api [73] bundle.
+[2017-09-08 08:51:53,071]  INFO (BundleManagerService) - Stopping org.araqne.log.api.http [51] bundle.
+[2017-09-08 08:51:53,085]  INFO (BundleManagerService) - Stopping com.logpresso.twitter [102] bundle.
+[2017-09-08 08:51:53,149]  INFO (BundleManagerService) - Stopping org.logpresso.jdbc [63] bundle.
+[2017-09-08 08:51:53,329]  INFO (BundleManagerService) - Stopping com.logpresso.index [79] bundle.
+[2017-09-08 08:51:53,329]  INFO (BundleManagerService) - Stopping com.logpresso.index.api [74] bundle.
+[2017-09-08 08:51:53,340]  INFO (BundleManagerService) - Stopping com.logpresso.widget3d [108] bundle.
+[2017-09-08 08:51:53,391]  INFO (LogTransformerFactoryRegistryImpl) - araqne log api: transformer factory [regex-filter] removed
+[2017-09-08 08:51:53,391]  INFO (LogTransformerFactoryRegistryImpl) - araqne log api: transformer factory [keyvalue] removed
+[2017-09-08 08:51:53,470]  INFO (LastStateServiceImpl) - araqne log api: last state sync thread exit
+[2017-09-08 08:51:53,470]  INFO (LastStateServiceImpl) - araqne log api: state thread ended
+[2017-09-08 08:51:53,597]  INFO (BundleManagerService) - Stopping org.araqne.log.api [8] bundle.
+[2017-09-08 08:51:53,613]  INFO (BundleManagerService) - Stopping org.logpresso.mongodb [69] bundle.
+[2017-09-08 08:51:53,621]  INFO (BundleManagerService) - Stopping org.araqne.logparser.snmptrap [47] bundle.
+[2017-09-08 08:51:53,683]  INFO (BundleManagerService) - Stopping org.logpresso.sentry [58] bundle.
+[2017-09-08 08:51:53,818]  INFO (BundleManagerService) - Stopping com.logpresso.query [83] bundle.
+[2017-09-08 08:51:53,834]  INFO (BundleManagerService) - Stopping com.logpresso.signverifier [84] bundle.
+[2017-09-08 08:51:53,842]  INFO (BundleManagerService) - Stopping org.araqne.logdb.jmx [44] bundle.
+[2017-09-08 08:51:53,871]  INFO (BundleManagerService) - Stopping org.araqne.logdb.nashorn [37] bundle.
+[2017-09-08 08:51:53,880]  INFO (BundleManagerService) - Stopping com.logpresso.federation [76] bundle.
+[2017-09-08 08:51:53,883]  INFO (InputThreadPools) - input: shutdown thread pools
+[2017-09-08 08:51:53,897]  INFO (QueryThreadPools) - query: shutdown thread pools
+[2017-09-08 08:51:53,954]  INFO (BundleManagerService) - Stopping com.logpresso.logstorage [77] bundle.
+[2017-09-08 08:51:53,959]  INFO (BundleManagerService) - Stopping org.araqne.logdb.jxpath [50] bundle.
+[2017-09-08 08:51:53,964]  INFO (BundleManagerService) - Stopping org.araqne.logdb.hprof [49] bundle.
+[2017-09-08 08:51:54,118]  INFO (BundleManagerService) - Starting org.logpresso.ftp [65] bundle.
