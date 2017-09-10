@@ -1,0 +1,270 @@
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_mhs33, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/mhs/mhs33.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_mhs33] is loaded
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_mhs51, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/mhs/mhs51.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_mhs51] is loaded
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_mhs52, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/mhs/mhs52.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_mhs52] is loaded
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_mhs53, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/mhs/mhs53.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_mhs53] is loaded
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_patch1, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/patch/patch1.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_patch1] is loaded
+[2017-09-08 08:51:59,407]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query1, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query1.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query1] is loaded
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query14, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query14.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query14] is loaded
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query2, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query2.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query2] is loaded
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query31, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query31.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query31] is loaded
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query32, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query32.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query32] is loaded
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query33, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query33.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query33] is loaded
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query51, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query51.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query51] is loaded
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query52, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query52.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query52] is loaded
+[2017-09-08 08:51:59,408]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_query53, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/query/query53.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_query53] is loaded
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt1, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt1.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt1] is loaded
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt11, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt11.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt11] is loaded
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt12, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt12.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt12] is loaded
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt13, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt13.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt13] is loaded
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt31, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt31.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt31] is loaded
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt32, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt32.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt32] is loaded
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt33, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt33.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt33] is loaded
+[2017-09-08 08:51:59,409]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt51, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt51.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt51] is loaded
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt52, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt52.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt52] is loaded
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\mes_rpt53, running=false, interval=5000, configs={file_path=/usr02/log/SMARTMES/rpt/rpt53.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{2}-\d{2} \d{2}:\d{2}:\d{2} \d{3})\], ftp_profile=mes_ftp, date_format=MM-dd HH:mm:ss SSS}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\mes_rpt53] is loaded
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest11, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/11.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest11] is loaded
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest1, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/1.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=true}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest1] is loaded
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest2, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/2.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=true}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest2] is loaded
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest3, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/3.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=true}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest3] is loaded
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest4, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/4.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=true}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest4] is loaded
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest5, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/5.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=true}]
+[2017-09-08 08:51:59,410]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest5] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest6, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/6.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest6] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest7, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/7.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest7] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest8, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/8.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest8] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest9, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/9.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest9] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest10, running=false, interval=5000, configs={file_path=/mcsapp1/mcsadm/loggen/10.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest10] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest12, running=false, interval=0, configs={file_path=/mcsapp1/mcsadm/loggen/12.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest12] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest13, running=false, interval=0, configs={file_path=/mcsapp1/mcsadm/loggen/13.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest13] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest14, running=false, interval=0, configs={file_path=/mcsapp1/mcsadm/loggen/14.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest14] is loaded
+[2017-09-08 08:51:59,411]  INFO (AbstractLoggerFactory) - araqne log api: trying to load logger [factory=local\ftp-rotation, fullname=local\00_mcsLogTest15, running=false, interval=0, configs={file_path=/mcsapp1/mcsadm/loggen/15.log, charset=UTF-8, end_regex=null, date_locale=ko, rate_limit=null, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], ftp_profile=mcs_test, date_format=yyyy-MM-dd HH:mm:ss.SSS, eof_flush=null}]
+[2017-09-08 08:51:59,412]  INFO (AbstractLoggerFactory) - araqne log api: logger [local\00_mcsLogTest15] is loaded
+[2017-09-08 08:51:59,429]  INFO (LicenseServiceImpl) - logpresso license: supported build time [2017-09-04 19:50]
+[2017-09-08 08:51:59,555]  INFO (LicenseServiceImpl) - logpresso license: valid license loaded [hardware key=427394b0c7054b79d726f84cf83a7a724473a3d5, duration=2017-07-01~2017-10-01, issued=2017-08-01, installed=2017-08-01, rate limit=null, volume limit=null, edr agent=0, features=[federation, 3d, hdfs, multiuser, dashboard]], support expires at [2018-08-01 00:00]
+[2017-09-08 08:51:59,683]  INFO (LogTransformerFactoryRegistryImpl) - araqne log api: new transformer factory [query] added
+[2017-09-08 08:51:59,686]  INFO (StreamingResultEncoder) - araqne logdb: created encoder thread pool [8]
+[2017-09-08 08:51:59,687]  INFO (QueryStatusNotifier) - araqne logdb: query status notifier started
+[2017-09-08 08:51:59,762]  INFO (OrderedParallelEncoder) - logpresso sentry: created encoder thread pool [8]
+[2017-09-08 08:51:59,763]  INFO (LogTransport) - logpresso sentry: transport thread started
+[2017-09-08 08:52:00,768]  WARN (BootLogService) - logpresso sign verifier: found modified bundles [org.araqne.log.api]
+[2017-09-08 08:52:00,916]  INFO (NodeRegistryImpl) - logpresso federation: node check scheduler started
+[2017-09-08 08:52:00,978]  INFO (LogFileRepairerRegistryImpl) - araqne logstorage: loaded file repairer [v3p]
+[2017-09-08 08:52:00,982]  INFO (InputThreadPools) - logpresso logstorage: creating parallel executor with slot count [28]
+[2017-09-08 08:52:00,984]  INFO (InputThreadPools) - created fork/join pool with JRE7 implementation.
+[2017-09-08 08:52:01,007]  INFO (QueryThreadPools) - query: creating parallel executor with slot count [28]
+[2017-09-08 08:52:01,008]  INFO (QueryThreadPools) - query: created fork/join pool with JRE7 implementation.
+[2017-09-08 08:52:01,035]  INFO (LogIndexerEngine) - logpresso index: counter reset thread started
+[2017-09-08 08:52:01,044]  INFO (LoggerHaServiceImpl) - logpresso core: starting managed logger HA sync
+[2017-09-08 08:52:01,179]  INFO (HA-core) - starting replicator
+[2017-09-08 08:52:01,184]  INFO (HA-Worker) - thread started.
+[2017-09-08 08:52:01,185]  INFO (HA-BGSyncer) - logpresso replicator: node [node3] data syncer is starting..
+[2017-09-08 08:52:01,185]  INFO (HA-BGSyncer) - logpresso replicator: node [node1] data syncer is starting..
+[2017-09-08 08:52:01,202]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\apc_das] with interval [5000]
+[2017-09-08 08:52:01,203]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\araqneLog] with interval [5000]
+[2017-09-08 08:52:01,206]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest2] with interval [5000]
+[2017-09-08 08:52:01,208]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest1] with interval [5000]
+[2017-09-08 08:52:01,208]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest4] with interval [5000]
+[2017-09-08 08:52:01,209]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest3] with interval [5000]
+[2017-09-08 08:52:01,209]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest6] with interval [5000]
+[2017-09-08 08:52:01,211]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest5] with interval [5000]
+[2017-09-08 08:52:01,211]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest8] with interval [5000]
+[2017-09-08 08:52:01,212]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest7] with interval [5000]
+[2017-09-08 08:52:01,213]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest9] with interval [5000]
+[2017-09-08 08:52:01,213]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcs_LogTest12] with interval [5000]
+[2017-09-08 08:52:01,213]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcs_LogTest13] with interval [5000]
+[2017-09-08 08:52:01,213]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcs_LogTest14] with interval [5000]
+[2017-09-08 08:52:01,217]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcs_LogTest15] with interval [5000]
+[2017-09-08 08:52:01,219]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest10] with interval [5000]
+[2017-09-08 08:52:01,294]  INFO (ReplicationPlugin) - replication msgbus plugin started
+[2017-09-08 08:52:01,313]  INFO (LogCacheServiceImpl) - logpresso logstorage: new table cache built, max weight [32212254720]
+[2017-09-08 08:52:01,332]  INFO (LogFileServiceRegistryImpl) - araqne logstorage: loaded file engine [v3p]
+[2017-09-08 08:52:01,332]  INFO (LogFileServiceV3) - logpresso logstorage: counter reset thread started
+[2017-09-08 08:52:01,374]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest15] loading prevFile [/mcsapp1/mcsadm/loggen/15.log.2017-09-08-07]
+[2017-09-08 08:52:01,415]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest13] loading prevFile [/mcsapp1/mcsadm/loggen/13.log.2017-09-08-07]
+[2017-09-08 08:52:01,434]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest14] loading prevFile [/mcsapp1/mcsadm/loggen/14.log.2017-09-08-07]
+[2017-09-08 08:52:01,483]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest12] loading prevFile [/mcsapp1/mcsadm/loggen/12.log.2017-09-08-07]
+[2017-09-08 08:52:01,518]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest15] prevFile is null [/mcsapp1/mcsadm/loggen/15.log.2017-09-08-07]
+[2017-09-08 08:52:01,520]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest14] prevFile is null [/mcsapp1/mcsadm/loggen/14.log.2017-09-08-07]
+[2017-09-08 08:52:01,569]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest12] prevFile is null [/mcsapp1/mcsadm/loggen/12.log.2017-09-08-07]
+[2017-09-08 08:52:01,597]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest13] prevFile is null [/mcsapp1/mcsadm/loggen/13.log.2017-09-08-07]
+[2017-09-08 08:52:02,046]  INFO (LoggerHaServiceImpl) - logpresso core: logger recovery thread exit
+[2017-09-08 08:52:02,073]  WARN (AlertServiceImpl) - logpresso core: mailer profile [system] not found, cannot send alert mail, 50002
+[2017-09-08 08:52:02,101]  INFO (NodeRegistryImpl) - logpresso federation: node [node3] alive
+[2017-09-08 08:52:02,103]  INFO (NodeRegistryImpl) - logpresso federation: node [node1] alive
+[2017-09-08 08:52:02,131]  INFO (NodeRegistryImpl) - logpresso federation: detected paired with node [node3]
+[2017-09-08 08:52:02,131]  INFO (NodeRegistryImpl) - logpresso federation: detected paired with node [node1]
+[2017-09-08 08:52:02,203]  INFO (HA-core) - onPaired: node [node3]
+[2017-09-08 08:52:02,204]  INFO (LoggerHaServiceImpl) - logpresso core: starting backup logger transition for node [node3] op [PAIRING]
+[2017-09-08 08:52:02,204]  INFO (LoggerHaServiceImpl) - logpresso core: completed backup logger transition for node [node3] op [PAIRING]
+[2017-09-08 08:52:02,215]  INFO (LoggerHaServiceImpl) - logpresso core: starting backup logger transition for node [node1] op [PAIRING]
+[2017-09-08 08:52:02,215]  INFO (HA-core) - onPaired: node [node1]
+[2017-09-08 08:52:02,215]  INFO (LoggerHaServiceImpl) - logpresso core: completed backup logger transition for node [node1] op [PAIRING]
+[2017-09-08 08:52:02,216]  INFO (HA-core) - index/data syncer for node [node3] are started
+[2017-09-08 08:52:02,218]  INFO (HA-core) - index/data syncer for node [node1] are started
+[2017-09-08 08:52:05,810]  INFO (ScriptRunner) - araqne core: user [root] execute command [bundle.list]
+[2017-09-08 08:52:44,513]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 08:52:44,514] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=62}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 08:54:06,935]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 08:54:06,936] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=243}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 08:54:06,936]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 08:54:06,936] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=245}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 08:54:06,967]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 08:54:06,967] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=246}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 08:55:17,784]  INFO (TelnetHandler) - console closed from: /127.0.0.1:44254
+[2017-09-08 08:57:17,670]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 08:57:17,670] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=491}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 08:59:12,647]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 08:59:12,648] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=591}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 08:59:12,648]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 08:59:12,648] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=592}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 08:59:52,932]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 08:59:52,937] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=681}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 09:00:09,710]  WARN (AlertServiceImpl) - logpresso core: mailer profile [system] not found, cannot send alert mail, 50002
+[2017-09-08 09:05:53,165]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 09:05:53,166] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=976}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 09:33:53,963]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest11] loading prevFile [/mcsapp1/mcsadm/loggen/11.log.2017-09-08-08]
+[2017-09-08 09:33:54,048]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest11] prevFile is null [/mcsapp1/mcsadm/loggen/11.log.2017-09-08-08]
+[2017-09-08 09:33:54,350]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest13] loading prevFile [/mcsapp1/mcsadm/loggen/13.log.2017-09-08-08]
+[2017-09-08 09:33:54,431]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest13] prevFile is null [/mcsapp1/mcsadm/loggen/13.log.2017-09-08-08]
+[2017-09-08 09:33:56,379]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest14] loading prevFile [/mcsapp1/mcsadm/loggen/14.log.2017-09-08-08]
+[2017-09-08 09:33:56,459]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest14] prevFile is null [/mcsapp1/mcsadm/loggen/14.log.2017-09-08-08]
+[2017-09-08 09:33:56,747]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest15] loading prevFile [/mcsapp1/mcsadm/loggen/15.log.2017-09-08-08]
+[2017-09-08 09:33:56,834]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest15] prevFile is null [/mcsapp1/mcsadm/loggen/15.log.2017-09-08-08]
+[2017-09-08 09:33:59,403]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest12] loading prevFile [/mcsapp1/mcsadm/loggen/12.log.2017-09-08-08]
+[2017-09-08 09:33:59,496]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest12] prevFile is null [/mcsapp1/mcsadm/loggen/12.log.2017-09-08-08]
+[2017-09-08 09:40:32,544]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 09:40:32,544] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=3125}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 09:40:32,545]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 09:40:32,545] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=3126}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 09:40:32,546]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 09:40:32,546] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=3127}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 09:53:42,431]  INFO (LogTableRegistryImpl) - araqne logstorage: created table [ts_data_t3] 
+[2017-09-08 09:59:26,571]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=type=10605, offset=-1, note=테이블 ts-data_t3이(가) 존재하지 않습니다., params={table=ts-data_t3}, lang=en] not found
+[2017-09-08 09:59:26,571] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, type=10605, offset=-1, note=테이블 ts-data_t3이(가) 존재하지 않습니다., params={table=ts-data_t3}, params null
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__createQuery(LogQueryPlugin.java:359)
+
+[2017-09-08 10:00:10,036]  WARN (AlertServiceImpl) - logpresso core: mailer profile [system] not found, cannot send alert mail, 50002
+[2017-09-08 10:49:24,402]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest11] loading prevFile [/mcsapp1/mcsadm/loggen/11.log.2017-09-08-09]
+[2017-09-08 10:49:24,522]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest11] prevFile is null [/mcsapp1/mcsadm/loggen/11.log.2017-09-08-09]
+[2017-09-08 10:49:24,768]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest13] loading prevFile [/mcsapp1/mcsadm/loggen/13.log.2017-09-08-09]
+[2017-09-08 10:49:24,908]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest13] prevFile is null [/mcsapp1/mcsadm/loggen/13.log.2017-09-08-09]
+[2017-09-08 10:49:25,749]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest12] loading prevFile [/mcsapp1/mcsadm/loggen/12.log.2017-09-08-09]
+[2017-09-08 10:49:25,833]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest12] prevFile is null [/mcsapp1/mcsadm/loggen/12.log.2017-09-08-09]
+[2017-09-08 10:49:26,864]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest14] loading prevFile [/mcsapp1/mcsadm/loggen/14.log.2017-09-08-09]
+[2017-09-08 10:49:26,990]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest14] prevFile is null [/mcsapp1/mcsadm/loggen/14.log.2017-09-08-09]
+[2017-09-08 10:49:27,418]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest15] loading prevFile [/mcsapp1/mcsadm/loggen/15.log.2017-09-08-09]
+[2017-09-08 10:49:27,506]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest15] prevFile is null [/mcsapp1/mcsadm/loggen/15.log.2017-09-08-09]
+[2017-09-08 11:00:10,211]  WARN (AlertServiceImpl) - logpresso core: mailer profile [system] not found, cannot send alert mail, 50002
+[2017-09-08 11:09:01,523]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 11:09:01,523] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=7978}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 11:10:10,213]  INFO (LogIndexerEngine) - logpresso index: created index => id=33, table=ts_data_t3, index=f_idx, period (unbounded), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-08 11:10:11,980]  INFO (OnlineIndexer) - ts_data_t3.f_idx 2017-09-08 follow up logstorage - new log id : 514628, maxPushedLogId : -1
+[2017-09-08 11:10:34,320]  INFO (LogIndexerEngine) - logpresso index: follow up indexing job [table=ts_data_t3, index=f_idx] is completed
+[2017-09-08 11:10:51,398]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 11:10:51,398] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=8035}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 11:10:51,417]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 11:10:51,417] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=8036}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 11:13:50,374]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 11:13:50,375] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=8456}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-08 12:00:10,348]  WARN (AlertServiceImpl) - logpresso core: mailer profile [system] not found, cannot send alert mail, 50002
+[2017-09-08 12:04:52,542]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest15] loading prevFile [/mcsapp1/mcsadm/loggen/15.log.2017-09-08-11]
+[2017-09-08 12:04:52,625]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest15] prevFile is null [/mcsapp1/mcsadm/loggen/15.log.2017-09-08-11]
+[2017-09-08 12:04:54,728]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest11] loading prevFile [/mcsapp1/mcsadm/loggen/11.log.2017-09-08-11]
+[2017-09-08 12:04:54,808]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest11] prevFile is null [/mcsapp1/mcsadm/loggen/11.log.2017-09-08-11]
+[2017-09-08 12:04:54,994]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest13] loading prevFile [/mcsapp1/mcsadm/loggen/13.log.2017-09-08-11]
+[2017-09-08 12:04:55,000]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest12] loading prevFile [/mcsapp1/mcsadm/loggen/12.log.2017-09-08-11]
+[2017-09-08 12:04:55,077]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest13] prevFile is null [/mcsapp1/mcsadm/loggen/13.log.2017-09-08-11]
+[2017-09-08 12:04:55,082]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest12] prevFile is null [/mcsapp1/mcsadm/loggen/12.log.2017-09-08-11]
+[2017-09-08 12:04:57,189]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest14] loading prevFile [/mcsapp1/mcsadm/loggen/14.log.2017-09-08-11]
+[2017-09-08 12:04:57,270]  INFO (MCSFtpRotationFileLogger) - mcs ftp: ftp-rotation [local\00_mcs_LogTest14] prevFile is null [/mcsapp1/mcsadm/loggen/14.log.2017-09-08-11]
+[2017-09-08 13:00:10,628]  WARN (AlertServiceImpl) - logpresso core: mailer profile [system] not found, cannot send alert mail, 50002
+[2017-09-08 13:08:15,382]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-08 13:08:15,383] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=9051}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
