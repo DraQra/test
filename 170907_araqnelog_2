@@ -1,0 +1,233 @@
+[2017-09-07 14:46:55,865]  INFO (LogIndexerEngine) - logpresso index: batch indexing job [table=ts_data, index=f_idx] is completed
+[2017-09-07 14:52:18,163]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 14:52:18,165] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=80679}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 14:57:18,844]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 14:57:18,844] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81059}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 14:57:18,847]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 14:57:18,848] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81060}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:14:31,679]  INFO (LogIndexerEngine) - logpresso index: follow up indexing job [table=ts_data_t2, index=f_idx] is completed
+[2017-09-07 15:17:19,432] ERROR (FtpRotationFileLogger) - logpresso ftp: ftp rotation logger [local\00_mcsLogTest10] cannot read file
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at org.apache.commons.net.ftp.FTPFileEntryParserImpl.readNextEntry(FTPFileEntryParserImpl.java:53)
+	at org.apache.commons.net.ftp.FTPListParseEngine.readStream(FTPListParseEngine.java:128)
+	at org.apache.commons.net.ftp.FTPListParseEngine.readServerList(FTPListParseEngine.java:104)
+	at org.apache.commons.net.ftp.FTPClient.initiateListParsing(FTPClient.java:3302)
+	at org.apache.commons.net.ftp.FTPClient.initiateListParsing(FTPClient.java:3271)
+	at org.apache.commons.net.ftp.FTPClient.listFiles(FTPClient.java:2930)
+	at org.logpresso.ftp.FtpRotationFileLogger.findFile(FtpRotationFileLogger.java:308)
+	at org.logpresso.ftp.FtpRotationFileLogger.getCurrentInfo(FtpRotationFileLogger.java:273)
+	at org.logpresso.ftp.FtpRotationFileLogger.runOnce(FtpRotationFileLogger.java:145)
+	at org.araqne.log.api.AbstractLogger.run(AbstractLogger.java:508)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-09-07 15:17:19,432] ERROR (FtpRotationFileLogger) - logpresso ftp: ftp rotation logger [local\00_mcsLogTest11] cannot read file
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at org.apache.commons.net.ftp.FTPFileEntryParserImpl.readNextEntry(FTPFileEntryParserImpl.java:53)
+	at org.apache.commons.net.ftp.FTPListParseEngine.readStream(FTPListParseEngine.java:128)
+	at org.apache.commons.net.ftp.FTPListParseEngine.readServerList(FTPListParseEngine.java:104)
+	at org.apache.commons.net.ftp.FTPClient.initiateListParsing(FTPClient.java:3302)
+	at org.apache.commons.net.ftp.FTPClient.initiateListParsing(FTPClient.java:3271)
+	at org.apache.commons.net.ftp.FTPClient.listFiles(FTPClient.java:2930)
+	at org.logpresso.ftp.FtpRotationFileLogger.findFile(FtpRotationFileLogger.java:308)
+	at org.logpresso.ftp.FtpRotationFileLogger.getCurrentInfo(FtpRotationFileLogger.java:273)
+	at org.logpresso.ftp.FtpRotationFileLogger.runOnce(FtpRotationFileLogger.java:145)
+	at org.araqne.log.api.AbstractLogger.run(AbstractLogger.java:508)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-09-07 15:21:16,423]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:21:16,425] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81171}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:21:16,565]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:21:16,565] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81172}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:25:58,631]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:25:58,634] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81210}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:25:58,875]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:25:58,876] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81211}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:25:58,876]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:25:58,876] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81212}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:25:58,876]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:25:58,876] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81213}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:25:58,877]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:25:58,877] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81214}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:25:58,877]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:25:58,877] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=81215}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:42:23,805] ERROR (FtpRotationFileLogger) - logpresso ftp: ftp rotation logger [local\00_mcsLogTest7] cannot read file
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.read(SocketInputStream.java:204)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.read(BufferedReader.java:182)
+	at org.apache.commons.net.io.CRLFLineReader.readLine(CRLFLineReader.java:58)
+	at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:314)
+	at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:294)
+	at org.apache.commons.net.ftp.FTP.getReply(FTP.java:692)
+	at org.apache.commons.net.ftp.FTPClient.completePendingCommand(FTPClient.java:1813)
+	at org.apache.commons.net.ftp.FTPClient.initiateListParsing(FTPClient.java:3308)
+	at org.apache.commons.net.ftp.FTPClient.initiateListParsing(FTPClient.java:3271)
+	at org.apache.commons.net.ftp.FTPClient.listFiles(FTPClient.java:2930)
+	at org.logpresso.ftp.FtpRotationFileLogger.findFile(FtpRotationFileLogger.java:308)
+	at org.logpresso.ftp.FtpRotationFileLogger.getCurrentInfo(FtpRotationFileLogger.java:273)
+	at org.logpresso.ftp.FtpRotationFileLogger.runOnce(FtpRotationFileLogger.java:145)
+	at org.araqne.log.api.AbstractLogger.run(AbstractLogger.java:508)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-09-07 15:46:04,900]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:46:04,910] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=82962}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:46:04,910]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:46:04,910] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=82964}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 15:46:04,911]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 15:46:04,911] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=82965}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 16:48:32,566]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 16:48:32,566] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=87827}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 16:48:32,754]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 16:48:32,754] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=87828}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 16:48:32,755]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 16:48:32,755] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=87829}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 17:32:04,545] ERROR (FtpRotationFileLogger) - logpresso ftp: logger [local\00_mcsLogTest6] failed to complete pending command
+[2017-09-07 17:35:42,110]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 17:35:42,111] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=94983}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 17:35:42,111]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 17:35:42,112] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=94984}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 17:38:35,060] ERROR (FtpRotationFileLogger) - logpresso ftp: ftp rotation logger [local\00_mcsLogTest13] cannot read file
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.araqne.log.api.MultilineLogExtractor.extract(MultilineLogExtractor.java:241)
+	at org.araqne.log.api.MultilineLogExtractor.extract(MultilineLogExtractor.java:223)
+	at org.logpresso.ftp.FtpRotationFileLogger.runOnce(FtpRotationFileLogger.java:191)
+	at org.araqne.log.api.AbstractLogger.run(AbstractLogger.java:508)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-09-07 17:52:50,544]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=type=parse-failure, offset=-1, note=java.lang.NumberFormatException: For input string: "100000000000", params={}, lang=en] not found
+[2017-09-07 17:52:50,546] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, type=parse-failure, offset=-1, note=java.lang.NumberFormatException: For input string: "100000000000", params={}, params null
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__createQuery(LogQueryPlugin.java:359)
+
+[2017-09-07 19:00:58,772]  INFO (LogIndexerEngine) - logpresso index: created index => id=32, table=ts_data, index=f_idx, period (unbounded), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 19:01:20,377]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 19:01:20,378] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=95858}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 19:01:20,380]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 19:01:20,380] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=95859}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 19:01:20,380]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 19:01:20,380] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=95860}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 19:03:09,042]  INFO (OnlineIndexer) - ts_data.f_idx 2017-09-07 follow up logstorage - new log id : 227675990, maxPushedLogId : -1
+[2017-09-07 19:03:15,409] ERROR (AbstractLogger) - araqne log api: logger [local\00_mcsLogTest15] stopped
+java.lang.NullPointerException
+	at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:314)
+	at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:294)
+	at org.apache.commons.net.ftp.FTP.getReply(FTP.java:692)
+	at org.apache.commons.net.ftp.FTPClient.completePendingCommand(FTPClient.java:1813)
+	at org.logpresso.ftp.FtpRotationFileLogger.runOnce(FtpRotationFileLogger.java:209)
+	at org.araqne.log.api.AbstractLogger.run(AbstractLogger.java:508)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-09-07 19:03:53,558]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 19:03:53,560] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=96033}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 19:07:06,735]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 19:07:06,737] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=96477}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 20:07:45,892]  INFO (LogIndexerEngine) - logpresso index: triggering follow-up indexing to 227872145 - table=ts_data, index=f_idx, day=2017-09-07, minLogId=-1, maxLogId=227675989
+[2017-09-07 20:07:45,893]  INFO (OnlineIndexer) - ts_data.f_idx 2017-09-07 follow up logstorage - new log id : 227872146, maxPushedLogId : 227675989
+[2017-09-07 20:07:54,333]  INFO (LogIndexerEngine) - logpresso index: follow up indexing job [table=ts_data, index=f_idx] is completed
