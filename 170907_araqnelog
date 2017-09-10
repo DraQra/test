@@ -1,0 +1,265 @@
+[2017-09-07 00:00:02,200]  WARN (logpresso-integrity-checker) - cannot update pid file
+[2017-09-07 00:00:02,203] ERROR (ScheduledQueryServiceImpl) - logpresso core: cannot excute query. guid=b0b1adc2-242b-4335-b381-f87eaf9c8c62
+org.araqne.logdb.QueryParseException: type=10605, offset=-1, note=table-not-found, params={table=IF_MS_EL_GERP_HIST}
+	at org.araqne.logdb.query.engine.QueryParserServiceImpl.__parseCommands(QueryParserServiceImpl.java:119)
+	at org.araqne.logdb.query.engine.QueryParserServiceImpl.parseCommands(QueryParserServiceImpl.java)
+	at org.araqne.logdb.query.engine.QueryServiceImpl.__createQuery(QueryServiceImpl.java:350)
+	at org.araqne.logdb.query.engine.QueryServiceImpl.createQuery(QueryServiceImpl.java)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.__M_runScheduledQuery(ScheduledQueryServiceImpl.java:474)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.runScheduledQuery(ScheduledQueryServiceImpl.java)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.__M_runScheduledQuery(ScheduledQueryServiceImpl.java:448)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.runScheduledQuery(ScheduledQueryServiceImpl.java)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.__M_run(ScheduledQueryServiceImpl.java:383)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.run(ScheduledQueryServiceImpl.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.araqne.cron.impl.Job.run(Job.java:103)
+	at org.araqne.cron.impl.Scheduler$Runner.run(Scheduler.java:217)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.araqne.logdb.QueryParseException: type=10605, offset=0, note=null, params={table=IF_MS_EL_GERP_HIST}
+	at org.araqne.logdb.query.parser.TableParser.addTableSpec(TableParser.java:580)
+	at org.araqne.logdb.query.parser.TableParser.parseTableNames(TableParser.java:545)
+	at org.araqne.logdb.query.parser.TableParser.parse(TableParser.java:109)
+	at org.araqne.logdb.query.engine.QueryParserServiceImpl.__parseCommands(QueryParserServiceImpl.java:95)
+	... 16 more
+
+[2017-09-07 05:03:02,865]  INFO (bloom-filter-tempseg-builder) - bloom-filter-tempseg-builder: enqueueing tasks from day 2017-09-01
+[2017-09-07 05:03:02,877]  INFO (bloom-filter-tempseg-builder) - bloom-filter-tempseg-builder: enqueueing tasks done(14 tasks)
+[2017-09-07 08:00:03,247] ERROR (ScheduledQueryServiceImpl) - logpresso core: cannot excute query. guid=0e673512-8eee-44d9-9cba-2e8d506531c3
+org.araqne.logdb.QueryParseException: type=30101, offset=7, note=import-table-not-found, params={table=Q_INL_REP_WF_DATA}
+	at org.araqne.logdb.query.engine.QueryParserServiceImpl.__parseCommands(QueryParserServiceImpl.java:119)
+	at org.araqne.logdb.query.engine.QueryParserServiceImpl.parseCommands(QueryParserServiceImpl.java)
+	at org.araqne.logdb.query.engine.QueryServiceImpl.__createQuery(QueryServiceImpl.java:350)
+	at org.araqne.logdb.query.engine.QueryServiceImpl.createQuery(QueryServiceImpl.java)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.__M_runScheduledQuery(ScheduledQueryServiceImpl.java:474)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.runScheduledQuery(ScheduledQueryServiceImpl.java)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.__M_runScheduledQuery(ScheduledQueryServiceImpl.java:448)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.runScheduledQuery(ScheduledQueryServiceImpl.java)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.__M_run(ScheduledQueryServiceImpl.java:383)
+	at com.logpresso.query.engine.ScheduledQueryServiceImpl.run(ScheduledQueryServiceImpl.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.araqne.cron.impl.Job.run(Job.java:103)
+	at org.araqne.cron.impl.Scheduler$Runner.run(Scheduler.java:217)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.araqne.logdb.QueryParseException: type=30101, offset=0, note=null, params={table=Q_INL_REP_WF_DATA}
+	at org.araqne.logdb.query.parser.ImportParser.parse(ImportParser.java:84)
+	at org.araqne.logdb.query.engine.QueryParserServiceImpl.__parseCommands(QueryParserServiceImpl.java:95)
+	... 16 more
+
+[2017-09-07 08:19:40,010]  INFO (ManagedLoggerServiceImpl) - logpresso core: starting managed logger [local\00_mcsLogTest11] with interval [5000]
+[2017-09-07 08:19:40,012]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logpresso, message_id=duplicated-managed-logger, lang=en] not found
+[2017-09-07 08:19:40,012] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logpresso, duplicated-managed-logger, params {factory_name=ftp-rotation, logger_name=00_mcsLogTest11, logger_description=00_mcsLogTest11, table_name=ts_raw, host_tag=00_mcsLogTest11, configs={ftp_profile=mcs_test, file_path=/mcsapp1/mcsadm/loggen/11.log, charset=UTF-8, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], date_format=yyyy-MM-dd HH:mm:ss.SSS, date_locale=ko, timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], end_regex=null, rate_limit=null, eof_flush=null}}
+	at com.logpresso.core.msgbus.ArchivePlugin.__M_createLocalLogger(ArchivePlugin.java:494)
+	at com.logpresso.core.msgbus.ArchivePlugin.createLocalLogger(ArchivePlugin.java)
+
+[2017-09-07 08:19:42,607]  INFO (OnlineIndexer) - ts_data.f_idx 2017-09-06 follow up logstorage - new log id : 156608683, maxPushedLogId : 110309072
+[2017-09-07 08:20:09,003]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logpresso, message_id=logger-already-exists, lang=en] not found
+[2017-09-07 08:20:09,005] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logpresso, logger-already-exists, params {factory_name=ftp-rotation, logger_name=00_mcsLogTest11, logger_description=00_mcsLogTest11, table_name=ts_raw, host_tag=00_mcsLogTest11, configs={ftp_profile=mcs_test, file_path=/mcsapp1/mcsadm/loggen/11.log, charset=UTF-8, date_pattern=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], date_format=yyyy-MM-dd HH:mm:ss.SSS, date_locale=ko, timezone=GMT+09:00, begin_regex=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3})\], end_regex=null, rate_limit=null, eof_flush=null}}
+	at com.logpresso.core.msgbus.ArchivePlugin.__M_createLocalLogger(ArchivePlugin.java:496)
+	at com.logpresso.core.msgbus.ArchivePlugin.createLocalLogger(ArchivePlugin.java)
+
+[2017-09-07 08:30:53,930]  INFO (LogTableRegistryImpl) - araqne logstorage: created table [ts_data_t2] 
+[2017-09-07 08:34:13,615]  INFO (LogIndexerEngine) - logpresso index: follow up indexing job [table=ts_data, index=f_idx] is completed
+[2017-09-07 08:43:31,864]  INFO (LogIndexerEngine) - logpresso index: created index => id=24, table=ts_data, index=f_idx, period (unbounded), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 08:43:54,158]  INFO (LogIndexerEngine) - logpresso index: created index => id=25, table=ts_data_t2, index=f_idx, period (unbounded), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 08:50:57,203] ERROR (FtpDirectoryWatchLogger) - logpresso ftp: ftp logger failed
+java.lang.NullPointerException
+	at org.apache.commons.net.SocketClient.getRemoteAddress(SocketClient.java:658)
+	at org.apache.commons.net.SocketClient.verifyRemote(SocketClient.java:676)
+	at org.apache.commons.net.ftp.FTPClient._openDataConnection_(FTPClient.java:908)
+	at org.apache.commons.net.ftp.FTPClient._retrieveFileStream(FTPClient.java:1927)
+	at org.apache.commons.net.ftp.FTPClient.retrieveFileStream(FTPClient.java:1918)
+	at org.logpresso.ftp.FtpDirectoryWatchLogger.loadFile(FtpDirectoryWatchLogger.java:276)
+	at org.logpresso.ftp.FtpDirectoryWatchLogger.runOnce(FtpDirectoryWatchLogger.java:185)
+	at org.araqne.log.api.AbstractLogger.run(AbstractLogger.java:508)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-09-07 08:55:52,955]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 08:55:52,957] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=61381}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 08:55:52,957]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 08:55:52,958] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=61382}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 10:17:59,667]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 10:17:59,669] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=66517}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 10:17:59,669]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 10:17:59,669] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=66519}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 10:17:59,670]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 10:17:59,670] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=66520}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 10:17:59,673]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 10:17:59,673] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=66521}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 10:19:25,087]  INFO (LogIndexerEngine) - logpresso index: created index => id=26, table=ts_data, index=f_idx, period (2017-09-05 ~ unlimited), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 10:20:05,909]  INFO (LogIndexerEngine) - logpresso index: created index => id=27, table=ts_data_t2, index=f_idx, period (unbounded), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 10:24:50,495]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 10:24:50,496] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=67141}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 10:24:50,496]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 10:24:50,496] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=67142}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 10:24:50,558]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 10:24:50,558] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=67143}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 10:25:02,042]  INFO (OnlineIndexer) - ts_data.f_idx 2017-09-07 follow up logstorage - new log id : 36563982, maxPushedLogId : -1
+[2017-09-07 10:25:02,494]  INFO (OnlineIndexer) - ts_data_t2.f_idx 2017-09-07 follow up logstorage - new log id : 36558982, maxPushedLogId : -1
+[2017-09-07 10:31:23,487]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 10:31:23,488] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=67914}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 11:12:51,846]  INFO (LogIndexerEngine) - logpresso index: triggering follow-up indexing to 157466172 - table=ts_data, index=f_idx, day=2017-09-06
+[2017-09-07 11:12:51,853]  INFO (OnlineIndexer) - ts_data.f_idx 2017-09-06 follow up logstorage - new log id : 157466173, maxPushedLogId : 139438568
+[2017-09-07 11:13:36,560]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 11:13:36,561] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=71944}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 11:13:36,612]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 11:13:36,613] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=71945}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 11:13:36,615]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 11:13:36,615] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=71946}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 11:13:47,819] ERROR (FtpRotationFileLogger) - logpresso ftp: logger [local\00_mcsLogTest6] failed to complete pending command
+[2017-09-07 11:14:41,633]  INFO (LogIndexerEngine) - logpresso index: created index => id=28, table=ts_data_t2, index=f_idx, period (unbounded), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 11:21:05,659]  INFO (OnlineIndexer) - ts_data_t2.f_idx 2017-09-07 follow up logstorage - new log id : 57568783, maxPushedLogId : -1
+[2017-09-07 11:25:15,309]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 11:25:15,310] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=73601}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 11:32:26,457]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 11:32:26,458] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=73968}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 11:33:19,278]  INFO (LogIndexerEngine) - logpresso index: indexing cancelled, table=ts_data_t2, index=f_idx, day=2017-09-07, minLogId=-1, maxLogId=36558981
+[2017-09-07 11:33:19,811]  INFO (LogIndexerEngine) - logpresso index: batch indexing job [table=ts_data, index=f_idx] is completed
+[2017-09-07 11:37:01,941]  INFO (LogIndexerEngine) - logpresso index: triggering follow-up indexing to 157466172 - table=ts_data, index=f_idx, day=2017-09-06, minLogId=139438569, maxLogId=157466172
+[2017-09-07 11:37:01,945]  INFO (OnlineIndexer) - ts_data.f_idx 2017-09-06 follow up logstorage - new log id : 157466173, maxPushedLogId : 151668087
+[2017-09-07 11:37:01,945]  INFO (LogIndexerEngine) - logpresso index: indexing cancelled, table=ts_data_t2, index=f_idx, day=2017-09-07, minLogId=-1, maxLogId=57568782
+[2017-09-07 11:38:50,624]  INFO (LogIndexerEngine) - logpresso index: follow up indexing job [table=ts_data, index=f_idx] is completed
+[2017-09-07 11:38:53,955]  INFO (LogIndexerEngine) - logpresso index: created index => id=29, table=ts_data_t2, index=f_idx, period (unbounded), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 11:38:53,970]  INFO (OnlineIndexer) - ts_data_t2.f_idx 2017-09-07 follow up logstorage - new log id : 65467234, maxPushedLogId : -1
+[2017-09-07 11:42:39,154]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 11:42:39,154] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=74109}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 11:55:59,922]  INFO (LogIndexerEngine) - logpresso index: follow up indexing job [table=ts_data_t2, index=f_idx] is completed
+[2017-09-07 13:03:56,987]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 13:03:56,987] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=74408}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 13:05:42,570]  INFO (LogIndexerEngine) - logpresso index: created index => id=30, table=ts_data, index=f_idx, period (2017-09-05 ~ unlimited), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 13:06:11,292]  INFO (LogIndexerEngine) - logpresso index: created index => id=31, table=ts_data_t2, index=f_idx, period (unbounded), bloomfilter=true, tokenizer=query-parsed, base path=null
+[2017-09-07 13:07:16,329]  INFO (OnlineIndexer) - ts_data.f_idx 2017-09-07 follow up logstorage - new log id : 107014572, maxPushedLogId : -1
+[2017-09-07 13:07:17,261]  INFO (OnlineIndexer) - ts_data_t2.f_idx 2017-09-07 follow up logstorage - new log id : 103199258, maxPushedLogId : -1
+[2017-09-07 13:08:15,124]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 13:08:15,132] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=74517}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 13:09:56,253]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=type=10605, offset=-1, note=테이블 ts_data_ts이(가) 존재하지 않습니다., params={table=ts_data_ts}, lang=en] not found
+[2017-09-07 13:09:56,253] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, type=10605, offset=-1, note=테이블 ts_data_ts이(가) 존재하지 않습니다., params={table=ts_data_ts}, params null
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__createQuery(LogQueryPlugin.java:359)
+
+[2017-09-07 13:18:38,818]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 13:18:38,818] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=75950}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 13:26:38,330]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 13:26:38,331] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=76671}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 13:26:38,331]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 13:26:38,331] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=76673}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 13:26:38,334]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 13:26:38,334] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=76674}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 13:42:58,596]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 13:42:58,596] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=77663}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 13:44:58,068] ERROR (FtpRotationFileLogger) - logpresso ftp: logger [local\00_mcsLogTest9] failed to complete pending command
+[2017-09-07 14:15:37,950]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 14:15:37,951] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=78612}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 14:38:30,555]  WARN (MessageBusImpl) - araqne msgbus: error message template [group_id=logdb, message_id=query not found, lang=en] not found
+[2017-09-07 14:38:30,556] ERROR (MessageBusImpl) - araqne msgbus: message handler failed
+org.araqne.msgbus.MsgbusException: logdb, query not found, params {query_id=78855}
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__startQuery(LogQueryPlugin.java:422)
+
+[2017-09-07 14:40:18,012] ERROR (DefaultQuery) - araqne logdb: cannot close command fulltext
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
+	at java.util.ArrayList$Itr.next(ArrayList.java:851)
+	at com.logpresso.index.online.OnlineIndex$SearchEnvironment.close(OnlineIndex.java:813)
+	at com.logpresso.index.engine.OnlineIndexCursor.close(OnlineIndexCursor.java:125)
+	at com.logpresso.index.engine.IndexCursorImpl.close(IndexCursorImpl.java:165)
+	at com.logpresso.index.engine.MergedIndexCursor.closeCurrentCursor(MergedIndexCursor.java:59)
+	at com.logpresso.index.engine.MergedIndexCursor.close(MergedIndexCursor.java:188)
+	at com.logpresso.index.engine.FromIndexCursor.close(FromIndexCursor.java:103)
+	at com.logpresso.index.query.Fulltext.onClose(Fulltext.java:759)
+	at org.araqne.logdb.QueryCommand.tryClose(QueryCommand.java:142)
+	at org.araqne.logdb.DefaultQuery.stop(DefaultQuery.java:341)
+	at org.araqne.logdb.DefaultQuery.stop(DefaultQuery.java:288)
+	at org.araqne.logdb.DefaultQuery.purge(DefaultQuery.java:255)
+	at org.araqne.logdb.query.engine.QueryServiceImpl.__removeQuery(QueryServiceImpl.java:503)
+	at org.araqne.logdb.query.engine.QueryServiceImpl.removeQuery(QueryServiceImpl.java)
+	at org.araqne.logdb.msgbus.LogQueryPlugin.__removeQuery(LogQueryPlugin.java:387)
+	at org.araqne.logdb.msgbus.LogQueryPlugin.removeQuery(LogQueryPlugin.java)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.araqne.msgbus.handler.MsgbusPluginHandler.__handleMessage(MsgbusPluginHandler.java:161)
+	at org.araqne.msgbus.handler.MsgbusPluginHandler.handleMessage(MsgbusPluginHandler.java)
+	at org.araqne.msgbus.impl.MessageBusImpl$TaskRunner.invokeMessageHandler(MessageBusImpl.java:456)
+	at org.araqne.msgbus.impl.MessageBusImpl$TaskRunner.run(MessageBusImpl.java:446)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
