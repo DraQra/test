@@ -1,0 +1,42 @@
+안녕하세요 비앤지시스템 전현구 사원입니다.
+많은도움 주심에 감사드립니다.
+
+현재 서비스중인 smartMCS 웹 서비스를 하나의 L4 VIP 로 묶어서 서비스하는
+작업을 진행 예정입니다.
+(기존 2개의 ip 를 하나의 domain에 동시 등록으로 충돌현상이 있음)
+
+■인프라 서비스팀 info
+L4 대역으로 사용하시려면, 기존 10.25.204 대역에서 10.25.210  대역으로의 IP 변경이 필요합니다. (기존 Public IP 사용 불가)
+그 이유는, 대역이 변경되면서 Gateway (Network)를 변경이 필요하기 때문입니다.
+기존 IP에서 L4 IP로 변경을 하려면 한 대씩 Offline PM이 필요합니다.
+(Network 교체로 인한 Public Down 필요)
+
+■서버 host info
+$ hostname
+m14mcslog01p
+
+$ cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+10.25.204.149 m14mcslog01p
+10.25.204.150 m14mcslog02s
+
+■하드웨어 키 info
+araqne@m14mcslog01p logpresso> logpresso.hardwareKey
+hardware key=1d03f58afb282cde04ee1882521a282b2f8d9586
+build=Logpresso 3.6.1.1 (build 20170904) on Araqne Core 3.2.1-1
+hostname=m14mcslog01p
+os=Linux (version=2.6.32-642.13.1.el6.x86_64, arch=amd64)
+jvm=Java HotSpot(TM) 64-Bit Server VM(1.8.0_121-b13 mixed mode)
+install path=/home/mcslog/logpresso
+data path=/log1/logpresso-data
+ip=10.25.210.120, 10.25.224.149, 10.25.204.149,
+
+■문의사항
+기존 Public IP(10.25.204.149) → L4 IP(10.25.210.120) 으로 변경시 또는
+offline PM 작업시 이로인해 하드웨어 키 정보가 변경되는지
+혹 하드웨어 키  변경으로 라이센스가 무효화 될 경우 재발급 가능한지
+문의드립니다.
+
+감사합니다.
