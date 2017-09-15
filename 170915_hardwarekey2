@@ -1,0 +1,24 @@
+안녕하세요 비앤지시스템 전현구 사원입니다.
+
+현재 네트워크 정보는 하기와 같으며 작업 후에는
+bond0 → bond2 로 메인IP가 바뀔 예정입니다
+
+■네트워크 info
+$ ifconfig
+bond0     Link encap:Ethernet  HWaddr 00:0A:F7:A6:5A:58
+	inet addr:10.25.204.149  Bcast:10.25.204.255  Mask:255.255.255.0
+bond1     Link encap:Ethernet  HWaddr F4:E9:D4:B0:D0:10
+	inet addr:10.25.224.149  Bcast:10.25.224.255  Mask:255.255.255.0
+bond2     Link encap:Ethernet  HWaddr 00:0A:F7:A6:5A:5B
+	inet addr:10.25.210.120  Bcast:10.25.210.127  Mask:255.255.255.192
+
+■Hardware Keys
+araqne@m14mcslog01p logpresso> logpresso.hardwareKeys
+Hardware Keys
+---------------
+65fca47b544d3c5b275e06f3374e420eeb8ec3f1
+1d03f58afb282cde04ee1882521a282b2f8d9586
+c54127b8ad140f453f313c7c6ed45eb67d4551a3
+
+하드웨어 키 변경이 예상되어 작업일정이 나오는대로 inform 드리겠습니다
+감사합니다.
