@@ -1,0 +1,351 @@
+public partial class MainWindow : Window
+    {
+        private List<address> addrList = new List<address>();
+
+        private static Dictionary<string, GeometryModel3D> vehicleDic;
+        private static Dictionary<string, Point3D> vehiclePosition;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        // The camera.
+        private PerspectiveCamera TheCamera = null;
+
+        // The camera controller.
+        private SphericalCameraController CameraController = null;
+
+        // The main model group.
+        private Model3DGroup MainGroup;
+
+        // The currently selected model and mesh.
+        private GeometryModel3D SelectedModel = null;
+
+        // The materials for selected and deselected models.
+        private Material SelectedMaterial, DeselectedMaterial;
+
+        private Transform3DGroup transform3DGroup;
+                
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Define WPF objects.
+            ModelVisual3D visual3d = new ModelVisual3D();
+            MainGroup = new Model3DGroup();
+
+            transform3DGroup = new Transform3DGroup();
+
+            visual3d.Content = MainGroup;
+            mainViewport.Children.Add(visual3d);
+            
+            // Define the camera, lights, and model.
+            DefineCamera(mainViewport);
+            DefineLights(MainGroup);
+            vehicleDic = new Dictionary<string, GeometryModel3D>();
+            vehiclePosition = new Dictionary<string, Point3D>();
+            DefineModel();
+        }
+
+        // Define the camera.
+        private void DefineCamera(Viewport3D viewport)
+        {
+            TheCamera = new PerspectiveCamera();
+            //TheCamera.FieldOfView = 60;
+            TheCamera.FieldOfView = 120;
+            CameraController = new SphericalCameraController
+                (TheCamera, viewport, this, mainGrid, mainGrid);
+        }
+
+        // Define the lights.
+        private void DefineLights(Model3DGroup group)
+        {
+            Color darker = Color.FromArgb(255, 64, 64, 64);
+            Color dark = Color.FromArgb(255, 96, 96, 96);
+
+            group.Children.Add(new AmbientLight(darker));
+
+            group.Children.Add(new DirectionalLight(dark, new Vector3D(0, -1, 0)));
+            group.Children.Add(new DirectionalLight(dark, new Vector3D(1, -3, -2)));
+            group.Children.Add(new DirectionalLight(dark, new Vector3D(-1, 3, 2)));
+
+            group.Children.Add(new PointLight(Colors.White, new Point3D(0, 1, 1)));
+        }
+
+        // Define the model.
+        private void DefineModel()
+        {
+            animationRotation(5000);
+        }
+
+        private async Task animationRotation(int i)
+        {
+            // Show the axes.
+            //MainGroup.AddAxisModels();
+
+            // Make the materials for selected and deselected models.
+            SelectedMaterial = new DiffuseMaterial(Brushes.Fuchsia);
+            DeselectedMaterial = new DiffuseMaterial(Brushes.LightBlue);
+            
+            // Make a bunch of cubes.
+            const int xmax = 1;
+            const double wid = 0.2;
+            const double radius = wid / 2;
+            Vector3D vx = D3.XVector(wid);
+            Vector3D vy = D3.YVector(wid);
+            Vector3D vz = D3.ZVector(wid);
+
+            LogDbClient client = new LogDbClient();
+            client.Connect("10.25.205.194", 8888, "root", "1q2w3e4r5t!");
+            LogCursor cursor2 = client.Query("proc m14_layout_addr_info()");
+            foreach (System.Collections.IDictionary o in cursor2)
+            {
+                MeshGeometry3D meshGeometry3D = new MeshGeometry3D(); // address 
+                GeometryModel3D geometryModel3D = new GeometryModel3D(meshGeometry3D, DeselectedMaterial);
+
+                meshGeometry3D.AddEdge(new HashSet<Edge>(), 0.02, 
+                    new Point3D(
+                        double.Parse(o["DRAW_X"].ToString()) ,
+                        double.Parse(o["DRAW_Y"].ToString()) , 
+                        0), 
+                    new Point3D(
+                        double.Parse(o["NEXT_ADDRESS_DRAW_X"].ToString()), 
+                        double.Parse(o["NEXT_ADDRESS_DRAW_Y"].ToString()), 
+                        0)
+                    );
+
+                MainGroup.Children.Add(geometryModel3D); 
+               
+            }
+            vehicleAdd();
+
+            cursor2.Dispose();
+            client.Close();
+            
+        }
+
+        
+        private TranslateTransform3D myTranslateTransform3D(Point3D init ,Point3D start, Point3D next, int milliseconds)
+        {
+
+            TranslateTransform3D translateTransform3D = new TranslateTransform3D();
+            DoubleAnimation animation = new DoubleAnimation();
+            animation.Duration = new Duration(TimeSpan.FromMilliseconds(milliseconds));
+
+            animation.From = init.X + start.X;
+            animation.To = init.X + next.X;
+            translateTransform3D.BeginAnimation(TranslateTransform3D.OffsetXProperty, animation);
+
+            animation.From = init.Y + start.Y;
+            animation.To = init.Y + next.Y;
+            translateTransform3D.BeginAnimation(TranslateTransform3D.OffsetYProperty, animation);
+
+            animation.From = init.Z + start.Z;
+            animation.To = init.Z + next.Z;
+            translateTransform3D.BeginAnimation(TranslateTransform3D.OffsetZProperty, animation);
+
+            return translateTransform3D;
+        }
+
+        /**
+        * geometryModel3D add for main group -> [Model3DGroup MainGroup]
+        * 
+        **/
+        // See if the user clicked on anything.
+        private async void mainBorder_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Only respond to left mouse down.
+            if (e.LeftButton == MouseButtonState.Released) return;
+
+            // Get the mouse's position relative to the viewport.
+            Point mousePos = e.GetPosition(mainViewport);
+
+            // Perform the hit test.
+            HitTestResult result =
+                VisualTreeHelper.HitTest(mainViewport, mousePos);
+            RayMeshGeometry3DHitTestResult meshResult =
+                result as RayMeshGeometry3DHitTestResult;
+            GeometryModel3D model = null;
+            if ((meshResult != null) && (meshResult.ModelHit is GeometryModel3D))
+                model = meshResult.ModelHit as GeometryModel3D;
+
+            // Select the new model.
+            SelectModel(model);
+        }
+
+                
+        private async void vehicleAdd()
+        {
+            // Make the materials for selected and deselected models.
+            SelectedMaterial = new DiffuseMaterial(Brushes.Fuchsia);
+            // DeselectedMaterial = new DiffuseMaterial(Brushes.GreenYellow);
+            DeselectedMaterial = new DiffuseMaterial(Brushes.Black);
+            
+
+            // Make a bunch of cubes.
+            const int xmax = 1;
+            const double wid = 0.25;
+            const double radius = wid / 2;
+            Vector3D vx = D3.XVector(wid);
+            Vector3D vy = D3.YVector(wid);
+            Vector3D vz = D3.ZVector(wid);
+
+            LogDbClient client = new LogDbClient();
+            client.Connect("10.25.205.194", 8888, "root", "1q2w3e4r5t!");
+            LogCursor cursor2 = client.Query("proc m14_oht_vehicle_list()");
+
+            foreach (System.Collections.IDictionary o in cursor2)
+            {
+                MeshGeometry3D meshGeometry3D = new MeshGeometry3D();
+
+                Point3D initposition = new Point3D(0.0D, 0.0D, 0.0D);
+
+                meshGeometry3D.AddBox(initposition, vx, vy, vz);
+                GeometryModel3D geometryModel3D = new GeometryModel3D(meshGeometry3D, DeselectedMaterial);
+
+                Point3D position = new Point3D(0, 0, 0);
+
+                Point3D next = new Point3D(0, 0, 0);
+
+                vehicleDic.Add(o["VEHICLE"].ToString(), geometryModel3D);
+                vehiclePosition.Add(o["VEHICLE"].ToString(), initposition);
+
+                MainGroup.Children.Add(geometryModel3D);
+            }
+
+            cursor2.Dispose();
+            client.Close();
+        }
+               
+        // Select a model.
+        private void SelectModel(GeometryModel3D model)
+        {
+            // Deselect any previously selected model.
+            if (SelectedModel != null) SelectedModel.Material = DeselectedMaterial;
+
+            // Select the new model.
+            SelectedModel = model;
+            if (model != null) model.Material = SelectedMaterial;
+        }
+
+        
+
+        private async Task animationAdd()
+        {
+            
+            LogDbClient client = new LogDbClient();
+            client.Connect("10.25.205.194", 8888, "root", "1q2w3e4r5t!");
+            LogCursor cursor2 = client.Query("proc m14_oht_vehicle_log_v2()");
+            
+            List<System.Collections.IDictionary> parallelList = new List<System.Collections.IDictionary>();
+
+            foreach (System.Collections.IDictionary o in cursor2)
+            {
+                parallelList.Add(o);
+            }
+
+            CancellationTokenSource cts = new CancellationTokenSource();
+            ParallelOptions po = new ParallelOptions();
+            po.CancellationToken = cts.Token;
+            po.MaxDegreeOfParallelism = System.Environment.ProcessorCount;
+
+            // Debug.Print("sTime : " + DateTime.Now);
+            try
+            {
+                Parallel.ForEach(parallelList, po, async (o) =>
+                {
+                    await Task.Run(() => animationAdd(o));
+                });
+
+                //Parallel.ForEach(parallelList, po, o=>
+                //{
+                //    Task.Run(() => animationAdd(o));
+                //});
+            }
+            catch (OperationCanceledException e)
+            {
+                Debug.Print("OperationCancelException..");
+            }
+            finally
+            {
+                cts.Dispose();
+            }
+            //foreach (System.Collections.IDictionary o in cursor2)
+            //{
+            //    await Task.Run(() => animationAdd(o));
+            //}
+            //foreach (System.Collections.IDictionary o in cursor2)
+            //{
+            //    await Task.Run(() => animationAdd(o));
+            //}
+
+            // Debug.Print("eTime : " + DateTime.Now);
+
+            cursor2.Dispose();
+            client.Close();
+        }
+
+
+        private async Task animationAdd(System.Collections.IDictionary o)
+        {
+            this.Dispatcher.Invoke((Action)(() => { 
+                Point3D prev = new Point3D(
+                       double.Parse(o["DRAW_X"].ToString()) - 0.1,
+                       double.Parse(o["DRAW_Y"].ToString()) - 0.1,
+                       0.0D);
+
+                Point3D next = new Point3D(
+                    double.Parse(o["NEXT_ADDRESS_DRAW_X"].ToString()) - 0.1,
+                    double.Parse(o["NEXT_ADDRESS_DRAW_Y"].ToString()) - 0.1,
+                    0.0D);
+
+                try
+                {
+                    Random rand = new Random();
+                    int duration = rand.Next(1, 10);
+
+                    vehicleDic[o["VEHICLE"].ToString()].Transform =
+                      myTranslateTransform3D(vehiclePosition[o["VEHICLE"].ToString()], prev, next, duration*1000);
+
+                    if (o["CARRIER"]!=null)
+                    {
+                        DiffuseMaterial dm = new DiffuseMaterial();
+                        dm.Brush = Brushes.AliceBlue;
+                        vehicleDic[o["VEHICLE"].ToString()].Material = dm;
+                    }
+                    else
+                    {
+                        DiffuseMaterial dm = new DiffuseMaterial();
+                        dm.Brush = Brushes.GreenYellow;
+                        vehicleDic[o["VEHICLE"].ToString()].Material = dm;
+                    }
+                }
+                catch (Exception ignore){}
+            }));
+        }
+
+        private async Task infinityLoop()
+        {
+            while (true)
+            {
+                await animationAdd();
+                Thread.Sleep(3000);
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.B)
+            {
+                new Thread(() =>
+                {
+                    infinityLoop();
+                }).Start();
+            }
+        }
+
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            // close all active threads
+            Environment.Exit(0);
+        }
+    }
